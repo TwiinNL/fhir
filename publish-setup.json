@@ -1,0 +1,24 @@
+{
+  "website": {
+    "url": "https://fhir.twiin.nl",
+    "server": "cloud",
+    "clone-xml-json": true,
+    "org": "Twiin"
+  },
+  "feeds": {
+    "package": "ig/package-feed.xml",
+    "publication": "ig/publication-feed.xml"
+  },
+  "layout-rules": [
+    {
+      "npm": "nl.twiin.fhir.r4.*",
+      "destination": "ig/{5}",
+      "canonical": "https://fhir.twiin.nl/ig/{5}"
+    },
+    {
+      "npm": "nl.twiin.fhir.stu3.*",
+      "destination": "ig/{5}-stu3",
+      "canonical": "https://fhir.twiin.nl/ig/{5}-stu3"
+    }
+  ]
+}
