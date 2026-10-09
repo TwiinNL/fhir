@@ -24,6 +24,17 @@ jobs:
           fi
           find _site -type f | sort
 
+      # upload-pages-artifact skips dotfiles by default; fail instead of
+      # silently deploying a site that is missing them.
+      - name: Fail on dotfiles in _site
+        run: |
+          dotfiles=$(find _site -name '.*')
+          if [ -n "$dotfiles" ]; then
+            echo "Dotfiles found in _site:" >&2
+            echo "$dotfiles" >&2
+            exit 1
+          fi
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
