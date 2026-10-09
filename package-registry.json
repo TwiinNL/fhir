@@ -1,2 +1,16 @@
 {
+  "packages" : [{
+    "path" : "ig/notifications/package-list.json",
+    "package-id" : "nl.twiin.fhir.r4.notifications",
+    "title" : "Twiin Notifications",
+    "canonical" : "https://fhir.twiin.nl/ig/notifications",
+    "category" : "Infrastructure",
+    "ci-build" : "https://github.com/TwiinNL/ig-notifications",
+    "version-count" : 1,
+    "latest" : {
+      "version" : "0.1.0-draft",
+      "date" : "2026-10-09",
+      "path" : "https://fhir.twiin.nl/ig/notifications/0.1.0-draft"
+    }
+  }]
 }

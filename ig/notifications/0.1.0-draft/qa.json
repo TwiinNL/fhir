@@ -1,0 +1,20 @@
+{
+  "url" : "https://fhir.twiin.nl/ig/notifications/ImplementationGuide/nl.twiin.fhir.r4.notifications",
+  "name" : "TwiinNotifications",
+  "title" : "Twiin Notifications",
+  "description" : "Technical specification of TA Notifications, part of the technical core of the Twiin Afsprakenstelsel. Based on the HL7 FHIR Subscriptions R5 Backport IG.",
+  "status" : "draft",
+  "package-id" : "nl.twiin.fhir.r4.notifications",
+  "ig-ver" : "0.1.0-draft",
+  "date" : "Fri, 09 Oct, 2026 13:43:30 +0200",
+  "dateISO8601" : "2026-10-09T13:43:30+02:00",
+  "errs" : 6,
+  "warnings" : 51,
+  "hints" : 27,
+  "broken-links" : 0,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 692594448
+}

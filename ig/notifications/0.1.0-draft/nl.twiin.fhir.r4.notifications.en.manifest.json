@@ -1,0 +1,6 @@
+{
+  "version" : "0.1.0-draft",
+  "fhirVersion" : ["4.0.1"],
+  "date" : "20261009134330",
+  "name" : "nl.twiin.fhir.r4.notifications"
+}

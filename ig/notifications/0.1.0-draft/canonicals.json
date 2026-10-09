@@ -1,0 +1,42 @@
+[{
+  "id" : "twiin-subscription-server",
+  "type" : "CapabilityStatement",
+  "url" : "https://fhir.twiin.nl/ig/notifications/CapabilityStatement/twiin-subscription-server",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinSubscriptionServer"
+},
+{
+  "id" : "nl.twiin.fhir.r4.notifications",
+  "type" : "ImplementationGuide",
+  "url" : "https://fhir.twiin.nl/ig/notifications/ImplementationGuide/nl.twiin.fhir.r4.notifications",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinNotifications"
+},
+{
+  "id" : "twiin-subscription",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinSubscription"
+},
+{
+  "id" : "twiin-subscription-notification",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinSubscriptionNotification"
+},
+{
+  "id" : "twiin-subscription-status",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinSubscriptionStatus"
+},
+{
+  "id" : "twiin-notification-formats",
+  "type" : "ValueSet",
+  "url" : "https://fhir.twiin.nl/ig/notifications/ValueSet/twiin-notification-formats",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinNotificationFormats"
+}]

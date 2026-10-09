@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="status-response"/>
+  <language value="en"/>
+  <type value="searchset"/>
+  <total value="1"/>
+  <link>
+    <relation value="self"/>
+    <url value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$status"/>
+  </link>
+  <entry>
+    <fullUrl value="urn:uuid:2d9f4b1e-6a3c-4e78-9b5d-1f8c0a7e3d62"/>
+    <resource>
+      <Parameters>
+        <id value="status-response-status"/>
+        <meta>
+          <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status"/>
+        </meta>
+        <language value="en"/>
+        <parameter>
+          <name value="subscription"/>
+          <valueReference>
+            <reference value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"/>
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="topic"/>
+          <valueCanonical value="https://example.org/fhir/SubscriptionTopic/task-status-change"/>
+        </parameter>
+        <parameter>
+          <name value="status"/>
+          <valueCode value="active"/>
+        </parameter>
+        <parameter>
+          <name value="type"/>
+          <valueCode value="query-status"/>
+        </parameter>
+        <parameter>
+          <name value="events-since-subscription-start"/>
+          <valueString value="44"/>
+        </parameter>
+      </Parameters>
+    </resource>
+    <search>
+      <mode value="match"/>
+    </search>
+  </entry>
+</Bundle>

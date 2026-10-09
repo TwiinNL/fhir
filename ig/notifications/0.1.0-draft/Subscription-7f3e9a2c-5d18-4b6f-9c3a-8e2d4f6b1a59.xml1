@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Subscription xmlns="http://hl7.org/fhir">
+  <id value="7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Subscription 7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59</b></p><a name="7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"> </a><a name="hc7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-twiin-subscription.html">Twiin Subscription</a></p></div><p><b>status</b>: Off</p><p><b>reason</b>: Notification of Task status changes</p><p><b>criteria</b>: https://example.org/fhir/SubscriptionTopic/task-status-change</p><h3>Channels</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Endpoint</b></td><td><b>Payload</b></td></tr><tr><td style="display: none">*</td><td>Rest Hook</td><td><a href="https://receiver.example.org/fhir/notifications">https://receiver.example.org/fhir/notifications</a></td><td>application/fhir+json</td></tr></table></div>
+  </text>
+  <status value="off"/>
+  <reason value="Notification of Task status changes"/>
+  <criteria value="https://example.org/fhir/SubscriptionTopic/task-status-change">
+    <extension url="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria">
+      <valueString value="owner=http://fhir.nl/fhir/NamingSystem/ura|12104037"/>
+    </extension>
+  </criteria>
+  <channel>
+    <type value="rest-hook"/>
+    <endpoint value="https://receiver.example.org/fhir/notifications"/>
+    <payload value="application/fhir+json">
+      <extension url="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content">
+        <valueCode value="id-only"/>
+      </extension>
+    </payload>
+  </channel>
+</Subscription>

@@ -1,0 +1,14 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.twiin.nl/ig/notifications/ValueSet/twiin-notification-formats",
+    "version" : "0.1.0-draft",
+    "status" : "draft",
+    "name" : "TwiinNotificationFormats",
+    "title" : "Twiin Notification Formats",
+    "description" : "MIME types permitted in Subscription.channel.payload under TA Notifications: application/fhir+json and application/fhir+xml.",
+    "systems" : ["urn:ietf:bcp:13"],
+    "uses" : {
+    },
+    "StructureDefinition-twiin-subscription.html" : "Twiin Subscription"
+  }]
+}

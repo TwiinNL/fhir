@@ -1,0 +1,1782 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "twiin-subscription"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition twiin-subscription</b></p><a name=\"twiin-subscription\"> </a><a name=\"hctwiin-subscription\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th scope=\"col\" style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th scope=\"col\" style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th scope=\"col\" style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th scope=\"col\" style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th scope=\"col\" style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-twiin-subscription-definitions.html#Subscription\">Subscription</a><a name=\"Subscription\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R4/conformance-rules.html#constraints\" title=\"This element has or is affected by constraints ( twiin-sub-1 )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.50\">0</span><span style=\"opacity: 0.50\">..</span><span style=\"opacity: 0.50\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/uv/subscriptions-backport/STU1.1/StructureDefinition-backport-subscription.html\">BackportSubscription</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.50\">Server push subscription criteria</span><br class=\"constraint\"/><span class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"criteria is the canonical URL of a SubscriptionTopic: an http(s) URL without a query. This is a heuristic to catch an R4 search expression in criteria.\" class=\"constraint\">twiin-sub-1</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">Subscription.</span><a href=\"StructureDefinition-twiin-subscription-definitions.html#Subscription.channel\">channel</a><a name=\"Subscription.channel\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">Subscription.channel.</span><a href=\"StructureDefinition-twiin-subscription-definitions.html#Subscription.channel.type\">type</a><a name=\"Subscription.channel.type\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.50\">1</span><span style=\"opacity: 0.50\">..</span><span style=\"opacity: 0.50\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.50; opacity: 0.50\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.50\">rest-hook | websocket | email | sms | message</span><br/><span style=\"font-weight:bold\">Required Pattern: </span><span style=\"color: darkgreen\">rest-hook</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">Subscription.channel.</span><a href=\"StructureDefinition-twiin-subscription-definitions.html#Subscription.channel.endpoint\">endpoint</a><a name=\"Subscription.channel.endpoint\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..<span style=\"opacity: 0.50\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.50; opacity: 0.50\" href=\"http://hl7.org/fhir/R4/datatypes.html#url\">url</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.50\">Where the channel points to</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">Subscription.channel.</span><a href=\"StructureDefinition-twiin-subscription-definitions.html#Subscription.channel.payload\">payload</a><a name=\"Subscription.channel.payload\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.50\">1</span><span style=\"opacity: 0.50\">..</span><span style=\"opacity: 0.50\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.50; opacity: 0.50\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.50\">MIME type to send, or omit for no payload</span><br class=\"binding\"/><span style=\"font-weight:bold\" class=\"binding\">Binding: </span><a href=\"ValueSet-twiin-notification-formats.html\" title=\"https://fhir.twiin.nl/ig/notifications/ValueSet/twiin-notification-formats\" class=\"binding\">Twiin Notification Formats</a><span class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\" class=\"binding\">required</a><span class=\"binding\">)</span></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  ] ;
+  fhir:StructureDefinition.url [ fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription"] ;
+  fhir:StructureDefinition.version [ fhir:value "0.1.0-draft"] ;
+  fhir:StructureDefinition.name [ fhir:value "TwiinSubscription"] ;
+  fhir:StructureDefinition.title [ fhir:value "Twiin Subscription"] ;
+  fhir:StructureDefinition.status [ fhir:value "draft"] ;
+  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-10-09T13:43:30+02:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.publisher [ fhir:value "Twiin"] ;
+  fhir:StructureDefinition.description [ fhir:value "Subscription under TA Notifications (TA section Resource Definitions → Subscription). Restricts channel.type to rest-hook and channel.payload to application/fhir+json or application/fhir+xml. channel.endpoint is 1..1 because the TA requires the rest-hook channel type, which needs an endpoint; this cardinality is derived from that requirement, not stated separately in the TA."] ;
+  fhir:StructureDefinition.copyright [ fhir:value "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."] ;
+  fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:StructureDefinition.mapping [
+     fhir:index -1 ;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "rim" ] ;
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3" ] ;
+     fhir:StructureDefinition.mapping.name [ fhir:value "RIM Mapping" ]
+  ], [
+     fhir:index -1 ;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "w5" ] ;
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/fhir/fivews" ] ;
+     fhir:StructureDefinition.mapping.name [ fhir:value "FiveWs Pattern Mapping" ]
+  ] ;
+  fhir:StructureDefinition.kind [ fhir:value "resource"] ;
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean] ;
+  fhir:StructureDefinition.type [ fhir:value "Subscription"] ;
+  fhir:StructureDefinition.baseDefinition [
+     fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription" ;
+     fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription>
+  ] ;
+  fhir:StructureDefinition.derivation [ fhir:value "constraint"] ;
+  fhir:StructureDefinition.snapshot [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version" ] ;
+       fhir:Extension.valueString [ fhir:value "1.1.0" ]
+     ] ;
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Server push subscription criteria" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined \"channel\" so that another system can take an appropriate action." ] ;
+       fhir:ElementDefinition.alias [
+         fhir:value "WebHook" ;
+         fhir:index -1
+       ], [
+         fhir:value "Hook" ;
+         fhir:index -1
+       ], [
+         fhir:value "Routing Rule" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-2" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL NOT contain nested Resources" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.contained.empty()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(parent::f:contained and f:contained)" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-3" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.where(((id.exists() and ('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url)))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(uri) = '#').exists()).not()).trace('unmatched', id).empty()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(for $contained in f:contained return $contained[not(exists(parent::*/descendant::f:reference/@value=concat('#', $contained/*/f:id/@value)) or exists(descendant::f:reference[@value='#']))]))" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-4" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-5" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "If a resource is contained in another resource, it SHALL NOT have a security label" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.meta.security.empty()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:contained/*/f:meta/f:security))" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice" ] ;
+           fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+         ], [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation" ] ;
+           fhir:Extension.valueMarkdown [ fhir:value "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time." ]
+         ] ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-6" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "warning" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "A resource should have narrative for robust management" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "text.`div`.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:text/h:div)" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/DomainResource" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "twiin-sub-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "warning" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "criteria is the canonical URL of a SubscriptionTopic: an http(s) URL without a query. This is a heuristic to catch an R4 search expression in criteria." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "criteria.matches('^https?://[^?]+$')" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription" ;
+           fhir:link <https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "Entity. Role, or Act" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "infrastructure.exchange" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.id" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.id" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Logical id of this artifact" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "The only time that a resource does not have an id is when it is being submitted to the server using a create operation." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.id" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "id" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.meta" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.meta" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Metadata about the resource" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.meta" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Meta" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.implicitRules" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.implicitRules" ] ;
+       fhir:ElementDefinition.short [ fhir:value "A set of rules under which this content was created" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.implicitRules" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation" ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.language" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.language" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Language of the resource content" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The base language in which the resource is written." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.language" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet" ] ;
+           fhir:Extension.valueCanonical [
+             fhir:value "http://hl7.org/fhir/ValueSet/all-languages" ;
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages>
+           ]
+         ], [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ] ;
+           fhir:Extension.valueString [ fhir:value "Language" ]
+         ] ;
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.description [ fhir:value "IETF language tag" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/languages" ;
+           fhir:link <http://hl7.org/fhir/ValueSet/languages>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.text" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.text" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Text summary of the resource, for human interpretation" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later." ] ;
+       fhir:ElementDefinition.alias [
+         fhir:value "narrative" ;
+         fhir:index -1
+       ], [
+         fhir:value "html" ;
+         fhir:index -1
+       ], [
+         fhir:value "xhtml" ;
+         fhir:index -1
+       ], [
+         fhir:value "display" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.text" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Narrative" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "Act.text?" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.contained" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.contained" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Contained, inline Resources" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels." ] ;
+       fhir:ElementDefinition.alias [
+         fhir:value "inline resources" ;
+         fhir:index -1
+       ], [
+         fhir:value "anonymous resources" ;
+         fhir:index -1
+       ], [
+         fhir:value "contained resources" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.contained" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Resource" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-r4b" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "warning" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Containing new R4B resources within R4 resources may cause interoperability issues if instances are shared with R4 systems" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "($this is Citation or $this is Evidence or $this is EvidenceReport or $this is EvidenceVariable or $this is MedicinalProductDefinition or $this is PackagedProductDefinition or $this is AdministrableProductDefinition or $this is Ingredient or $this is ClinicalUseDefinition or $this is RegulatedAuthorization or $this is SubstanceDefinition or $this is SubscriptionStatus or $this is SubscriptionTopic) implies (%resource is Citation or %resource is Evidence or %resource is EvidenceReport or %resource is EvidenceVariable or %resource is MedicinalProductDefinition or %resource is PackagedProductDefinition or %resource is AdministrableProductDefinition or %resource is Ingredient or %resource is ClinicalUseDefinition or %resource is RegulatedAuthorization or %resource is SubstanceDefinition or %resource is SubscriptionStatus or %resource is SubscriptionTopic)" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(f:Citation|f:Evidence|f:EvidenceReport|f:EvidenceVariable|f:MedicinalProductDefinition|f:PackagedProductDefinition|f:AdministrableProductDefinition|f:Ingredient|f:ClinicalUseDefinition|f:RegulatedAuthorization|f:SubstanceDefinition|f:SubscriptionStatus|f:SubscriptionTopic) or not(parent::f:Citation|parent::f:Evidence|parent::f:EvidenceReport|parent::f:EvidenceVariable|parent::f:MedicinalProductDefinition|parent::f:PackagedProductDefinition|parent::f:AdministrableProductDefinition|parent::f:Ingredient|parent::f:ClinicalUseDefinition|parent::f:RegulatedAuthorization|parent::f:SubstanceDefinition|f:SubscriptionStatus|f:SubscriptionTopic)" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Subscription" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Subscription>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.extension" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.extension" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions" ;
+         fhir:index -1
+       ], [
+         fhir:value "user content" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.modifierExtension" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.modifierExtension" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)." ] ;
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions" ;
+         fhir:index -1
+       ], [
+         fhir:value "user content" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.modifierExtension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifierReason [ fhir:value "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them" ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.status" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.status" ] ;
+       fhir:ElementDefinition.short [ fhir:value "requested | active | error | off" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The status of the subscription, which marks the server state for managing the subscription." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "A client can only submit subscription resources in the requested or off state. Only the server can  move a subscription from requested to active, and then to error. Either the server or the client can turn a subscription off.\n\nThis element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.status" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ] ;
+           fhir:Extension.valueString [ fhir:value "SubscriptionStatus" ]
+         ] ;
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.description [ fhir:value "The status of a subscription." ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/subscription-status|4.0.0" ;
+           fhir:link <http://hl7.org/fhir/ValueSet/subscription-status|4.0.0>
+         ]
+       ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.status" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.contact" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.contact" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Contact details for source (e.g. troubleshooting)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.contact" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "ContactPoint" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject[x]" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.subject" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.end" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.end" ] ;
+       fhir:ElementDefinition.short [ fhir:value "When to automatically delete the subscription" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The time for the server to turn the subscription off." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "The server is permitted to deviate from this time but should observe it." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.end" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "instant" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.done[x]" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.reason" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.reason" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Description of why this subscription was created" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A description of why this subscription is defined." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.reason" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.why[x]" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.criteria" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.criteria" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Canonical URL for the topic used to generate events" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "When using topic-based subscriptions, the primary criteria is always the topic, indicated by its canonical URL." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "The rules are search criteria (without the [base] part). Like Bundle.entry.request.url, it has no leading \"/\"." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.criteria" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.criteria.id" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.criteria.id" ] ;
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references)" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "string" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.criteria.extension" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.criteria.extension" ] ;
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index -1 ;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ] ;
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
+         ] ;
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ] ;
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Extension" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "An Extension" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.criteria.extension:filterCriteria" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.criteria.extension" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "filterCriteria" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Filtering critiera applied to events" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Search-style filters to be applied to narrow the subscription topic stream. Keys can be either search parameters appropriate to the filtering resource or keys defined within the subscription topic." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "When multiple filters are applied, evaluates to true if all the conditions are met; otherwise it returns false. (i.e., logical AND)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ] ;
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria" ;
+           fhir:index -1 ;
+           fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria>
+         ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children unless an empty Parameters resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count()) or $this is Parameters" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div|self::f:Parameters" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.criteria.value" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.criteria.value" ] ;
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Primitive value for string" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The actual value" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "string.value" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "string" ]
+         ], [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/regex" ] ;
+           fhir:Extension.valueString [ fhir:value "[ \\r\\n\\t\\S]+" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.maxLength [ fhir:value "1048576"^^xsd:integer ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.error" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.error" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Latest error note" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "A record of the last error that occurred when the server processed a notification." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.error" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "The channel on which to report matches to the criteria" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Details where to send notifications when resources are received that meet the criteria." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.channel" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children unless an empty Parameters resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count()) or $this is Parameters" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div|self::f:Parameters" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.id" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.id" ] ;
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Unique id for inter-element referencing" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "string" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.extension" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.extension" ] ;
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index -1 ;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ] ;
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
+         ] ;
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ] ;
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Extension" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "An Extension" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.extension:heartbeatPeriod" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.extension" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "heartbeatPeriod" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Interval in seconds to send 'heartbeat' notification" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "If present, a 'hearbeat' notification (keepalive) is sent via this channel with an the interval period equal to this elements integer value in seconds. If not present, a heartbeat notification is not sent." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ] ;
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-heartbeat-period" ;
+           fhir:index -1 ;
+           fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-heartbeat-period>
+         ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children unless an empty Parameters resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count()) or $this is Parameters" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div|self::f:Parameters" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.extension:timeout" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.extension" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "timeout" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Timeout in seconds to attempt notification delivery" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "If present, the maximum amount of time a server will allow before failing a notification attempt." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ] ;
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-timeout" ;
+           fhir:index -1 ;
+           fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-timeout>
+         ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children unless an empty Parameters resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count()) or $this is Parameters" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div|self::f:Parameters" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.extension:maxCount" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.extension" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "maxCount" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Maximum number of triggering resources included in notification bundles" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "If present, the maximum number of triggering resources that will be included in a notification bundle (e.g., a server will not include more than this number of trigger resources in a single notification). Note that this is not a strict limit on the number of entries in a bundle, as dependent resources can be included." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ] ;
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-max-count" ;
+           fhir:index -1 ;
+           fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-max-count>
+         ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children unless an empty Parameters resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count()) or $this is Parameters" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div|self::f:Parameters" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.modifierExtension" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.modifierExtension" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)." ] ;
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions" ;
+         fhir:index -1
+       ], [
+         fhir:value "user content" ;
+         fhir:index -1
+       ], [
+         fhir:value "modifiers" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifierReason [ fhir:value "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them" ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index -1 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.type" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.type" ] ;
+       fhir:ElementDefinition.short [ fhir:value "rest-hook | websocket | email | sms | message" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The type of channel to send notifications on." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.channel.type" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.patternCode [ fhir:value "rest-hook" ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ] ;
+           fhir:Extension.valueString [ fhir:value "SubscriptionChannelType" ]
+         ] ;
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.description [ fhir:value "The type of method used to execute a subscription." ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/subscription-channel-type|4.0.0" ;
+           fhir:link <http://hl7.org/fhir/ValueSet/subscription-channel-type|4.0.0>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.type.id" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.type.id" ] ;
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references)" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "string" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.type.extension" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.type.extension" ] ;
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index -1 ;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ] ;
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
+         ] ;
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ] ;
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Extension" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "An Extension" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.type.extension:customChannelType" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.type.extension" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "customChannelType" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Extended channel type for notifications" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The type of channel to send notifications on." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "This extension allows for the use of additional channel types that were not defined in the FHIR R4 subscription definition." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ] ;
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-channel-type" ;
+           fhir:index -1 ;
+           fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-channel-type>
+         ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children unless an empty Parameters resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count()) or $this is Parameters" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div|self::f:Parameters" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.type.value" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.type.value" ] ;
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Primitive value for code" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Primitive value for code" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "string.value" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "code" ]
+         ], [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/regex" ] ;
+           fhir:Extension.valueString [ fhir:value "[^\\s]+(\\s[^\\s]+)*" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.endpoint" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.endpoint" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Where the channel points to" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The url that describes the actual end-point to send messages to." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.channel.endpoint" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "url" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.payload" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.payload" ] ;
+       fhir:ElementDefinition.short [ fhir:value "MIME type to send, or omit for no payload" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. If the payload is not present, then there is no payload in the notification, just a notification. The mime type \"text/plain\" may also be used for Email and SMS subscriptions." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.channel.payload" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://fhir.twiin.nl/ig/notifications/ValueSet/twiin-notification-formats" ;
+           fhir:link <https://fhir.twiin.nl/ig/notifications/ValueSet/twiin-notification-formats>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.payload.id" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.payload.id" ] ;
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references)" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "string" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.payload.extension" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.payload.extension" ] ;
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index -1 ;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ] ;
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
+         ] ;
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ] ;
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Extension" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "An Extension" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.payload.extension:content" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.payload.extension" ] ;
+       fhir:ElementDefinition.sliceName [ fhir:value "content" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Notification content level" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ] ;
+         fhir:ElementDefinition.type.profile [
+           fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content" ;
+           fhir:index -1 ;
+           fhir:link <http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content>
+         ]
+       ] ;
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children unless an empty Parameters resource" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count()) or $this is Parameters" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div|self::f:Parameters" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.payload.value" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.payload.value" ] ;
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr" ;
+         fhir:index -1
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Primitive value for code" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Primitive value for code" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "string.value" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
+           fhir:Extension.valueUrl [ fhir:value "code" ]
+         ], [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/regex" ] ;
+           fhir:Extension.valueString [ fhir:value "[^\\s]+(\\s[^\\s]+)*" ]
+         ] ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.header" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.header" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Usage depends on the channel type" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Additional headers / information to send as part of the notification." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Exactly what these mean depend on the channel type. They can convey additional information to the recipient and/or meet security requirements; for example, support of multiple headers in the outgoing notifications for rest-hook type subscriptions." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Subscription.channel.header" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ]
+  ] ;
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription" ] ;
+       fhir:ElementDefinition.constraint [
+         fhir:index -1 ;
+         fhir:ElementDefinition.constraint.key [ fhir:value "twiin-sub-1" ] ;
+         fhir:ElementDefinition.constraint.severity [ fhir:value "warning" ] ;
+         fhir:ElementDefinition.constraint.human [ fhir:value "criteria is the canonical URL of a SubscriptionTopic: an http(s) URL without a query. This is a heuristic to catch an R4 search expression in criteria." ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "criteria.matches('^https?://[^?]+$')" ] ;
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription" ;
+           fhir:link <https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.type" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.type" ] ;
+       fhir:ElementDefinition.patternCode [ fhir:value "rest-hook" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.endpoint" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.endpoint" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "Subscription.channel.payload" ] ;
+       fhir:ElementDefinition.path [ fhir:value "Subscription.channel.payload" ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://fhir.twiin.nl/ig/notifications/ValueSet/twiin-notification-formats" ;
+           fhir:link <https://fhir.twiin.nl/ig/notifications/ValueSet/twiin-notification-formats>
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

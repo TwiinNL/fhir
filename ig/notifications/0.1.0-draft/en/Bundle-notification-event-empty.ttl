@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/Bundle/notification-event-empty> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "notification-event-empty"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:Bundle.type [ fhir:value "history"] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:4b8e2f6a-1d3c-4a59-8e7b-2c6f9a0d5e14" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:4b8e2f6a-1d3c-4a59-8e7b-2c6f9a0d5e14> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "GET" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$status" ]
+     ] ;
+     fhir:Bundle.entry.response [
+       fhir:Bundle.entry.response.status [ fhir:value "200" ]
+     ]
+  ] .
+
+<urn:uuid:4b8e2f6a-1d3c-4a59-8e7b-2c6f9a0d5e14> a fhir:Parameters ;
+  fhir:Resource.id [ fhir:value "notification-event-empty-status"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:Parameters.parameter [
+     fhir:index -1 ;
+     fhir:Parameters.parameter.name [ fhir:value "subscription" ] ;
+     fhir:Parameters.parameter.valueReference [
+       fhir:link <https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59> ;
+       fhir:Reference.reference [ fhir:value "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Parameters.parameter.name [ fhir:value "topic" ] ;
+     fhir:Parameters.parameter.valueCanonical [
+       fhir:value "https://example.org/fhir/SubscriptionTopic/task-status-change" ;
+       fhir:link <https://example.org/fhir/SubscriptionTopic/task-status-change>
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Parameters.parameter.name [ fhir:value "status" ] ;
+     fhir:Parameters.parameter.valueCode [ fhir:value "active" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Parameters.parameter.name [ fhir:value "type" ] ;
+     fhir:Parameters.parameter.valueCode [ fhir:value "event-notification" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Parameters.parameter.name [ fhir:value "notification-event" ] ;
+     fhir:Parameters.parameter.part [
+       fhir:index -1 ;
+       fhir:Parameters.parameter.name [ fhir:value "event-number" ] ;
+       fhir:Parameters.parameter.valueString [ fhir:value "43" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Parameters.parameter.name [ fhir:value "timestamp" ] ;
+       fhir:Parameters.parameter.valueInstant [ fhir:value "2026-07-16T10:02:00Z"^^xsd:dateTime ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/Bundle/notification-event-empty.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

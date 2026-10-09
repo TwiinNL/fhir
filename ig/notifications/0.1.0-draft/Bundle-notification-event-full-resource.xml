@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="notification-event-full-resource"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification"/>
+  </meta>
+  <type value="history"/>
+  <entry>
+    <fullUrl value="urn:uuid:7a1c3e5f-9b2d-4f60-8a4e-6d0b2c8f1e37"/>
+    <resource>
+      <Parameters>
+        <id value="notification-event-full-resource-status"/>
+        <meta>
+          <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status"/>
+        </meta>
+        <parameter>
+          <name value="subscription"/>
+          <valueReference>
+            <reference value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"/>
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="topic"/>
+          <valueCanonical value="https://example.org/fhir/SubscriptionTopic/task-status-change"/>
+        </parameter>
+        <parameter>
+          <name value="status"/>
+          <valueCode value="active"/>
+        </parameter>
+        <parameter>
+          <name value="type"/>
+          <valueCode value="event-notification"/>
+        </parameter>
+        <parameter>
+          <name value="notification-event"/>
+          <part>
+            <name value="event-number"/>
+            <valueString value="44"/>
+          </part>
+          <part>
+            <name value="timestamp"/>
+            <valueInstant value="2026-07-16T11:30:00Z"/>
+          </part>
+          <part>
+            <name value="focus"/>
+            <valueReference>
+              <reference value="https://sender.example.org/fhir/Task/5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"/>
+            </valueReference>
+          </part>
+        </parameter>
+      </Parameters>
+    </resource>
+    <request>
+      <method value="GET"/>
+      <url value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$status"/>
+    </request>
+    <response>
+      <status value="200"/>
+    </response>
+  </entry>
+  <entry>
+    <fullUrl value="https://sender.example.org/fhir/Task/5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"/>
+    <resource>
+      <Task>
+        <id value="5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Task_5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"> </a><p class="res-header-id"><b>Generated Narrative: Task 5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d</b></p><a name="5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"> </a><a name="hc5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"> </a><p><b>status</b>: Ready</p><p><b>intent</b>: order</p></div>
+        </text>
+        <status value="ready"/>
+        <intent value="order"/>
+      </Task>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Task/5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"/>
+    </request>
+    <response>
+      <status value="200"/>
+    </response>
+  </entry>
+</Bundle>

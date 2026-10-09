@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/Bundle/notification-handshake> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "notification-handshake"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification>
+     ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "history"] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:9e41b2d7-3c85-4f1a-b6e0-2d7c8a5f4e13" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:9e41b2d7-3c85-4f1a-b6e0-2d7c8a5f4e13> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "GET" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$status" ]
+     ] ;
+     fhir:Bundle.entry.response [
+       fhir:Bundle.entry.response.status [ fhir:value "200" ]
+     ]
+  ] .
+
+<urn:uuid:9e41b2d7-3c85-4f1a-b6e0-2d7c8a5f4e13> a fhir:Parameters ;
+  fhir:Resource.id [ fhir:value "notification-handshake-status"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status>
+     ]
+  ] ;
+  fhir:Parameters.parameter [
+     fhir:index 0 ;
+     fhir:Parameters.parameter.name [ fhir:value "subscription" ] ;
+     fhir:Parameters.parameter.valueReference [
+       fhir:link <https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59> ;
+       fhir:Reference.reference [ fhir:value "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Parameters.parameter.name [ fhir:value "topic" ] ;
+     fhir:Parameters.parameter.valueCanonical [
+       fhir:value "https://example.org/fhir/SubscriptionTopic/task-status-change" ;
+       fhir:link <https://example.org/fhir/SubscriptionTopic/task-status-change>
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Parameters.parameter.name [ fhir:value "status" ] ;
+     fhir:Parameters.parameter.valueCode [ fhir:value "requested" ]
+  ], [
+     fhir:index 3 ;
+     fhir:Parameters.parameter.name [ fhir:value "type" ] ;
+     fhir:Parameters.parameter.valueCode [ fhir:value "handshake" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/Bundle/notification-handshake.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
