@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="notification-handshake"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification"/>
+  </meta>
+  <language value="en"/>
+  <type value="history"/>
+  <entry>
+    <fullUrl value="urn:uuid:9e41b2d7-3c85-4f1a-b6e0-2d7c8a5f4e13"/>
+    <resource>
+      <Parameters>
+        <id value="notification-handshake-status"/>
+        <meta>
+          <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status"/>
+        </meta>
+        <language value="en"/>
+        <parameter>
+          <name value="subscription"/>
+          <valueReference>
+            <reference value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"/>
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="topic"/>
+          <valueCanonical value="https://example.org/fhir/SubscriptionTopic/task-status-change"/>
+        </parameter>
+        <parameter>
+          <name value="status"/>
+          <valueCode value="requested"/>
+        </parameter>
+        <parameter>
+          <name value="type"/>
+          <valueCode value="handshake"/>
+        </parameter>
+      </Parameters>
+    </resource>
+    <request>
+      <method value="GET"/>
+      <url value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$status"/>
+    </request>
+    <response>
+      <status value="200"/>
+    </response>
+  </entry>
+</Bundle>

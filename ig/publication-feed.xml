@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir" version="2.0">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir" version="2.0">
   <channel>
     <title>Twiin FHIR Publications</title>
     <description>FHIR specifications published by Twiin</description>
     <link>https://fhir.twiin.nl/ig/publication-feed.xml</link>
     <generator>Twiin</generator>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
-    <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-  </channel>
+    <lastBuildDate>Fri, 09 Oct 2026 01:43:30 +0200</lastBuildDate>
+    <pubDate>Fri, 09 Oct 2026 01:43:30 +0200</pubDate>
+  
+    <item>
+      <title>Twiin Notifications version 0.1.0-draft</title>
+      <description>First draft publication, technical specification of TA Notifications 0.9</description>
+      <link>https://fhir.twiin.nl/ig/notifications/0.1.0-draft/index.html</link>
+      <guid isPermaLink="true">https://fhir.twiin.nl/ig/notifications/0.1.0-draft/index.html</guid>
+      <dc:creator>Twiin</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Fri, 09 Oct 2026 01:43:30 +0200</pubDate>
+      <fhir:details>Publication run at 09/10/2026 by marc using Version 3.0.0 (Git# 7d1c5ae624df). Built 2026-10-08T04:07:06.228Z (31 hours old) source id Unknown (todo)</fhir:details>
+    </item></channel>
 </rss>

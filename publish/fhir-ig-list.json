@@ -1,3 +1,22 @@
 {
-  "guides": []
+  "guides" : [{
+    "name" : "Twiin Notifications",
+    "category" : "Infrastructure",
+    "npm-name" : "nl.twiin.fhir.r4.notifications",
+    "description" : "Technical specification of TA Notifications, part of the technical core of the Twiin Afsprakenstelsel.",
+    "authority" : "Twiin",
+    "country" : "nl",
+    "history" : "https://fhir.twiin.nl/ig/notifications/history.html",
+    "language" : ["en"],
+    "canonical" : "https://fhir.twiin.nl/ig/notifications",
+    "ci-build" : "https://github.com/TwiinNL/ig-notifications",
+    "product" : ["fhir"],
+    "editions" : [{
+      "name" : "Release 1 Draft",
+      "ig-version" : "0.1.0-draft",
+      "package" : "nl.twiin.fhir.r4.notifications#0.1.0-draft",
+      "fhir-version" : ["4.0.1"],
+      "url" : "https://fhir.twiin.nl/ig/notifications/0.1.0-draft"
+    }]
+  }]
 }

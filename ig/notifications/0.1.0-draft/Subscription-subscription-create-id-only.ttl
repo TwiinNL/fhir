@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/Subscription/subscription-create-id-only> a fhir:Subscription ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "subscription-create-id-only"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Subscription subscription-create-id-only</b></p><a name=\"subscription-create-id-only\"> </a><a name=\"hcsubscription-create-id-only\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-subscription.html\">Twiin Subscription</a></p></div><p><b>status</b>: Requested</p><p><b>reason</b>: Notification of Task status changes</p><p><b>criteria</b>: https://example.org/fhir/SubscriptionTopic/task-status-change</p><h3>Channels</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Endpoint</b></td><td><b>Payload</b></td></tr><tr><td style=\"display: none\">*</td><td>Rest Hook</td><td><a href=\"https://receiver.example.org/fhir/notifications\">https://receiver.example.org/fhir/notifications</a></td><td>application/fhir+json</td></tr></table></div>"
+  ] ;
+  fhir:Subscription.status [ fhir:value "requested"] ;
+  fhir:Subscription.reason [ fhir:value "Notification of Task status changes"] ;
+  fhir:Subscription.criteria [
+     fhir:value "https://example.org/fhir/SubscriptionTopic/task-status-change" ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria" ] ;
+       fhir:Extension.valueString [ fhir:value "owner=http://fhir.nl/fhir/NamingSystem/ura|12104037" ]
+     ]
+  ] ;
+  fhir:Subscription.channel [
+     fhir:Subscription.channel.type [ fhir:value "rest-hook" ] ;
+     fhir:Subscription.channel.endpoint [ fhir:value "https://receiver.example.org/fhir/notifications" ] ;
+     fhir:Subscription.channel.payload [
+       fhir:value "application/fhir+json" ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content" ] ;
+         fhir:Extension.valueCode [ fhir:value "id-only" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/notifications/Subscription/subscription-create-id-only.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

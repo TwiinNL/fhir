@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="notification-heartbeat"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification"/>
+  </meta>
+  <type value="history"/>
+  <entry>
+    <fullUrl value="urn:uuid:0364d735-381d-4a15-89fd-597e557b0ce2"/>
+    <resource>
+      <Parameters>
+        <id value="notification-heartbeat-status"/>
+        <meta>
+          <profile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status"/>
+        </meta>
+        <parameter>
+          <name value="subscription"/>
+          <valueReference>
+            <reference value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"/>
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="topic"/>
+          <valueCanonical value="https://example.org/fhir/SubscriptionTopic/task-status-change"/>
+        </parameter>
+        <parameter>
+          <name value="status"/>
+          <valueCode value="active"/>
+        </parameter>
+        <parameter>
+          <name value="type"/>
+          <valueCode value="heartbeat"/>
+        </parameter>
+        <parameter>
+          <name value="events-since-subscription-start"/>
+          <valueString value="42"/>
+        </parameter>
+      </Parameters>
+    </resource>
+    <request>
+      <method value="GET"/>
+      <url value="https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$status"/>
+    </request>
+    <response>
+      <status value="200"/>
+    </response>
+  </entry>
+</Bundle>

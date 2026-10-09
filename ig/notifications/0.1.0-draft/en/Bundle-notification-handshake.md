@@ -1,0 +1,58 @@
+# Notification: handshake - Twiin Notifications v0.1.0-draft
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Notification: handshake**
+
+## Example Bundle: Notification: handshake
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "notification-handshake",
+  "meta" : {
+    "profile" : ["https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification"]
+  },
+  "type" : "history",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:9e41b2d7-3c85-4f1a-b6e0-2d7c8a5f4e13",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "notification-handshake-status",
+      "meta" : {
+        "profile" : ["https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status"]
+      },
+      "parameter" : [{
+        "name" : "subscription",
+        "valueReference" : {
+          "reference" : "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"
+        }
+      },
+      {
+        "name" : "topic",
+        "valueCanonical" : "https://example.org/fhir/SubscriptionTopic/task-status-change"
+      },
+      {
+        "name" : "status",
+        "valueCode" : "requested"
+      },
+      {
+        "name" : "type",
+        "valueCode" : "handshake"
+      }]
+    },
+    "request" : {
+      "method" : "GET",
+      "url" : "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$status"
+    },
+    "response" : {
+      "status" : "200"
+    }
+  }]
+}
+
+```

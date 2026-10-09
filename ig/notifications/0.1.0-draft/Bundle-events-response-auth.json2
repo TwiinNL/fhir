@@ -1,0 +1,78 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "events-response-auth",
+  "type" : "history",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:5e3a9c1d-7b4f-4e28-a6d0-9f2b8c4e1a73",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "events-response-auth-status",
+      "meta" : {
+        "profile" : ["https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status"]
+      },
+      "parameter" : [{
+        "name" : "subscription",
+        "valueReference" : {
+          "reference" : "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59"
+        }
+      },
+      {
+        "name" : "topic",
+        "valueCanonical" : "https://example.org/fhir/SubscriptionTopic/task-status-change"
+      },
+      {
+        "name" : "status",
+        "valueCode" : "active"
+      },
+      {
+        "name" : "type",
+        "valueCode" : "query-event"
+      },
+      {
+        "name" : "notification-event",
+        "part" : [{
+          "name" : "event-number",
+          "valueString" : "42"
+        },
+        {
+          "name" : "timestamp",
+          "valueInstant" : "2026-07-16T09:15:00Z"
+        },
+        {
+          "name" : "focus",
+          "valueReference" : {
+            "reference" : "https://sender.example.org/fhir/Task/5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"
+          }
+        },
+        {
+          "name" : "authorization-type",
+          "valueCoding" : {
+            "system" : "https://example.org/CodeSystem/authorization-type",
+            "code" : "example"
+          }
+        },
+        {
+          "name" : "authorization-value",
+          "valueString" : "Zk3p9QxT2mVb7LcW8nRy"
+        }]
+      }]
+    },
+    "request" : {
+      "method" : "GET",
+      "url" : "https://sender.example.org/fhir/Subscription/7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59/$events?eventsSinceNumber=42&eventsUntilNumber=42"
+    },
+    "response" : {
+      "status" : "200"
+    }
+  },
+  {
+    "fullUrl" : "https://sender.example.org/fhir/Task/5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d",
+    "request" : {
+      "method" : "PUT",
+      "url" : "Task/5f2f9a4e-8c1d-4b6e-9d3a-7c0e2f4b8a1d"
+    },
+    "response" : {
+      "status" : "200"
+    }
+  }]
+}

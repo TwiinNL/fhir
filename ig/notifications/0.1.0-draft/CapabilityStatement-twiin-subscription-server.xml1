@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="twiin-subscription-server"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CapabilityStatement twiin-subscription-server</b></p><a name="twiin-subscription-server"> </a><a name="hctwiin-subscription-server"> </a><h2 id="title">Twiin Subscription Server</h2><ul><li>Implementation Guide Version: 0.1.0-draft </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <strong>SHALL</strong> support <code>json</code>, <strong>SHALL</strong> support <code>xml</code></li><li>Published on: 2026-10-08 </li><li>Published by: Twiin </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><p>This CapabilityStatement imports the CapabilityStatement <a href="http://hl7.org/fhir/uv/subscriptions-backport/STU1.1/CapabilityStatement-backport-subscription-server-r4.html">BackportSubscriptionCapabilityStatementR4 (version: 1.1.0)</a></p><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>server</code></h3></div><div class="panel-body"><div><p>Where the Subscription Server supports in-band Subscription creation, it SHOULD advertise the SubscriptionTopics it supports with the extension http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical (TA section Subscription Server).</p>
+</div><div class="lead"><em>Security</em></div><div class="row"><div class="col-lg-6">Enable CORS: no</div><div class="col-lg-6">Security services supported: <code>Certificates</code></div></div><blockquote><div><p>All endpoints are secured with mutual TLS (TA section Preconditions).</p>
+</div></blockquote></div></div><h3 id="resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="resourcesSummary1">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class="text-center"><b title="GET a resource (read interaction)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="POST a new resource (create interaction)">C</b></th><th class="text-center"><b title="DELETE a resource (delete interaction)">D</b></th><th><b title="Required and recommended search parameters">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href="#Subscription1-1">Subscription</a></td><td>Supported Profiles<br/>  <a href="StructureDefinition-twiin-subscription.html">Twiin Subscription</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="SHOULD-NOT">&#x1F6C7;?</span></td><td>status, criteria, url, type, payload, payload-type</td><td/><td/><td><code>$status</code>, <code>$events</code></td></tr></tbody></table></div><hr/><div class="panel panel-default"><div class="panel-heading"><h4 id="Subscription1-1" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Subscription</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="http://hl7.org/fhir/R4/subscription.html">Subscription</a></div><div class="col-lg-4"><span class="lead">Reference Policy</span><br/></div><div class="col-lg-4"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code><br/><code>update</code><div><p>Updating a Subscription: only status off and a change of channel.payload are permitted (TA section Updating a Subscription).</p>
+</div></li><li><strong>MAY</strong> support <br/><code>create</code><div><p>Required where a use-case-specific technical agreement specifies in-band creation for a SubscriptionTopic (TA section Subscription Server).</p>
+</div></li><li><strong>SHOULD-NOT</strong> support <br/><code>delete</code><div><p>A Subscription is ended by setting its status to off, not by deleting it (TA section Sequence Diagram, step 7).</p>
+</div></li></ul></div></div><p/><div class="row"><div class="col-6"><span class="lead">Supported Profiles</span><p><a href="StructureDefinition-twiin-subscription.html">Twiin Subscription</a></p></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/subscription.html#search">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/subscription.html#search">criteria</a></td><td><code>string</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/subscription.html#search">url</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/subscription.html#search">type</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/subscription.html#search">payload</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/uv/subscriptions-backport/STU1.1/SearchParameter-Subscription-payload-type.html">payload-type</a></td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div><div class="row"><div class="col-12"><span class="lead">Extended Operations</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Operation</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/uv/subscriptions-backport/STU1.1/OperationDefinition-backport-subscription-status.html">$status</a></td><td><div/></td></tr><tr><td><b>MAY</b></td><td><a href="http://hl7.org/fhir/uv/subscriptions-backport/STU1.1/OperationDefinition-backport-subscription-events.html">$events</a></td><td><div/></td></tr></tbody></table></div></div></div></div></div></div>
+  </text>
+  <url value="https://fhir.twiin.nl/ig/notifications/CapabilityStatement/twiin-subscription-server"/>
+  <version value="0.1.0-draft"/>
+  <name value="TwiinSubscriptionServer"/>
+  <title value="Twiin Subscription Server"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-10-08"/>
+  <publisher value="Twiin"/>
+  <description value="Requirements for a Subscription Server under TA Notifications (TA section System Roles and Responsibilities → Subscription Server). Imports the Backport IG Subscription Server CapabilityStatement for R4."/>
+  <copyright value="Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."/>
+  <kind value="requirements"/>
+  <imports value="http://hl7.org/fhir/uv/subscriptions-backport/CapabilityStatement/backport-subscription-server-r4|1.1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="json">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="SHALL"/>
+    </extension>
+  </format>
+  <format value="xml">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="SHALL"/>
+    </extension>
+  </format>
+  <rest>
+    <mode value="server"/>
+    <documentation value="Where the Subscription Server supports in-band Subscription creation, it SHOULD advertise the SubscriptionTopics it supports with the extension http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical (TA section Subscription Server)."/>
+    <security>
+      <service>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/restful-security-service"/>
+          <code value="Certificates"/>
+        </coding>
+      </service>
+      <description value="All endpoints are secured with mutual TLS (TA section Preconditions)."/>
+    </security>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Subscription"/>
+      <supportedProfile value="https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+        <documentation value="Updating a Subscription: only status off and a change of channel.payload are permitted (TA section Updating a Subscription)."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="create"/>
+        <documentation value="Required where a use-case-specific technical agreement specifies in-band creation for a SubscriptionTopic (TA section Subscription Server)."/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD-NOT"/>
+        </extension>
+        <code value="delete"/>
+        <documentation value="A Subscription is ended by setting its status to off, not by deleting it (TA section Sequence Diagram, step 7)."/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Subscription-status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="criteria"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Subscription-criteria"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="url"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Subscription-url"/>
+        <type value="uri"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="type"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Subscription-type"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="payload"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Subscription-payload"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="payload-type"/>
+        <definition value="http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-payload-type"/>
+        <type value="string"/>
+      </searchParam>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"/>
+      </operation>
+      <operation>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <name value="events"/>
+        <definition value="http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"/>
+      </operation>
+    </resource>
+  </rest>
+</CapabilityStatement>
