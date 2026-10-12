@@ -14,15 +14,6 @@
     "fhirversion" : "4.0.1",
     "date" : "2026-10-13",
     "desc" : "Second draft publication, technical specification of TA Workflow 0.3, in the Twiin house style"
-  },
-  {
-    "version" : "0.1.0-draft",
-    "path" : "https://fhir.twiin.nl/ig/workflow/0.1.0-draft",
-    "status" : "draft",
-    "sequence" : "Release 1",
-    "fhirversion" : "4.0.1",
-    "date" : "2026-10-12",
-    "desc" : "First draft publication, technical specification of TA Workflow 0.3"
   }],
   "package-id" : "nl.twiin.fhir.r4.workflow",
   "canonical" : "https://fhir.twiin.nl/ig/workflow",

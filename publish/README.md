@@ -32,3 +32,27 @@ git status --short   # expect only ig/<name>/index.html, history.html and files 
 ```
 
 Nothing in the version folders (`ig/<name>/<version>/`) is touched.
+
+## Removing a published version
+
+IG Publisher 3.0.0 has no way to remove a version; its withdrawal mode adds a `withdrawn` entry instead. Removing is done by hand, on a branch, so that the next `-go-publish` builds on the result. References are to IG Publisher 3.0.0 (`org.hl7.fhir.igtools.web`). Example: `0.1.0-draft` of Notifications and Workflow (git tags in the IG repositories stay).
+
+1. Inventory: `grep -rlI <version> . --exclude-dir=.git | grep -v "/<version>/"`. Check the later versions too: a version built after `<version>` contains `comparison-v<version>/` and a link to it in `qa.html` and `qa.min.html`.
+2. `git rm -r ig/<name>/<version>`.
+3. `ig/<name>/package-list.json`: remove the entry from `list`, leave everything else as is. The publisher reads and writes it with `PackageList` (`PublicationProcess.updatePackageList`): `current` (ci-build) first, then the newest version first.
+4. `ig/package-feed.xml` and `ig/publication-feed.xml`: remove the `<item>` of the version (one per feed). Leave `lastBuildDate` and `pubDate`; `PublicationProcess.updateFeedAsXml` inserts each new item before the first one and sets both dates.
+5. `package-registry.json`: lower `version-count` (versions in `package-list.json` without ci-build) and fix `latest` if it was the removed version (`PackageRegistryBuilder.update`).
+6. `publish/fhir-ig-list.json`: only if `editions` names the version (`IGRegistryMaintainer.seeEdition`).
+7. Later versions: remove `ig/<name>/<later>/comparison-v<version>/` and in its `qa.html` and `qa.min.html` replace `<a href="comparison-v<version>/index.html">Comparison with version <version></a>` by `n/a`. Leave `full-ig.zip`: it is a download, not a hosted page.
+8. Check that the publisher reads the files as it writes them; both must give no diff (run from a scratch copy):
+
+   ```sh
+   # package-list.json round trip and package-registry.json rebuild, with jshell --class-path publisher.jar
+   org.hl7.fhir.utilities.FileUtilities.stringToFile(org.hl7.fhir.utilities.npm.PackageList.fromFile(p).toJson(), p + ".rt");
+   new org.hl7.fhir.igtools.web.PackageRegistryBuilder("<copy of repo root>").build();
+   ```
+
+9. Regenerate the history pages (previous section). `history.html` and `index.html` normally do not change: the version table is read from `package-list.json` in the browser.
+10. Check: `git status` shows only these changes; `grep -rlI <version> . --exclude-dir=.git` finds only this README; each `package-list.json` has only the expected versions; each feed has one item per remaining version; `du -sk ig` before and after.
+11. Dry run of `-go-publish` on scratch copies of this repo and of the IG repository (built with `_genonce.sh`) of the latest published version. Expected: only "Found an entry in the publication package-list for v<latest> - it looks like it has already been published" and "Nominated path ... already exists", no parse errors; the scratch copy of the web root is unchanged.
+12. Update the IG repositories' READMEs if they mention the version.

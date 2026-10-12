@@ -6,7 +6,7 @@
     "canonical" : "https://fhir.twiin.nl/ig/notifications",
     "category" : "Infrastructure",
     "ci-build" : "https://github.com/TwiinNL/ig-notifications",
-    "version-count" : 2,
+    "version-count" : 1,
     "latest" : {
       "version" : "0.1.1-draft",
       "date" : "2026-10-12",
@@ -20,7 +20,7 @@
     "canonical" : "https://fhir.twiin.nl/ig/workflow",
     "category" : "Infrastructure",
     "ci-build" : "https://github.com/TwiinNL/ig-workflow",
-    "version-count" : 2,
+    "version-count" : 1,
     "latest" : {
       "version" : "0.1.1-draft",
       "date" : "2026-10-13",
