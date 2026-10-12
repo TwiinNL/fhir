@@ -15,7 +15,7 @@ Waarom hier: de Pages-workflow publiceert alleen `index.html` en `ig/`, en de pa
 - Opbouw (header, navbar met streep, breadcrumb, content, footer) en lettergroottes volgen de IG-pagina's (fhir2.base.template, CC0); kleuren en lettertype volgen de Twiin-huisstijl.
 - Logo: kleurenversie met het pad dat `#8E8A12` was gezet op `#3E4D5C` (de letterkleur in dezelfde SVG); verder ongewijzigd. Het logo is van Twiin en valt niet onder CC BY-SA 4.0 (vermeld in de footer).
 - Albert Sans: SIL Open Font License 1.1, Copyright 2023 The Albert Sans Project Authors (https://github.com/usted/Albert-Sans, `OFL.txt`); zelf hosten en subsetten is toegestaan zolang de licentietekst meegaat. De woff2-bestanden komen uit het npm-pakket `@fontsource/albert-sans` 5.2.5 (latin-subset). Alleen de gebruikte gewichten staan in de repo. Pagina's laden niets van externe hosts.
-- De header-, navbar- en footer-HTML staat zowel in `publish/web-templates/` als (met de hand) in `ig/index.html`; wijzig je het ene, wijzig dan ook het andere.
+- De header-, navbar- en footer-HTML staat zowel in `publish/web-templates/` als (met de hand) in `index.html` (rootpagina) en `ig/index.html`; wijzig je het ene, wijzig dan ook de andere. De footer van die twee handgemaakte pagina's heeft "© Twiin" zonder pakket-id.
 
 ### History-pagina's opnieuw genereren zonder publicatie
 
