@@ -1,0 +1,27 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/CodeSystem/task-code",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "TaskCode",
+    "title" : "Task Codes",
+    "description" : "Codes indicating the type of action that is expected to be performed",
+    "oids" : ["2.16.840.1.113883.4.642.4.1397"],
+    "uses" : {
+    },
+    "ValueSet-ta-workflow-task-code.html" : "TA Workflow Task Code"
+  },
+  {
+    "url" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+    "version" : "0.1.1-draft",
+    "status" : "draft",
+    "name" : "TAWorkflowCS",
+    "title" : "TA Workflow Codes",
+    "description" : "Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type.",
+    "uses" : {
+    },
+    "ValueSet-ta-workflow-status-reason.html" : "TA Workflow Status Reason",
+    "ValueSet-ta-workflow-business-status.html" : "TA Workflow Business Status",
+    "ValueSet-ta-workflow-task-code.html" : "TA Workflow Task Code"
+  }]
+}

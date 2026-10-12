@@ -33,10 +33,10 @@
     "product" : ["fhir"],
     "editions" : [{
       "name" : "Release 1 Draft",
-      "ig-version" : "0.1.0-draft",
-      "package" : "nl.twiin.fhir.r4.workflow#0.1.0-draft",
+      "ig-version" : "0.1.1-draft",
+      "package" : "nl.twiin.fhir.r4.workflow#0.1.1-draft",
       "fhir-version" : ["4.0.1"],
-      "url" : "https://fhir.twiin.nl/ig/workflow/0.1.0-draft"
+      "url" : "https://fhir.twiin.nl/ig/workflow/0.1.1-draft"
     }]
   }]
 }

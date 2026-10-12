@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ta-workflow-task-code"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ta-workflow-task-code</b></p><a name=\"ta-workflow-task-code\"> </a><a name=\"hcta-workflow-task-code\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-task-code.html\"><code>http://hl7.org/fhir/CodeSystem/task-code</code></a><span title=\"Version is explicitly stated to be 4.0.1\"> version ?4.0.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-task-code.html#task-code-fulfill\">fulfill</a></td><td style=\"color: #cccccc\">Fulfill the focal request</td><td>Act to perform the actions defined in the focus request.  This might result in a 'more assertive' request (order for a plan or proposal, filler order for a placer order), but is intend to eventually result in events.  The degree of fulfillment requested might be limited by Task.restriction.</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-ta-workflow.html\"><code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.1-draft</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-ta-workflow.html#ta-workflow-request-fulfillment\">request-fulfillment</a></td><td style=\"color: #cccccc\">Request fulfillment</td><td>The Multiple Fulfillers Pattern applies and no candidate has been selected yet; the owner is invited to accept and, optionally, to bid, and may not yet start the work.</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code"] ;
+  fhir:ValueSet.version [ fhir:value "0.1.1-draft"] ;
+  fhir:ValueSet.name [ fhir:value "TAWorkflowTaskCodeVS"] ;
+  fhir:ValueSet.title [ fhir:value "TA Workflow Task Code"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-13T00:04:50+02:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Twiin"] ;
+  fhir:ValueSet.description [ fhir:value "Codes for Task.code of the Coordination Task under TA Workflow."] ;
+  fhir:ValueSet.copyright [ fhir:value "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/task-code" ] ;
+       fhir:ValueSet.compose.include.version [ fhir:value "4.0.1" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "fulfill" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "request-fulfillment" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
