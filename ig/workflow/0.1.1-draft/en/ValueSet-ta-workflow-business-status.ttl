@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ta-workflow-business-status"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ta-workflow-business-status</b></p><a name=\"ta-workflow-business-status\"> </a><a name=\"hcta-workflow-business-status\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-ta-workflow.html\"><code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.1-draft</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-ta-workflow.html#ta-workflow-selected\">selected</a></td><td style=\"color: #cccccc\">Selected</td><td>The Placer has selected the owner of this Task as the Fulfiller.</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status"] ;
+  fhir:ValueSet.version [ fhir:value "0.1.1-draft"] ;
+  fhir:ValueSet.name [ fhir:value "TAWorkflowBusinessStatusVS"] ;
+  fhir:ValueSet.title [ fhir:value "TA Workflow Business Status"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-13T00:04:50+02:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Twiin"] ;
+  fhir:ValueSet.description [ fhir:value "Codes for Task.businessStatus of the Coordination Task under TA Workflow. Extensible: a use case MAY define further values; selected is set by the Placer only."] ;
+  fhir:ValueSet.copyright [ fhir:value "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "selected" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "3c717841-264d-4518-b036-d35ee62d50d5-26",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/3c717841-264d-4518-b036-d35ee62d50d5-26",
+  "name" : "UnionTAWorkflowTaskCodeVSAndTAWorkflowTaskCodeVS",
+  "title" : "Union of TA Workflow Task Code And TA Workflow Task Code",
+  "status" : "draft",
+  "date" : "2026-10-13T00:09:49+02:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "fulfill"
+      }]
+    },
+    {
+      "concept" : [{
+        "code" : "request-fulfillment"
+      }]
+    }]
+  }
+}
