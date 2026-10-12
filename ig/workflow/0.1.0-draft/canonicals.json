@@ -1,0 +1,63 @@
+[{
+  "id" : "twiin-workflow-placer-server",
+  "type" : "CapabilityStatement",
+  "url" : "https://fhir.twiin.nl/ig/workflow/CapabilityStatement/twiin-workflow-placer-server",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinWorkflowPlacerServer"
+},
+{
+  "id" : "ta-workflow",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+  "version" : "0.1.0-draft",
+  "name" : "TAWorkflowCS"
+},
+{
+  "id" : "nl.twiin.fhir.r4.workflow",
+  "type" : "ImplementationGuide",
+  "url" : "https://fhir.twiin.nl/ig/workflow/ImplementationGuide/nl.twiin.fhir.r4.workflow",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinWorkflow"
+},
+{
+  "id" : "twiin-authorization-cancellation-request-task",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-authorization-cancellation-request-task",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinAuthorizationCancellationRequestTask"
+},
+{
+  "id" : "twiin-cancellation-request-task",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-cancellation-request-task",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinCancellationRequestTask"
+},
+{
+  "id" : "twiin-coordination-task",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinCoordinationTask"
+},
+{
+  "id" : "twiin-workflow-servicerequest",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-workflow-servicerequest",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinWorkflowServiceRequest"
+},
+{
+  "id" : "twiin-workflow-subscription",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-workflow-subscription",
+  "version" : "0.1.0-draft",
+  "name" : "TwiinWorkflowSubscription"
+},
+{
+  "id" : "ta-workflow-task-code",
+  "type" : "ValueSet",
+  "url" : "https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code",
+  "version" : "0.1.0-draft",
+  "name" : "TAWorkflowTaskCodeVS"
+}]

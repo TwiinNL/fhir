@@ -18,5 +18,25 @@
       "fhir-version" : ["4.0.1"],
       "url" : "https://fhir.twiin.nl/ig/notifications/0.1.0-draft"
     }]
+  },
+  {
+    "name" : "Twiin Workflow",
+    "category" : "Infrastructure",
+    "npm-name" : "nl.twiin.fhir.r4.workflow",
+    "description" : "Technical specification of TA Workflow, part of the technical core of the Twiin Afsprakenstelsel.",
+    "authority" : "Twiin",
+    "country" : "nl",
+    "history" : "https://fhir.twiin.nl/ig/workflow/history.html",
+    "language" : ["en"],
+    "canonical" : "https://fhir.twiin.nl/ig/workflow",
+    "ci-build" : "https://github.com/TwiinNL/ig-workflow",
+    "product" : ["fhir"],
+    "editions" : [{
+      "name" : "Release 1 Draft",
+      "ig-version" : "0.1.0-draft",
+      "package" : "nl.twiin.fhir.r4.workflow#0.1.0-draft",
+      "fhir-version" : ["4.0.1"],
+      "url" : "https://fhir.twiin.nl/ig/workflow/0.1.0-draft"
+    }]
   }]
 }
