@@ -19,3 +19,16 @@ java -jar publisher.jar -go-publish -source <ig-repo> -web $PWD \
   -registry $PWD/publish/fhir-ig-list.json -history $PWD/publish/history-template \
   -templates $PWD/publish/web-templates -temp <tmp> -zips <tmp>/zips
 ```
+
+## After changing the history template or web templates
+
+Regenerate the existing history pages without publishing again (from the repo root, with `publisher.jar` 3.0.0 or newer; `HistoryPageUpdater` has its own `main`):
+
+```sh
+rm ig/*/index.html   # only so that index.html is made again; it is only written if missing or containing XXXX
+java -cp publisher.jar org.hl7.fhir.igtools.web.HistoryPageUpdater \
+  $PWD/publish/history-template $PWD $PWD/publish/web-templates
+git status --short   # expect only ig/<name>/index.html, history.html and files from manifest.ini
+```
+
+Nothing in the version folders (`ig/<name>/<version>/`) is touched.
