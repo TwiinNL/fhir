@@ -1,12 +1,17 @@
 <body>
  <div id="segment-header" class="segment">
   <div class="container">
-   <p style="font-size:24px;padding-top:20px;">
-    <a href="https://fhir.twiin.nl">Twiin</a> &ndash; <b id="ig-title">[%title%]</b>
-   </p>
+   <a id="logo" href="/" title="Twiin"><img src="/ig/_twiin/twiin-logo.svg" alt="Twiin - Landelijk afsprakenstelsel voor gezondheidsgegevens"/></a>
   </div>
  </div>
- <div id="segment-content" class="segment">
+ <div id="segment-navbar" class="segment">
+  <div id="stripe"> </div>
   <div class="container">
-   <div class="row">
-    <div class="inner-wrapper">
+   <nav class="navbar">
+    <ul class="nav">
+     <li><a href="/">Home</a></li>
+     <li><a href="/ig/">Implementation Guides</a></li>
+    </ul>
+   </nav>
+  </div>
+ </div>

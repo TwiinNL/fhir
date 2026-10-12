@@ -1,0 +1,189 @@
+/*
+  Shared style of the pages we make ourselves: ig/index.html and the history pages made from
+  publish/history-template. Structure, class names and type sizes follow the pages of the
+  IG Publisher base template (fhir2.base.template, CC0): segment-header, navbar with stripe,
+  breadcrumb, segment-content, segment-footer. Colours and typeface follow the Twiin house style
+  (styleguide.md). Content: CC BY-SA 4.0. Code: licence TBD.
+*/
+
+@font-face {
+  font-family: "Albert Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/albert-sans-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Albert Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/albert-sans-latin-700-normal.woff2") format("woff2");
+}
+
+:root {
+  --rood: #EE4763;
+  --oranje: #FF8C02;
+  --donkergrijs: #3E4D5B;
+  --grijsblauw: #4C7091;
+  --grijs: #8B9CB2;
+  --lichtgrijs: #E9E9E9;
+  --lichtgrijs-20: #F8F8F8;
+  --grijs-40: #D1D7E0;
+
+  --text-color: var(--donkergrijs);
+  --link-color: var(--grijsblauw);        /* 5.0:1 on white; Blauw (#4797CE) is only 3.1:1 */
+  --link-hover-color: var(--donkergrijs);
+  --navbar-bg-color: var(--donkergrijs);
+  --btn-hover-color: var(--grijsblauw);
+  --btn-text-color: #ffffff;
+  --breadcrumb-bg-color: var(--lichtgrijs);
+  --footer-bg-color: var(--donkergrijs);
+  --footer-text-color: #ffffff;
+  --footer-link-color: var(--lichtgrijs);
+
+  --logo-width: 260px;                    /* at least about 250 px (styleguide) */
+  --logo-clear: calc(var(--logo-width) * 0.2);
+  --stripe-gradient: linear-gradient(90deg, var(--oranje), var(--rood));
+}
+
+html { background-color: #ffffff; }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: var(--text-color);
+  font-family: "Albert Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  word-wrap: break-word;
+}
+
+.segment { position: relative; }
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  max-width: 1100px;
+}
+@media (max-width: 1099px) { .container { max-width: 940px; } }
+@media (max-width: 991px) { .container { max-width: 728px; } }
+@media (max-width: 767px) { .container { max-width: none; } }
+
+/* Header: only the logo, with a clear zone of 20% of its width on every side. */
+#segment-header { background-color: var(--lichtgrijs-20); }
+#segment-header .container { background-color: #ffffff; padding: var(--logo-clear); }
+#logo {
+  display: block;
+  width: var(--logo-width);
+  max-width: 100%;
+}
+#logo img { display: block; width: 100%; height: auto; }
+
+/* Navbar with stripe, as in the IG pages. */
+#segment-navbar { background-color: #ffffff; }
+#stripe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 8px;
+  background: var(--stripe-gradient);
+}
+.navbar { padding-top: 8px; background-color: var(--navbar-bg-color); }
+.navbar ul.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar .nav > li > a {
+  display: block;
+  padding: 10px 12px;
+  line-height: 20px;
+  color: var(--btn-text-color);
+  text-decoration: none;
+}
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus { background-color: var(--btn-hover-color); color: #ffffff; }
+.navbar .nav > li.active > a { background-color: var(--btn-hover-color); }
+
+.breadcrumb {
+  margin: 0;
+  padding: 8px 15px;
+  list-style: none;
+  background-color: var(--breadcrumb-bg-color);
+}
+.breadcrumb > li { display: inline-block; }
+.breadcrumb > li + li:before { content: ">\00a0"; padding: 0 5px; color: var(--grijs); }
+.breadcrumb a { color: var(--donkergrijs); }
+
+/* Content */
+.inner-wrapper { margin-top: 4px; margin-bottom: 20px; }
+@media (max-width: 1100px) { #segment-content .inner-wrapper { padding: 0 15px; } }
+a { color: var(--link-color); text-decoration: none; }
+a:hover, a:focus { color: var(--link-hover-color); text-decoration: underline; }
+
+a.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--navbar-bg-color);
+  color: #ffffff;
+  font-weight: 700;
+}
+a.button:hover, a.button:focus { background-color: var(--btn-hover-color); color: #ffffff; text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 15px 0 10px 0;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--donkergrijs);
+}
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+
+/* Sizes of paragraph, list and table text as in fhir.css of the IG pages */
+p, li, td, th {
+  font-size: 12px;
+  line-height: 1.4em;
+}
+p { margin: 0 0 20px 0; }
+ul { margin: 10px 0; padding: 0 0 0 25px; }
+code { font-family: Menlo, Consolas, "Courier New", monospace; font-size: 12px; color: var(--donkergrijs); }
+
+#publish-box {
+  margin: 0 0 20px 0;
+  padding: 5px 10px;
+  background-color: var(--lichtgrijs-20);
+  border: 1px solid var(--grijs-40);
+  border-left: 4px solid var(--oranje);
+}
+
+#history-table, #ig-table { overflow-x: auto; }
+#history-table table, #ig-table table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#history-table th, #history-table td, #ig-table th, #ig-table td {
+  text-align: left;
+  padding: 6px;
+  vertical-align: top;
+  border: 1px solid var(--grijs-40);
+}
+#history-table th, #ig-table th {
+  background-color: var(--lichtgrijs);
+  font-weight: 700;
+}
+
+/* Footer, as in the IG pages */
+#segment-footer { background-color: var(--lichtgrijs); margin-top: 20px; }
+#segment-footer .container { background-color: var(--footer-bg-color); color: var(--footer-text-color); }
+#segment-footer .inner-wrapper { margin: 0; padding: 8px 15px; }
+#segment-footer p { margin: 0 0 6px 0; color: var(--footer-text-color); }
+#segment-footer p:last-child { margin-bottom: 0; }
+#segment-footer a { color: var(--footer-link-color); text-decoration: underline; }

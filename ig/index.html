@@ -4,21 +4,32 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Twiin FHIR Implementation Guides</title>
-  <style>
-body { font-family: system-ui, sans-serif; margin: 0; color: #222; }
-.container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
-#segment-footer { border-top: 1px solid #ccc; margin-top: 2em; font-size: 0.9em; }
-#ig-table table { border-collapse: collapse; width: 100%; }
-#ig-table th, #ig-table td { text-align: left; padding: 4px 8px; border-bottom: 1px solid #ddd; vertical-align: top; }
-  </style>
   <meta name="author" content="Twiin"/>
+  <link rel="icon" type="image/png" href="/ig/_twiin/favicon.png"/>
+  <link rel="stylesheet" href="/ig/_twiin/site.css"/>
 </head>
 <body>
  <div id="segment-header" class="segment">
   <div class="container">
-   <p style="font-size:24px;padding-top:20px;">
-    <a href="https://fhir.twiin.nl">Twiin</a> &ndash; <b id="ig-title">FHIR Implementation Guides</b>
-   </p>
+   <a id="logo" href="/" title="Twiin"><img src="/ig/_twiin/twiin-logo.svg" alt="Twiin - Landelijk afsprakenstelsel voor gezondheidsgegevens"/></a>
+  </div>
+ </div>
+ <div id="segment-navbar" class="segment">
+  <div id="stripe"> </div>
+  <div class="container">
+   <nav class="navbar">
+    <ul class="nav">
+     <li><a href="/">Home</a></li>
+     <li class="active"><a href="/ig/">Implementation Guides</a></li>
+    </ul>
+   </nav>
+  </div>
+ </div>
+ <div id="segment-breadcrumb" class="segment">
+  <div class="container">
+   <ul class="breadcrumb">
+    <li><b>Implementation Guides</b></li>
+   </ul>
   </div>
  </div>
  <div id="segment-content" class="segment">
@@ -27,8 +38,8 @@ body { font-family: system-ui, sans-serif; margin: 0; color: #222; }
     <div class="inner-wrapper">
 
 <div class="col-12">
+<p id="publish-box">The newest published version of each implementation guide, with its status. Every version stays available at its own address; follow &ldquo;Version list&rdquo; for all of them.</p>
 <h2>Twiin FHIR Implementation Guides</h2>
-<p>The newest published version of each implementation guide, with its status. Every version stays available at its own address; follow &ldquo;Version list&rdquo; for all of them.</p>
 <div id="ig-table"><p>Loading the implementation guides&hellip;</p></div>
 <noscript><p>This list needs JavaScript; the raw list is in <a href="package-feed.xml">package-feed.xml</a>.</p></noscript>
    </div> <!-- /col-12 -->
@@ -41,8 +52,12 @@ body { font-family: system-ui, sans-serif; margin: 0; color: #222; }
   <div class="container">
    <div class="inner-wrapper">
     <p>
-     <span id="ig-footer">nl.twiin.fhir</span> &copy; <a href="https://fhir.twiin.nl">Twiin</a> |
-     Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+     &copy; <a href="https://fhir.twiin.nl">Twiin</a>.
+     Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+    </p>
+    <p>
+     The Twiin logo belongs to Twiin and is not covered by CC BY-SA 4.0.
+     The licence of the code on this page is still to be determined.
     </p>
    </div>
   </div>

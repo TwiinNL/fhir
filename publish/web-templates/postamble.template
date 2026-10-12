@@ -8,8 +8,12 @@
   <div class="container">
    <div class="inner-wrapper">
     <p>
-     <span id="ig-footer">[%id%]</span> &copy; <a href="https://fhir.twiin.nl">Twiin</a> |
-     Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+     <span id="ig-footer">[%id%]</span> &copy; <a href="https://fhir.twiin.nl">Twiin</a>.
+     Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+    </p>
+    <p>
+     The Twiin logo belongs to Twiin and is not covered by CC BY-SA 4.0.
+     The licence of the code on this page is still to be determined.
     </p>
    </div>
   </div>

@@ -5,10 +5,10 @@ Inputs for `-go-publish` (IG Publisher). Not deployed: the Pages workflow publis
 - `history-template/`: own files, read by `HistoryPageUpdater` (IG Publisher 3.0.0, `web/HistoryPageUpdater.java`). Nothing from HL7/fhir-ig-history-template is used.
   - `history.template` (required) becomes `ig/<name>/history.html`.
   - `index.html` becomes `ig/<name>/index.html` only on the first publication and only if the IG folder has no `index.html` yet (working release). It must contain the marker `XXXX`, which the publisher removes.
-  - `manifest.ini`: `[files]` lists the files copied into `ig/<name>/` (`overwrite` or `if-missing`).
+  - `manifest.ini`: `[files]` lists the files copied into `ig/<name>/` (`overwrite` or `if-missing`); only `history-table.js`, the stylesheet is shared.
   - Placeholders the publisher fills in: `$header$`, `$preamble$`, `$postamble$` (from `web-templates/`), `[%title%]` and `[%id%]` (title and package id from `package-list.json`), `[%json%]` (the package list; not used here).
   - `history-table.js` reads `package-list.json` next to the page and lists each version (version, date, status, sequence, description, link). No scripts or other files from external hosts.
-- `web-templates/`: header, preamble and postamble for the history pages (Twiin, CC BY-SA 4.0, no HL7 house style).
+- `web-templates/`: header, preamble and postamble for the history pages: Twiin house style on the structure of the IG pages; CSS, logo, favicon and font come from `ig/_twiin/` (see the root README). Each page template supplies its own breadcrumb and opens the content area; the postamble closes it and adds the footer (CC BY-SA 4.0 for content, logo excluded, code licence TBD).
 - License: content (templates, texts) CC BY-SA 4.0; code (`history-table.js`, and `ig/index.js` for the overview page `ig/index.html`): TBD, no license chosen yet. The text of `ig/index.html` is CC BY-SA 4.0.
 - `fhir-ig-list.json`: local IG registry, updated by every publication. Not submitted to FHIR/ig-registry.
 
@@ -19,3 +19,16 @@ java -jar publisher.jar -go-publish -source <ig-repo> -web $PWD \
   -registry $PWD/publish/fhir-ig-list.json -history $PWD/publish/history-template \
   -templates $PWD/publish/web-templates -temp <tmp> -zips <tmp>/zips
 ```
+
+## After changing the history template or web templates
+
+Regenerate the existing history pages without publishing again (from the repo root, with `publisher.jar` 3.0.0 or newer; `HistoryPageUpdater` has its own `main`):
+
+```sh
+rm ig/*/index.html   # only so that index.html is made again; it is only written if missing or containing XXXX
+java -cp publisher.jar org.hl7.fhir.igtools.web.HistoryPageUpdater \
+  $PWD/publish/history-template $PWD $PWD/publish/web-templates
+git status --short   # expect only ig/<name>/index.html, history.html and files from manifest.ini
+```
+
+Nothing in the version folders (`ig/<name>/<version>/`) is touched.
