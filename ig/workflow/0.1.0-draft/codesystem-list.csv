@@ -1,2 +1,0 @@
-URL,Version,Status,OIDs,Name,Title,Description,Used
-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow,0.1.0-draft,draft,,TAWorkflowCS,TA Workflow Codes,"Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type.",

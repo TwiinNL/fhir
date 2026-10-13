@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "3c717841-264d-4518-b036-d35ee62d50d5-18",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/3c717841-264d-4518-b036-d35ee62d50d5-18",
-  "name" : "IntersectionBusinessStatusAndTAWorkflowBusinessStatusVS",
-  "title" : "Intersection of Clinical Orders Workflow Business Status Codes And TA Workflow Business Status",
-  "status" : "active",
-  "date" : "2026-10-13T00:09:49+02:00"
-}
