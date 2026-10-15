@@ -1,0 +1,78 @@
+TwiinNotifications : Validation Results
+=========================================
+
+err = 3, warn = 9, info = 27, broken links = 0
+IG Publisher Version: 3.0.0
+Generated Thu Oct 15 14:59:22 UTC 2026. FHIR version 4.0.1 for nl.twiin.fhir.r4.notifications#0.2.0-draft (canonical = https://fhir.twiin.nl/ig/notifications)
+ Build Errors : 2 / 0 / 0
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Bundle-events-response-auth : 0 / 1 / 7
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Bundle-notification-event-empty : 0 / 1 / 6
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Bundle-notification-event-full-resource : 0 / 1 / 8
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Bundle-notification-event-id-only : 0 / 1 / 7
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Bundle-notification-handshake : 0 / 1 / 6
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Bundle-notification-heartbeat : 0 / 1 / 6
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Bundle-status-response : 0 / 1 / 6
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/CapabilityStatement-twiin-subscription-server : 0 / 0 / 2
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/ImplementationGuide-nl.twiin.fhir.r4.notifications : 0 / 1 / 2
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/StructureDefinition-twiin-subscription : 0 / 1 / 3
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/StructureDefinition-twiin-subscription-notification : 0 / 0 / 3
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/StructureDefinition-twiin-subscription-status : 1 / 0 / 3
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Subscription-7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59 : 0 / 0 / 1
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/Subscription-subscription-create-id-only : 0 / 0 / 1
+ /work/ig-builds/nl.twiin.fhir.r4.notifications#0.2.0-draft/fsh-generated/resources/ValueSet-twiin-notification-formats : 0 / 1 / 1
+</table>
+== n/a ==
+ERROR: ImplementationGuide/nl.twiin.fhir.r4.notifications: This IG is version 4.0.1, while the IG 'hl7.fhir.uv.subscriptions-backport.r4' is from version 4.0.0
+ERROR: Parameters.parameter.value: The reference http://hl7.org/fhir/ValueSet/subscription-notification-type could not be resolved
+== fsh-generated/resources/Bundle-events-response-auth.json ==
+INFORMATION: Bundle/events-response-auth: Bundle.entry[0].resource/*Parameters/events-response-auth-status*/.parameter[0]: The parameter 'subscription' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type Reference. Check that this is correct
+INFORMATION: Bundle/events-response-auth: Bundle.entry[0].resource/*Parameters/events-response-auth-status*/.parameter[1]: The parameter 'topic' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type canonical. Check that this is correct
+WARNING: Bundle/events-response-auth: Bundle.entry[0].resource/*Parameters/events-response-auth-status*/.parameter[3].value.ofType(code): ValueSet 'http://hl7.org/fhir/ValueSet/subscription-notification-type' not found
+INFORMATION: Bundle/events-response-auth: Bundle.entry[0].resource/*Parameters/events-response-auth-status*/.parameter[4].part[3]: This element does not match any known slice defined in the profile https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status|0.2.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/events-response-auth: Bundle.entry[0].resource/*Parameters/events-response-auth-status*/.parameter[4].part[4]: This element does not match any known slice defined in the profile https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status|0.2.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Bundle-notification-event-empty.json ==
+INFORMATION: Bundle/notification-event-empty: Bundle.entry[0].resource/*Parameters/notification-event-empty-status*/.parameter[0]: The parameter 'subscription' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type Reference. Check that this is correct
+INFORMATION: Bundle/notification-event-empty: Bundle.entry[0].resource/*Parameters/notification-event-empty-status*/.parameter[1]: The parameter 'topic' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type canonical. Check that this is correct
+WARNING: Bundle/notification-event-empty: Bundle.entry[0].resource/*Parameters/notification-event-empty-status*/.parameter[3].value.ofType(code): ValueSet 'http://hl7.org/fhir/ValueSet/subscription-notification-type' not found
+== fsh-generated/resources/Bundle-notification-event-full-resource.json ==
+INFORMATION: Bundle/notification-event-full-resource: Bundle.entry[1]: This element does not match any known slice defined in the profile https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification|0.2.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/notification-event-full-resource: Bundle.entry[0].resource/*Parameters/notification-event-full-resource-status*/.parameter[0]: The parameter 'subscription' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type Reference. Check that this is correct
+INFORMATION: Bundle/notification-event-full-resource: Bundle.entry[0].resource/*Parameters/notification-event-full-resource-status*/.parameter[1]: The parameter 'topic' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type canonical. Check that this is correct
+WARNING: Bundle/notification-event-full-resource: Bundle.entry[0].resource/*Parameters/notification-event-full-resource-status*/.parameter[3].value.ofType(code): ValueSet 'http://hl7.org/fhir/ValueSet/subscription-notification-type' not found
+== fsh-generated/resources/Bundle-notification-event-id-only.json ==
+INFORMATION: Bundle/notification-event-id-only: Bundle.entry[1]: This element does not match any known slice defined in the profile https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-notification|0.2.0-draft (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/notification-event-id-only: Bundle.entry[0].resource/*Parameters/notification-event-id-only-status*/.parameter[0]: The parameter 'subscription' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type Reference. Check that this is correct
+INFORMATION: Bundle/notification-event-id-only: Bundle.entry[0].resource/*Parameters/notification-event-id-only-status*/.parameter[1]: The parameter 'topic' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type canonical. Check that this is correct
+WARNING: Bundle/notification-event-id-only: Bundle.entry[0].resource/*Parameters/notification-event-id-only-status*/.parameter[3].value.ofType(code): ValueSet 'http://hl7.org/fhir/ValueSet/subscription-notification-type' not found
+== fsh-generated/resources/Bundle-notification-handshake.json ==
+INFORMATION: Bundle/notification-handshake: Bundle.entry[0].resource/*Parameters/notification-handshake-status*/.parameter[0]: The parameter 'subscription' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type Reference. Check that this is correct
+INFORMATION: Bundle/notification-handshake: Bundle.entry[0].resource/*Parameters/notification-handshake-status*/.parameter[1]: The parameter 'topic' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type canonical. Check that this is correct
+WARNING: Bundle/notification-handshake: Bundle.entry[0].resource/*Parameters/notification-handshake-status*/.parameter[3].value.ofType(code): ValueSet 'http://hl7.org/fhir/ValueSet/subscription-notification-type' not found
+== fsh-generated/resources/Bundle-notification-heartbeat.json ==
+INFORMATION: Bundle/notification-heartbeat: Bundle.entry[0].resource/*Parameters/notification-heartbeat-status*/.parameter[0]: The parameter 'subscription' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type Reference. Check that this is correct
+INFORMATION: Bundle/notification-heartbeat: Bundle.entry[0].resource/*Parameters/notification-heartbeat-status*/.parameter[1]: The parameter 'topic' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type canonical. Check that this is correct
+WARNING: Bundle/notification-heartbeat: Bundle.entry[0].resource/*Parameters/notification-heartbeat-status*/.parameter[3].value.ofType(code): ValueSet 'http://hl7.org/fhir/ValueSet/subscription-notification-type' not found
+== fsh-generated/resources/Bundle-status-response.json ==
+INFORMATION: Bundle/status-response: Bundle.entry[0].resource/*Parameters/status-response-status*/.parameter[0]: The parameter 'subscription' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type Reference. Check that this is correct
+INFORMATION: Bundle/status-response: Bundle.entry[0].resource/*Parameters/status-response-status*/.parameter[1]: The parameter 'topic' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of string, but this parameter instead has a value of type canonical. Check that this is correct
+WARNING: Bundle/status-response: Bundle.entry[0].resource/*Parameters/status-response-status*/.parameter[3].value.ofType(code): ValueSet 'http://hl7.org/fhir/ValueSet/subscription-notification-type' not found
+INFORMATION: Bundle/status-response: Bundle: No types could be determined from the search string, so the types can't be checked
+== fsh-generated/resources/CapabilityStatement-twiin-subscription-server.json ==
+INFORMATION: Resource: The resource CapabilityStatement/twiin-subscription-server could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+== fsh-generated/resources/ImplementationGuide-nl.twiin.fhir.r4.notifications.json ==
+WARNING: ImplementationGuide/nl.twiin.fhir.r4.notifications: ImplementationGuide.dependsOn[2]: The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.fhir.uv.subscriptions-backport.r4#1.1.0 is based on FHIR version 4.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+INFORMATION: Resource: The resource ImplementationGuide/nl.twiin.fhir.r4.notifications could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+== fsh-generated/resources/StructureDefinition-twiin-subscription.json ==
+WARNING: Twiin Subscription.Subscription.channel.payload: Binding http://hl7.org/fhir/ValueSet/mimetypes|4.0.0 could not be expanded
+INFORMATION: StructureDefinition/twiin-subscription: StructureDefinition.snapshot.element[17].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+INFORMATION: Resource: The resource StructureDefinition/twiin-subscription could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+== fsh-generated/resources/StructureDefinition-twiin-subscription-notification.json ==
+INFORMATION: StructureDefinition/twiin-subscription-notification: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+INFORMATION: Resource: The resource StructureDefinition/twiin-subscription-notification could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+== fsh-generated/resources/StructureDefinition-twiin-subscription-status.json ==
+ERROR: StructureDefinition/twiin-subscription-status: StructureDefinition.snapshot.element[42].binding.valueSet: A definition could not be found for Canonical URL 'http://hl7.org/fhir/ValueSet/subscription-notification-type'
+INFORMATION: Resource: The resource StructureDefinition/twiin-subscription-status could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+INFORMATION: StructureDefinition.where(url = 'https://fhir.twiin.nl/ig/notifications/StructureDefinition/twiin-subscription-status'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/Subscription-7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59.json ==
+== fsh-generated/resources/Subscription-subscription-create-id-only.json ==
+== fsh-generated/resources/ValueSet-twiin-notification-formats.json ==

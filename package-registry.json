@@ -6,11 +6,11 @@
     "canonical" : "https://fhir.twiin.nl/ig/notifications",
     "category" : "Infrastructure",
     "ci-build" : "https://github.com/TwiinNL/ig-notifications",
-    "version-count" : 1,
+    "version-count" : 2,
     "latest" : {
-      "version" : "0.1.1-draft",
-      "date" : "2026-10-12",
-      "path" : "https://fhir.twiin.nl/ig/notifications/0.1.1-draft"
+      "version" : "0.2.0-draft",
+      "date" : "2026-10-15",
+      "path" : "https://fhir.twiin.nl/ig/notifications/0.2.0-draft"
     }
   },
   {

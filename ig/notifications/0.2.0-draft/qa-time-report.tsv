@@ -1,0 +1,24 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	translate	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-nl.twiin.fhir.r4.notifications.json	8503	-	0	0	0	0	0	0	3	18	0	0	0	0	0	0	0	0	0	0	0	40	50	0	0	0	1	0	0
+fsh-generated/resources/Bundle-events-response-auth.json	2503	3	5	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6	729	0	0	0	0	0	0
+fsh-generated/resources/Bundle-notification-event-empty.json	1736	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5	5	0	0	0	0	0	0
+fsh-generated/resources/Bundle-notification-event-full-resource.json	2418	1	2	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	6	7	0	0	0	0	0	0
+fsh-generated/resources/Bundle-notification-event-id-only.json	2238	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4	5	0	0	0	0	0	0
+fsh-generated/resources/Bundle-notification-handshake.json	1390	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	5	0	0	0	0	0	0
+fsh-generated/resources/Bundle-notification-heartbeat.json	1499	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5	5	0	0	0	0	0	0
+fsh-generated/resources/Bundle-status-response.json	1363	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	6	0	0	0	0	0	0
+fsh-generated/resources/CapabilityStatement-twiin-subscription-server.json	7289	1	0	0	0	0	0	0	0	16	0	0	0	0	0	0	0	1	0	0	0	14	23	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-twiin-subscription-notification.json	3565	1	0	35	0	0	0	0	0	16	0	0	1	0	0	0	0	0	0	0	0	80	475	0	0	0	4	1	1
+fsh-generated/resources/StructureDefinition-twiin-subscription-status.json	4599	0	0	12	0	0	0	0	0	10	0	0	0	0	0	0	0	1	0	0	0	81	305	0	0	0	3	0	1
+fsh-generated/resources/StructureDefinition-twiin-subscription.json	2052	0	0	413	0	0	0	0	0	6	0	0	0	0	0	0	0	1	0	0	0	40	125	0	0	0	1	0	0
+fsh-generated/resources/Subscription-7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59.json	978	1	0	0	0	0	0	0	0	226	0	0	0	0	0	0	0	0	0	0	0	4	4	0	0	0	0	0	0
+fsh-generated/resources/Subscription-subscription-create-id-only.json	975	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	5	3	0	0	0	0	0	0
+fsh-generated/resources/ValueSet-twiin-notification-formats.json	786	0	0	0	0	0	0	0	0	1357	0	0	0	0	0	0	0	0	0	0	0	7	144	0	0	0	1	0	0
+/fsh-generated/includes/fsh-link-references.md	994	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/fsh-generated/includes/menu.xml	1194	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/artifacts-overview.md	4306	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/index.md	1144	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/requirements-not-in-artifacts.md	2442	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/temp/pages/_includes/artifacts.xml	12310	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1	0	0	0	0	0	0
