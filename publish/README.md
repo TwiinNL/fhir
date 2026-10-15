@@ -56,3 +56,7 @@ IG Publisher 3.0.0 has no way to remove a version; its withdrawal mode adds a `w
 10. Check: `git status` shows only these changes; `grep -rlI <version> . --exclude-dir=.git` finds only this README; each `package-list.json` has only the expected versions; each feed has one item per remaining version; `du -sk ig` before and after.
 11. Dry run of `-go-publish` on scratch copies of this repo and of the IG repository (built with `_genonce.sh`) of the latest published version. Expected: only "Found an entry in the publication package-list for v<latest> - it looks like it has already been published" and "Nominated path ... already exists", no parse errors; the scratch copy of the web root is unchanged.
 12. Update the IG repositories' READMEs if they mention the version.
+
+## Known issues
+
+- **Feed dates use a 12-hour clock.** IG Publisher 3.0.0 writes `lastBuildDate` and `pubDate` in `ig/package-feed.xml` and `ig/publication-feed.xml` with a 12-hour clock and no AM/PM marker: a build at 14:58:55 UTC is written as `Thu, 15 Oct 2026 02:58:55 +0000` (seen at the publication of Notifications 0.2.0-draft). The feeds are written by the publisher and are not edited by hand; the dates stay as written until the publisher is fixed.
