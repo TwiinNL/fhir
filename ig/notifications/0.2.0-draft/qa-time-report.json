@@ -1,0 +1,591 @@
+{
+  "date" : "Thu, 15 Oct, 2026 14:58:55 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-nl.twiin.fhir.r4.notifications.json",
+    "size" : 8503,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 7,
+      "length" : 2
+    },
+    {
+      "activity" : "scan",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 7,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 7,
+      "length" : 18
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 3082
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 40
+    },
+    {
+      "activity" : "generate2",
+      "start" : 17,
+      "length" : 50
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 22,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-events-response-auth.json",
+    "size" : 2503,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 7,
+      "length" : 5
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 133
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 17,
+      "length" : 729
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-notification-event-empty.json",
+    "size" : 1736,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 14
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-notification-event-full-resource.json",
+    "size" : 2418,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 7,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 7,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-notification-event-id-only.json",
+    "size" : 2238,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-notification-handshake.json",
+    "size" : 1390,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-notification-heartbeat.json",
+    "size" : 1499,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-status-response.json",
+    "size" : 1363,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CapabilityStatement-twiin-subscription-server.json",
+    "size" : 7289,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 7,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 7,
+      "length" : 16
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 18
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 23
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-subscription-notification.json",
+    "size" : 3565,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 7,
+      "length" : 2
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 7,
+      "length" : 35
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 7,
+      "length" : 16
+    },
+    {
+      "activity" : "validate",
+      "start" : 9,
+      "length" : 408
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 14,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 80
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 475
+    },
+    {
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 241
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 22,
+      "length" : 4
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 27,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 27,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-subscription-status.json",
+    "size" : 4599,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 7,
+      "length" : 2
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 7,
+      "length" : 12
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 7,
+      "length" : 10
+    },
+    {
+      "activity" : "validate",
+      "start" : 10,
+      "length" : 716
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 81
+    },
+    {
+      "activity" : "generate2",
+      "start" : 18,
+      "length" : 305
+    },
+    {
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 188
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 22,
+      "length" : 3
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 27,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-subscription.json",
+    "size" : 2052,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 7,
+      "length" : 413
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 7,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 53
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 15,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 40
+    },
+    {
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 125
+    },
+    {
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 65
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 22,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Subscription-7f3e9a2c-5d18-4b6f-9c3a-8e2d4f6b1a59.json",
+    "size" : 978,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 7,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 7,
+      "length" : 226
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 153
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Subscription-subscription-create-id-only.json",
+    "size" : 975,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 8,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 14,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-twiin-notification-formats.json",
+    "size" : 786,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 7,
+      "length" : 6
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 8,
+      "length" : 1357
+    },
+    {
+      "activity" : "validate",
+      "start" : 9,
+      "length" : 516
+    },
+    {
+      "activity" : "generate1",
+      "start" : 15,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 144
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 22,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 994,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 1194
+  },
+  {
+    "name" : "/input/pagecontent/artifacts-overview.md",
+    "size" : 4306
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 1144
+  },
+  {
+    "name" : "/input/pagecontent/requirements-not-in-artifacts.md",
+    "size" : 2442
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 12310,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 19,
+      "length" : 1
+    }]
+  }]
+}
