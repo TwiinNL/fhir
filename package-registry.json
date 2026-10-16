@@ -20,11 +20,11 @@
     "canonical" : "https://fhir.twiin.nl/ig/workflow",
     "category" : "Infrastructure",
     "ci-build" : "https://github.com/TwiinNL/ig-workflow",
-    "version-count" : 2,
+    "version-count" : 3,
     "latest" : {
-      "version" : "0.2.0-draft",
+      "version" : "0.3.0-draft",
       "date" : "2026-10-16",
-      "path" : "https://fhir.twiin.nl/ig/workflow/0.2.0-draft"
+      "path" : "https://fhir.twiin.nl/ig/workflow/0.3.0-draft"
     }
   }]
 }

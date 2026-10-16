@@ -1,0 +1,6 @@
+{
+  "version" : "0.3.0-draft",
+  "fhirVersion" : ["4.0.1"],
+  "date" : "20261016112939",
+  "name" : "nl.twiin.fhir.r4.workflow"
+}

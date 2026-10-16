@@ -12,6 +12,8 @@
 #
 # Needs docker; build the image first: docker build -t twiin-ig-publish publish/docker
 # Writes into <fhir-checkout>: nothing is committed or pushed.
+# Exits non-zero unless the container exited 0, ig/<ig>/<version>/ (from publication-request.json
+# of the IG) is new in <fhir-checkout> and go-publish.log has the publisher's "Success" line.
 set -euo pipefail
 
 ig_repo=${1:?usage: run.sh <ig-repo> <commit> [<fhir-checkout> [<out-dir>]]}
@@ -27,7 +29,15 @@ git clone -q "$ig_repo" "$work/src"
 git -C "$work/src" checkout -q "$commit"
 echo "IG source $(git -C "$work/src" rev-parse HEAD)"
 
-docker run --rm -v "$work/src:/src" -v "$fhir:/web" -v "$out:/out" "$image" bash -s <<'CONTAINER'
+# Where -go-publish must put the result: layout rule of publish-setup.json (ig/{5}, with -stu3)
+pkg=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["package-id"])' "$work/src/publication-request.json")
+version=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["version"])' "$work/src/publication-request.json")
+name=$(echo "$pkg" | cut -d. -f5); case "$pkg" in *.stu3.*) name=$name-stu3 ;; esac
+target="$fhir/ig/$name/$version"
+if [ -e "$target" ]; then echo "FAILED: $target exists before the run" >&2; exit 1; fi
+
+rc=0
+docker run --rm -i -v "$work/src:/src" -v "$fhir:/web" -v "$out:/out" "$image" bash -s <<'CONTAINER' || rc=$?
 set -euo pipefail
 cd /src
 export BUNDLE_GEMFILE=/src/.github/jekyll/Gemfile JEKYLL_NO_BUNDLER_REQUIRE=1
@@ -69,4 +79,12 @@ java -jar /tools/publisher.jar -go-publish -source /src -web /web \
   || { echo "go-publish FAILED"; tail -40 /out/go-publish.log; exit 1; }
 tail -25 /out/go-publish.log
 CONTAINER
-echo "Logs in $out. Compare the result with the CI artifact of $commit before committing."
+
+logs=; if [ -n "$(ls -A "$out" 2>/dev/null)" ]; then logs=" (logs in $out)"; fi
+if [ "$rc" -ne 0 ]; then echo "FAILED: container exited with $rc$logs" >&2; exit 1; fi
+if [ ! -d "$target" ]; then echo "FAILED: $target was not created$logs" >&2; exit 1; fi
+if ! grep -qx 'Success' "$out/go-publish.log" 2>/dev/null; then
+  echo "FAILED: no 'Success' line in $out/go-publish.log" >&2; exit 1
+fi
+echo "Published $pkg#$version into $target; logs in $out."
+echo "Compare the result with the CI artifact of $commit before committing."

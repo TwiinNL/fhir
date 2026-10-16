@@ -1,0 +1,887 @@
+{
+  "date" : "Fri, 16 Oct, 2026 11:29:39 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-nl.twiin.fhir.r4.workflow.json",
+    "size" : 12602,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 111
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 9,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 9,
+      "length" : 29
+    },
+    {
+      "activity" : "validate",
+      "start" : 12,
+      "length" : 5214
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 35
+    },
+    {
+      "activity" : "generate2",
+      "start" : 20,
+      "length" : 56
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 27,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 35,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CapabilityStatement-twiin-workflow-placer-server.json",
+    "size" : 9430,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 12
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 9,
+      "length" : 22
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 243
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 16
+    },
+    {
+      "activity" : "generate2",
+      "start" : 20,
+      "length" : 23
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 35,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-ta-workflow.json",
+    "size" : 2032,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 9,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 15
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 17,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 20,
+      "length" : 45
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.json",
+    "size" : 293,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 9,
+      "length" : 228
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75.json",
+    "size" : 619,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 658
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 116
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-a529d458-5bec-4d91-8ed8-f4fd5bb93720.json",
+    "size" : 518,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-authorization-cancellation-request-task.json",
+    "size" : 3463,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 9,
+      "length" : 25
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 32
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 184
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 18,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 91
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 531
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 227
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 27,
+      "length" : 3
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 35,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 35,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-cancellation-request-task.json",
+    "size" : 5357,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 9,
+      "length" : 18
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 18
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 124
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 17,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 18,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 97
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 328
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 187
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 27,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 35,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-coordination-task.json",
+    "size" : 12749,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 9,
+      "length" : 24
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 30
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 188
+    },
+    {
+      "activity" : "generate1",
+      "start" : 18,
+      "length" : 172
+    },
+    {
+      "activity" : "generate2",
+      "start" : 21,
+      "length" : 439
+    },
+    {
+      "activity" : "generate2",
+      "start" : 23,
+      "length" : 215
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 27,
+      "length" : 5
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 35,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 35,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-workflow-servicerequest.json",
+    "size" : 2003,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 9,
+      "length" : 10
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 48
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 18,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 45
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 126
+    },
+    {
+      "activity" : "generate2",
+      "start" : 23,
+      "length" : 76
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 27,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-twiin-workflow-subscription.json",
+    "size" : 2462,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 9,
+      "length" : 13
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 33
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 49
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 127
+    },
+    {
+      "activity" : "generate2",
+      "start" : 23,
+      "length" : 81
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 27,
+      "length" : 2
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 35,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Subscription-1e8b4c6d-3f7a-4b2e-9d5c-8a1f6e3b7c29.json",
+    "size" : 1221,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 10,
+      "length" : 264
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 117
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56.json",
+    "size" : 1773,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 15
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-6d2e9f41-8b3c-4a7d-b5e2-1c9f7a3d8e64.json",
+    "size" : 2538,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-948d41c4-820f-49ed-bbb7-c15e6d7fc699.json",
+    "size" : 2727,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-9c4a1f8e-7d3b-4e2a-b6f9-3a8e5d2c7b14.json",
+    "size" : 893,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-a41c7e2b-5f9d-4e3a-8c6b-2d7f1e9a5b38.json",
+    "size" : 2769,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91.json",
+    "size" : 2011,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Task-e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47.json",
+    "size" : 3141,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 18,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-ta-workflow-business-status.json",
+    "size" : 865,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 9,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 16
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 37
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-ta-workflow-status-reason.json",
+    "size" : 733,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 9,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 9,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 21
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-ta-workflow-task-code.json",
+    "size" : 741,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 9,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 11,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 11,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 19,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 20
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 1764
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 1269
+  },
+  {
+    "name" : "/input/pagecontent/installing-dependencies.md",
+    "size" : 2350
+  },
+  {
+    "name" : "/input/pagecontent/StructureDefinition-twiin-coordination-task-intro.md",
+    "size" : 379
+  },
+  {
+    "name" : "/input/pagecontent/artifacts-overview.md",
+    "size" : 6773,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 1131
+  },
+  {
+    "name" : "/input/pagecontent/requirements-not-in-artifacts.md",
+    "size" : 4775
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 18261,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 22,
+      "length" : 1
+    }]
+  }]
+}

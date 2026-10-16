@@ -1,0 +1,39 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status",
+    "version" : "0.3.0-draft",
+    "status" : "draft",
+    "name" : "TAWorkflowBusinessStatusVS",
+    "title" : "TA Workflow Business Status",
+    "description" : "Codes for Task.businessStatus of the Coordination Task under TA Workflow (TA sections Business status; Codes of this TA). Extensible: a use case MAY define further codes. selected is reserved for the Placer.",
+    "systems" : ["https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"],
+    "uses" : {
+    },
+    "StructureDefinition-twiin-coordination-task.html" : "Twiin Coordination Task"
+  },
+  {
+    "url" : "https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-status-reason",
+    "version" : "0.3.0-draft",
+    "status" : "draft",
+    "name" : "TAWorkflowStatusReasonVS",
+    "title" : "TA Workflow Status Reason",
+    "description" : "Codes for Task.statusReason of the Coordination Task under TA Workflow. Extensible: a use case or a Fulfiller MAY use other reasons, for instance when it rejects a Task; not-selected is reserved for the Placer.",
+    "systems" : ["https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"],
+    "uses" : {
+    },
+    "StructureDefinition-twiin-coordination-task.html" : "Twiin Coordination Task"
+  },
+  {
+    "url" : "https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code",
+    "version" : "0.3.0-draft",
+    "status" : "draft",
+    "name" : "TAWorkflowTaskCodeVS",
+    "title" : "TA Workflow Task Code",
+    "description" : "Codes for Task.code of the Coordination Task under TA Workflow.",
+    "systems" : ["https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+    "http://hl7.org/fhir/CodeSystem/task-code"],
+    "uses" : {
+    },
+    "StructureDefinition-twiin-coordination-task.html" : "Twiin Coordination Task"
+  }]
+}

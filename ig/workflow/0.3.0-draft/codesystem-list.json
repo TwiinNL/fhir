@@ -1,0 +1,10 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+    "version" : "0.3.0-draft",
+    "status" : "draft",
+    "name" : "TAWorkflowCS",
+    "title" : "TA Workflow Codes",
+    "description" : "Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type."
+  }]
+}
