@@ -20,6 +20,22 @@ java -jar publisher.jar -go-publish -source <ig-repo> -web $PWD \
   -templates $PWD/publish/web-templates -temp <tmp> -zips <tmp>/zips
 ```
 
+## Publishing in a container
+
+`publish/docker/` holds the setup used for the publications since Workflow 0.2.0-draft: an Ubuntu 24.04 image that mirrors the CI job of the IG repositories (Temurin 21.0.12.1, Ruby 3.3.12 with the gems of the `Gemfile.lock` of the IG repository, Node 22.23.3, SUSHI 3.21.0; IG Publisher and its sha-256 come from `.github/workflows/build.yml` of the IG repository) and a script that builds the IG from a clean checkout of one commit with an empty FHIR package cache (`install-packages.sh`, `install-backport.sh`, `install-template.sh` of the IG repository) and then runs `-go-publish` into this repository.
+
+```sh
+git switch -c publish/<name>-<version> origin/main
+docker build -t twiin-ig-publish publish/docker
+publish/docker/run.sh <ig-repo> <commit>      # e.g. git@github-twiin:TwiinNL/ig-workflow.git 18ff083
+```
+
+`run.sh` changes the working tree only; it commits nothing. The Dockerfile has not been built from this file yet: the first publications used an image built from an earlier version of it (arm64).
+
+Before committing, compare `ig/<name>/<version>/` with the `ig-output` artifact of the main build of the same commit (file list and content; ignore timestamps, generation dates, build paths, the release header and `package.tgz`), and stop at any other difference. Expected extras: the `.json1/.json2/.xml1/.xml2` copies and the redirect `index.html` files made by `-go-publish`.
+
+`.github/scripts/check-package-set.sh` of the IG repository does not apply here. Its lock file lists the packages of the whole CI job, including packages that are only there in CI (it runs after `test/validate-invalid.sh`; in the first run from an empty cache `hl7.fhir.uv.extensions`, `hl7.fhir.uv.extensions.r5`, `hl7.terminology` and `hl7.terminology.r5` were missing), and `-go-publish` adds the published package itself. The validator step is not part of a publication.
+
 ## After changing the history template or web templates
 
 Regenerate the existing history pages without publishing again (from the repo root, with `publisher.jar` 3.0.0 or newer; `HistoryPageUpdater` has its own `main`):

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ta-workflow"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem ta-workflow</b></p><a name="ta-workflow"> </a><a name="hcta-workflow"> </a><p>This case-sensitive code system <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">request-fulfillment<a name="ta-workflow-request-fulfillment"> </a></td><td>Request fulfillment</td><td>The Multiple Fulfillers Pattern applies and no candidate has been selected yet; the owner is invited to accept and, optionally, to bid, and may not yet start the work.</td></tr><tr><td style="white-space:nowrap">selected<a name="ta-workflow-selected"> </a></td><td>Selected</td><td>The Placer has selected the owner of this Task as the Fulfiller.</td></tr><tr><td style="white-space:nowrap">not-selected<a name="ta-workflow-not-selected"> </a></td><td>Not selected</td><td>The Placer has selected another candidate; the Coordination Task of this candidate is cancelled.</td></tr><tr><td style="white-space:nowrap">type-of-work<a name="ta-workflow-type-of-work"> </a></td><td>Type of work</td><td>The entry carries the type of work.</td></tr><tr><td style="white-space:nowrap">supplemental-resource<a name="ta-workflow-supplemental-resource"> </a></td><td>Supplemental resource</td><td>The entry refers, in valueReference, to one resource at the Placer that the Fulfiller may read beyond the standard dataset.</td></tr><tr><td style="white-space:nowrap">supplemental-query<a name="ta-workflow-supplemental-query"> </a></td><td>Supplemental query</td><td>The entry carries, in valueString, a search relative to the FHIR base of the Placer that the Fulfiller may perform beyond the standard dataset.</td></tr></table></div>
+  </text>
+  <url value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+  <version value="0.2.0-draft"/>
+  <name value="TAWorkflowCS"/>
+  <title value="TA Workflow Codes"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-10-16T08:47:10+00:00"/>
+  <publisher value="Twiin"/>
+  <description value="Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type."/>
+  <copyright value="Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="request-fulfillment"/>
+    <display value="Request fulfillment"/>
+    <definition value="The Multiple Fulfillers Pattern applies and no candidate has been selected yet; the owner is invited to accept and, optionally, to bid, and may not yet start the work."/>
+  </concept>
+  <concept>
+    <code value="selected"/>
+    <display value="Selected"/>
+    <definition value="The Placer has selected the owner of this Task as the Fulfiller."/>
+  </concept>
+  <concept>
+    <code value="not-selected"/>
+    <display value="Not selected"/>
+    <definition value="The Placer has selected another candidate; the Coordination Task of this candidate is cancelled."/>
+  </concept>
+  <concept>
+    <code value="type-of-work"/>
+    <display value="Type of work"/>
+    <definition value="The entry carries the type of work."/>
+  </concept>
+  <concept>
+    <code value="supplemental-resource"/>
+    <display value="Supplemental resource"/>
+    <definition value="The entry refers, in valueReference, to one resource at the Placer that the Fulfiller may read beyond the standard dataset."/>
+  </concept>
+  <concept>
+    <code value="supplemental-query"/>
+    <display value="Supplemental query"/>
+    <definition value="The entry carries, in valueString, a search relative to the FHIR base of the Placer that the Fulfiller may perform beyond the standard dataset."/>
+  </concept>
+</CodeSystem>
