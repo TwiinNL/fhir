@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="87bcc618-cbb8-4880-9c20-b3d55f24cfb8"/>
+  <meta>
+    <lastUpdated value="2026-10-16T11:29:39.566+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-ta-workflow.html">codesystem TA Workflow Codes v0.3.0-draft (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 3 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-selected"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-selected">selected</a>
+                </td>
+                <td>Selected</td>
+                <td>The Placer has selected the owner of this Task as the Fulfiller.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;selected&quot;, &quot;display&quot;: &quot;Selected&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;selected&quot;/&gt;&lt;display value=&quot;Selected&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-awaiting-information"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-awaiting-information">awaiting-information</a>
+                </td>
+                <td>Awaiting information</td>
+                <td>The Fulfiller needs more information from the Placer to continue or to decide.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;awaiting-information&quot;, &quot;display&quot;: &quot;Awaiting information&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;awaiting-information&quot;/&gt;&lt;display value=&quot;Awaiting information&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-visit-scheduled"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-visit-scheduled">visit-scheduled</a>
+                </td>
+                <td>Visit scheduled</td>
+                <td>A visit with the patient is scheduled.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;visit-scheduled&quot;, &quot;display&quot;: &quot;Visit scheduled&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;visit-scheduled&quot;/&gt;&lt;display value=&quot;Visit scheduled&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status"/>
+        <version value="0.3.0-draft"/>
+        <name value="TAWorkflowBusinessStatusVS"/>
+        <title value="TA Workflow Business Status"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-10-16T11:29:39+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:50d40d5e-8a11-4abe-9b89-f72bf8012918"/>
+          <timestamp value="2026-10-16T11:30:02+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="selected"/>
+            <display value="Selected"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="awaiting-information"/>
+            <display value="Awaiting information"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="visit-scheduled"/>
+            <display value="Visit scheduled"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-ta-workflow.html">codesystem TA Workflow Codes v0.3.0-draft (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 3 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-selected"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-selected">selected</a>
+                </td>
+                <td>Selected</td>
+                <td>The Placer has selected the owner of this Task as the Fulfiller.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;selected&quot;, &quot;display&quot;: &quot;Selected&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;selected&quot;/&gt;&lt;display value=&quot;Selected&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-awaiting-information"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-awaiting-information">awaiting-information</a>
+                </td>
+                <td>Awaiting information</td>
+                <td>The Fulfiller needs more information from the Placer to continue or to decide.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;awaiting-information&quot;, &quot;display&quot;: &quot;Awaiting information&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;awaiting-information&quot;/&gt;&lt;display value=&quot;Awaiting information&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-visit-scheduled"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-visit-scheduled">visit-scheduled</a>
+                </td>
+                <td>Visit scheduled</td>
+                <td>A visit with the patient is scheduled.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;visit-scheduled&quot;, &quot;display&quot;: &quot;Visit scheduled&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;visit-scheduled&quot;/&gt;&lt;display value=&quot;Visit scheduled&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-business-status"/>
+        <version value="0.3.0-draft"/>
+        <name value="TAWorkflowBusinessStatusVS"/>
+        <title value="TA Workflow Business Status"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-10-16T11:29:39+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:145f5a67-2aee-483b-9297-beed79454140"/>
+          <timestamp value="2026-10-16T11:30:02+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="selected"/>
+            <display value="Selected"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="awaiting-information"/>
+            <display value="Awaiting information"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="visit-scheduled"/>
+            <display value="Visit scheduled"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-status-reason"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-ta-workflow.html">codesystem TA Workflow Codes v0.3.0-draft (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-not-selected"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-not-selected">not-selected</a>
+                </td>
+                <td>Not selected</td>
+                <td>The Placer has selected another candidate; the Coordination Task of this candidate is cancelled.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;not-selected&quot;, &quot;display&quot;: &quot;Not selected&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;not-selected&quot;/&gt;&lt;display value=&quot;Not selected&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-status-reason"/>
+        <version value="0.3.0-draft"/>
+        <name value="TAWorkflowStatusReasonVS"/>
+        <title value="TA Workflow Status Reason"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-10-16T11:29:39+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:83199c7f-3507-4811-b294-4ceccaff5693"/>
+          <timestamp value="2026-10-16T11:30:02+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="not-selected"/>
+            <display value="Not selected"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-status-reason"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-ta-workflow.html">codesystem TA Workflow Codes v0.3.0-draft (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-not-selected"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-not-selected">not-selected</a>
+                </td>
+                <td>Not selected</td>
+                <td>The Placer has selected another candidate; the Coordination Task of this candidate is cancelled.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;not-selected&quot;, &quot;display&quot;: &quot;Not selected&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;not-selected&quot;/&gt;&lt;display value=&quot;Not selected&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-status-reason"/>
+        <version value="0.3.0-draft"/>
+        <name value="TAWorkflowStatusReasonVS"/>
+        <title value="TA Workflow Status Reason"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-10-16T11:29:39+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:6f939582-8cfb-4092-8e2c-34a4fda684bc"/>
+          <timestamp value="2026-10-16T11:30:02+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="not-selected"/>
+            <display value="Not selected"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion performed internally based on:</p>
+              <ul>
+                <li>
+                  <a href="http://hl7.org/fhir/R4/codesystem-task-code.html">codesystem Task Codes v4.0.1 (CodeSystem)</a>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="http://hl7.org/fhir/CodeSystem/task-code|4.0.1" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </li>
+                <li>
+                  <a href="CodeSystem-ta-workflow.html">codesystem TA Workflow Codes v0.3.0-draft (CodeSystem)</a>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/CodeSystem/task-code-fulfill"> </a>
+                  <code>http://hl7.org/fhir/CodeSystem/task-code</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-task-code.html#task-code-fulfill">fulfill</a>
+                </td>
+                <td>Fulfill the focal request</td>
+                <td>Act to perform the actions defined in the focus request.  This might result in a 'more assertive' request (order for a plan or proposal, filler order for a placer order), but is intend to eventually result in events.  The degree of fulfillment requested might be limited by Task.restriction.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/CodeSystem/task-code&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;fulfill&quot;, &quot;display&quot;: &quot;Fulfill the focal request&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/CodeSystem/task-code&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;fulfill&quot;/&gt;&lt;display value=&quot;Fulfill the focal request&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-request-fulfillment"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-request-fulfillment">request-fulfillment</a>
+                </td>
+                <td>Request fulfillment</td>
+                <td>The Multiple Fulfillers Pattern applies and no candidate has been selected yet; the owner is invited to accept and, optionally, to bid, and may not yet start the work.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;request-fulfillment&quot;, &quot;display&quot;: &quot;Request fulfillment&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;request-fulfillment&quot;/&gt;&lt;display value=&quot;Request fulfillment&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code"/>
+        <version value="0.3.0-draft"/>
+        <name value="TAWorkflowTaskCodeVS"/>
+        <title value="TA Workflow Task Code"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-10-16T11:29:39+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:ee0217ca-67db-486d-b571-54a6d6359862"/>
+          <timestamp value="2026-10-16T11:30:02+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/CodeSystem/task-code|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="fulfill"/>
+            <display value="Fulfill the focal request"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="request-fulfillment"/>
+            <display value="Request fulfillment"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion performed internally based on:</p>
+              <ul>
+                <li>
+                  <a href="http://hl7.org/fhir/R4/codesystem-task-code.html">codesystem Task Codes v4.0.1 (CodeSystem)</a>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="http://hl7.org/fhir/CodeSystem/task-code|4.0.1" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </li>
+                <li>
+                  <a href="CodeSystem-ta-workflow.html">codesystem TA Workflow Codes v0.3.0-draft (CodeSystem)</a>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft" title="Click to Copy URL" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/CodeSystem/task-code-fulfill"> </a>
+                  <code>http://hl7.org/fhir/CodeSystem/task-code</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-task-code.html#task-code-fulfill">fulfill</a>
+                </td>
+                <td>Fulfill the focal request</td>
+                <td>Act to perform the actions defined in the focus request.  This might result in a 'more assertive' request (order for a plan or proposal, filler order for a placer order), but is intend to eventually result in events.  The degree of fulfillment requested might be limited by Task.restriction.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/CodeSystem/task-code&quot;, &quot;version&quot;: &quot;4.0.1&quot;, &quot;code&quot;: &quot;fulfill&quot;, &quot;display&quot;: &quot;Fulfill the focal request&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/CodeSystem/task-code&quot;/&gt;&lt;version value=&quot;4.0.1&quot;/&gt;&lt;code value=&quot;fulfill&quot;/&gt;&lt;display value=&quot;Fulfill the focal request&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow-request-fulfillment"> </a>
+                  <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-ta-workflow.html#ta-workflow-request-fulfillment">request-fulfillment</a>
+                </td>
+                <td>Request fulfillment</td>
+                <td>The Multiple Fulfillers Pattern applies and no candidate has been selected yet; the owner is invited to accept and, optionally, to bid, and may not yet start the work.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;, &quot;version&quot;: &quot;0.3.0-draft&quot;, &quot;code&quot;: &quot;request-fulfillment&quot;, &quot;display&quot;: &quot;Request fulfillment&quot;}" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow&quot;/&gt;&lt;version value=&quot;0.3.0-draft&quot;/&gt;&lt;code value=&quot;request-fulfillment&quot;/&gt;&lt;display value=&quot;Request fulfillment&quot;/&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy" aria-label="copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.twiin.nl/ig/workflow/ValueSet/ta-workflow-task-code"/>
+        <version value="0.3.0-draft"/>
+        <name value="TAWorkflowTaskCodeVS"/>
+        <title value="TA Workflow Task Code"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2026-10-16T11:29:39+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:7420ab22-9338-41fd-8d2c-38c46f775713"/>
+          <timestamp value="2026-10-16T11:30:02+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/CodeSystem/task-code|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow|0.3.0-draft"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="fulfill"/>
+            <display value="Fulfill the focal request"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+            <code value="request-fulfillment"/>
+            <display value="Request fulfillment"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

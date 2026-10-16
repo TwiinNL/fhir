@@ -1,0 +1,62 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ta-workflow",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ta-workflow</b></p><a name=\"ta-workflow\"> </a><a name=\"hcta-workflow\"> </a><p>This case-sensitive code system <code>https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">request-fulfillment<a name=\"ta-workflow-request-fulfillment\"> </a></td><td>Request fulfillment</td><td>The Multiple Fulfillers Pattern applies and no candidate has been selected yet; the owner is invited to accept and, optionally, to bid, and may not yet start the work.</td></tr><tr><td style=\"white-space:nowrap\">selected<a name=\"ta-workflow-selected\"> </a></td><td>Selected</td><td>The Placer has selected the owner of this Task as the Fulfiller.</td></tr><tr><td style=\"white-space:nowrap\">not-selected<a name=\"ta-workflow-not-selected\"> </a></td><td>Not selected</td><td>The Placer has selected another candidate; the Coordination Task of this candidate is cancelled.</td></tr><tr><td style=\"white-space:nowrap\">type-of-work<a name=\"ta-workflow-type-of-work\"> </a></td><td>Type of work</td><td>The entry carries the type of work.</td></tr><tr><td style=\"white-space:nowrap\">supplemental-resource<a name=\"ta-workflow-supplemental-resource\"> </a></td><td>Supplemental resource</td><td>The entry refers, in valueReference, to one resource at the Placer that the Fulfiller may read beyond the standard dataset.</td></tr><tr><td style=\"white-space:nowrap\">supplemental-query<a name=\"ta-workflow-supplemental-query\"> </a></td><td>Supplemental query</td><td>The entry carries, in valueString, a search relative to the FHIR base of the Placer that the Fulfiller may perform beyond the standard dataset.</td></tr><tr><td style=\"white-space:nowrap\">awaiting-information<a name=\"ta-workflow-awaiting-information\"> </a></td><td>Awaiting information</td><td>The Fulfiller needs more information from the Placer to continue or to decide.</td></tr><tr><td style=\"white-space:nowrap\">visit-scheduled<a name=\"ta-workflow-visit-scheduled\"> </a></td><td>Visit scheduled</td><td>A visit with the patient is scheduled.</td></tr></table></div>"
+  },
+  "url" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+  "version" : "0.3.0-draft",
+  "name" : "TAWorkflowCS",
+  "title" : "TA Workflow Codes",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-10-16T11:29:39+00:00",
+  "publisher" : "Twiin",
+  "description" : "Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type.",
+  "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 8,
+  "concept" : [{
+    "code" : "request-fulfillment",
+    "display" : "Request fulfillment",
+    "definition" : "The Multiple Fulfillers Pattern applies and no candidate has been selected yet; the owner is invited to accept and, optionally, to bid, and may not yet start the work."
+  },
+  {
+    "code" : "selected",
+    "display" : "Selected",
+    "definition" : "The Placer has selected the owner of this Task as the Fulfiller."
+  },
+  {
+    "code" : "not-selected",
+    "display" : "Not selected",
+    "definition" : "The Placer has selected another candidate; the Coordination Task of this candidate is cancelled."
+  },
+  {
+    "code" : "type-of-work",
+    "display" : "Type of work",
+    "definition" : "The entry carries the type of work."
+  },
+  {
+    "code" : "supplemental-resource",
+    "display" : "Supplemental resource",
+    "definition" : "The entry refers, in valueReference, to one resource at the Placer that the Fulfiller may read beyond the standard dataset."
+  },
+  {
+    "code" : "supplemental-query",
+    "display" : "Supplemental query",
+    "definition" : "The entry carries, in valueString, a search relative to the FHIR base of the Placer that the Fulfiller may perform beyond the standard dataset."
+  },
+  {
+    "code" : "awaiting-information",
+    "display" : "Awaiting information",
+    "definition" : "The Fulfiller needs more information from the Placer to continue or to decide."
+  },
+  {
+    "code" : "visit-scheduled",
+    "display" : "Visit scheduled",
+    "definition" : "A visit with the patient is scheduled."
+  }]
+}
