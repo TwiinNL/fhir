@@ -1,0 +1,20 @@
+{
+  "url" : "https://fhir.twiin.nl/ig/workflow/ImplementationGuide/nl.twiin.fhir.r4.workflow",
+  "name" : "TwiinWorkflow",
+  "title" : "Twiin Workflow",
+  "description" : "Technical specification of TA Workflow, part of the technical core of the Twiin Afsprakenstelsel.",
+  "status" : "draft",
+  "package-id" : "nl.twiin.fhir.r4.workflow",
+  "ig-ver" : "0.2.0-draft",
+  "date" : "Fri, 16 Oct, 2026 08:47:10 +0000",
+  "dateISO8601" : "2026-10-16T08:47:10+00:00",
+  "errs" : 2,
+  "warnings" : 1,
+  "hints" : 41,
+  "broken-links" : 0,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 21,
+  "version" : "4.0.1",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 1018870904
+}
