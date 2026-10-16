@@ -1,3 +1,0 @@
-URL,Version,Status,OIDs,Name,Title,Description,Used
-http://hl7.org/fhir/CodeSystem/task-code,4.0.1,active,"2.16.840.1.113883.4.642.4.1397",TaskCode,Task Codes,"Codes indicating the type of action that is expected to be performed","ValueSet/ta-workflow-task-code"
-https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow,0.2.0-draft,draft,,TAWorkflowCS,TA Workflow Codes,"Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type.","ValueSet/ta-workflow-task-code,ValueSet/ta-workflow-business-status,ValueSet/ta-workflow-status-reason"

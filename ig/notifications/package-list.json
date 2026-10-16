@@ -14,15 +14,6 @@
     "fhirversion" : "4.0.1",
     "date" : "2026-10-15",
     "desc" : "Third draft publication, technical specification of TA Notifications 0.10, in the Twiin house style"
-  },
-  {
-    "version" : "0.1.1-draft",
-    "path" : "https://fhir.twiin.nl/ig/notifications/0.1.1-draft",
-    "status" : "draft",
-    "sequence" : "Release 1",
-    "fhirversion" : "4.0.1",
-    "date" : "2026-10-12",
-    "desc" : "Second draft publication, technical specification of TA Notifications 0.9, in the Twiin house style"
   }],
   "package-id" : "nl.twiin.fhir.r4.notifications",
   "canonical" : "https://fhir.twiin.nl/ig/notifications",
