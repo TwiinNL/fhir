@@ -27,7 +27,7 @@ git clone -q "$ig_repo" "$work/src"
 git -C "$work/src" checkout -q "$commit"
 echo "IG source $(git -C "$work/src" rev-parse HEAD)"
 
-docker run --rm -v "$work/src:/src" -v "$fhir:/web" -v "$out:/out" "$image" bash -s <<'CONTAINER'
+docker run --rm -i -v "$work/src:/src" -v "$fhir:/web" -v "$out:/out" "$image" bash -s <<'CONTAINER'
 set -euo pipefail
 cd /src
 export BUNDLE_GEMFILE=/src/.github/jekyll/Gemfile JEKYLL_NO_BUNDLER_REQUIRE=1
