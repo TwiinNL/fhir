@@ -8,12 +8,9 @@
   <div class="container">
    <div class="inner-wrapper">
     <p>
-     <span id="ig-footer">[%id%]</span> &copy; <a href="https://fhir.twiin.nl">Twiin</a>.
-     Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-    </p>
-    <p>
-     The Twiin logo belongs to Twiin and is not covered by CC BY-SA 4.0.
-     The licence of the code on this page is still to be determined.
+     &copy; <a href="https://www.twiin.nl">Twiin</a>. Content licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, except the Twiin logo and the design and code of this site (all rights reserved). Third-party software keeps its own licence.
+     <br/>
+     <span id="ig-footer">[%id%]</span>
     </p>
    </div>
   </div>
