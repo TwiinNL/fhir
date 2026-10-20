@@ -3,7 +3,7 @@
   publish/history-template. Structure, class names and type sizes follow the pages of the
   IG Publisher base template (fhir2.base.template, CC0): segment-header, navbar with stripe,
   breadcrumb, segment-content, segment-footer. Colours and typeface follow the Twiin house style
-  (styleguide.md). Content: CC BY-SA 4.0. Code: licence TBD.
+  (styleguide.md). Content: CC BY-SA 4.0. Design and code: all rights reserved.
 */
 
 @font-face {
@@ -187,7 +187,7 @@ code { font-family: Menlo, Consolas, "Courier New", monospace; font-size: 12px; 
 /* Footer, as in the IG pages */
 #segment-footer { background-color: var(--lichtgrijs); margin-top: 20px; }
 #segment-footer .container { background-color: var(--footer-bg-color); color: var(--footer-text-color); }
-#segment-footer .inner-wrapper { margin: 0; padding: 8px 15px; }
+#segment-footer .inner-wrapper { margin: 0; padding: 4px 20px; }  /* Same as #segment-footer .inner-wrapper in fhir2.base.template (project.css). */
 #segment-footer p { margin: 0 0 6px 0; color: var(--footer-text-color); }
 #segment-footer p:last-child { margin-bottom: 0; }
 #segment-footer a { color: var(--footer-link-color); text-decoration: underline; }
