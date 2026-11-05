@@ -1,0 +1,143 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/Task/5fe23d95-5f8d-4f9d-9315-7d7979153e2a> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "5fe23d95-5f8d-4f9d-9315-7d7979153e2a"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task 5fe23d95-5f8d-4f9d-9315-7d7979153e2a</b></p><a name=\"5fe23d95-5f8d-4f9d-9315-7d7979153e2a\"> </a><a name=\"hc5fe23d95-5f8d-4f9d-9315-7d7979153e2a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-coordination-task.html\">Twiin Coordination Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/12d4c5d1-e6cb-432f-b195-7a4dc2da47be</p><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/CodeSystem/task-code fulfill}\">Fulfill the focal request</span></p><p><b>focus</b>: <a href=\"ServiceRequest-c682d130-33be-4bd5-a2b5-6677aead5ad9.html\">ServiceRequest Transfer of care</a></p><p><b>for</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>authoredOn</b>: 2026-11-02 09:00:00+0100</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis (use: official)</p><p><b>location</b>: Identifier: <code>https://fulfiller-a.example.org/location</code>/vestiging-centrum (use: official)</p><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}\">Type of work</span></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow available-resource}\">Available resource</span></p><p><b>value</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow available-query}\">Available query</span></p><p><b>value</b>: Observation?patient=3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90&amp;category=vital-signs</p></blockquote></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://placer.example.org/task" ] ;
+     fhir:Identifier.value [ fhir:value "12d4c5d1-e6cb-432f-b195-7a4dc2da47be" ]
+  ] ;
+  fhir:Task.status [ fhir:value "requested"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/CodeSystem/task-code" ] ;
+       fhir:Coding.code [ fhir:value "fulfill" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <https://fhir.twiin.nl/ig/workflow/ServiceRequest/c682d130-33be-4bd5-a2b5-6677aead5ad9> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/c682d130-33be-4bd5-a2b5-6677aead5ad9" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <https://fhir.twiin.nl/ig/workflow/Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90> ;
+     fhir:Reference.reference [ fhir:value "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-11-02T09:00:00+01:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://fhir.nl/fhir/NamingSystem/ura" ] ;
+       fhir:Identifier.value [ fhir:value "12345678" ]
+     ]
+  ] ;
+  fhir:Task.owner [
+     fhir:Reference.type [ fhir:value "HealthcareService" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.use [ fhir:value "official" ] ;
+       fhir:Identifier.system [ fhir:value "https://fulfiller-a.example.org/healthcareservice" ] ;
+       fhir:Identifier.value [ fhir:value "wondzorg-thuis" ] ;
+       fhir:Identifier.assigner [
+         fhir:Reference.identifier [
+           fhir:Identifier.type [
+             fhir:CodeableConcept.coding [
+               fhir:index -1 ;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+               fhir:Coding.code [ fhir:value "custodian" ]
+             ]
+           ] ;
+           fhir:Identifier.system [ fhir:value "urn:oid:2.16.528.1.1007.3.3" ] ;
+           fhir:Identifier.value [ fhir:value "87654321" ]
+         ]
+       ]
+     ]
+  ] ;
+  fhir:Task.location [
+     fhir:Reference.type [ fhir:value "Location" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.use [ fhir:value "official" ] ;
+       fhir:Identifier.system [ fhir:value "https://fulfiller-a.example.org/location" ] ;
+       fhir:Identifier.value [ fhir:value "vestiging-centrum" ] ;
+       fhir:Identifier.assigner [
+         fhir:Reference.identifier [
+           fhir:Identifier.type [
+             fhir:CodeableConcept.coding [
+               fhir:index -1 ;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+               fhir:Coding.code [ fhir:value "custodian" ]
+             ]
+           ] ;
+           fhir:Identifier.system [ fhir:value "urn:oid:2.16.528.1.1007.3.3" ] ;
+           fhir:Identifier.value [ fhir:value "87654321" ]
+         ]
+       ]
+     ]
+  ] ;
+  fhir:Task.input [
+     fhir:index -1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow" ] ;
+         fhir:Coding.code [ fhir:value "type-of-work" ]
+       ]
+     ] ;
+     fhir:Task.input.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:308292007 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "308292007" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow" ] ;
+         fhir:Coding.code [ fhir:value "available-resource" ]
+       ]
+     ] ;
+     fhir:Task.input.valueReference [
+       fhir:link <https://fhir.twiin.nl/ig/workflow/Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90> ;
+       fhir:Reference.reference [ fhir:value "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow" ] ;
+         fhir:Coding.code [ fhir:value "available-query" ]
+       ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "Observation?patient=3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90&category=vital-signs" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/Task/5fe23d95-5f8d-4f9d-9315-7d7979153e2a.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

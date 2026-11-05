@@ -1,0 +1,104 @@
+{
+  "resourceType" : "Task",
+  "id" : "5932fe26-950a-481f-8fc3-fa792e1d318f",
+  "meta" : {
+    "profile" : ["https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task 5932fe26-950a-481f-8fc3-fa792e1d318f</b></p><a name=\"5932fe26-950a-481f-8fc3-fa792e1d318f\"> </a><a name=\"hc5932fe26-950a-481f-8fc3-fa792e1d318f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-coordination-task.html\">Twiin Coordination Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/aef0b40c-fa1e-4748-9b47-317d11c3de9c</p><p><b>status</b>: Accepted</p><p><b>businessStatus</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow selected}\">Selected</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/CodeSystem/task-code fulfill}\">Fulfill the focal request</span></p><p><b>focus</b>: <a href=\"ServiceRequest-7e83a049-2267-4ca0-9d35-07216dfec2b6.html\">ServiceRequest Transfer of care</a></p><p><b>for</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>authoredOn</b>: 2026-11-02 11:00:00+0100</p><p><b>lastModified</b>: 2026-11-02 14:00:00+0100</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis\u00a0(use:\u00a0official)</p><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}\">Type of work</span></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow available-resource}\">Available resource</span></p><p><b>value</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow available-query}\">Available query</span></p><p><b>value</b>: Observation?patient=3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90&amp;category=vital-signs</p></blockquote><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">Bid</span></td><td>First visit possible on 2026-11-04</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://placer.example.org/task",
+    "value" : "aef0b40c-fa1e-4748-9b47-317d11c3de9c"
+  }],
+  "status" : "accepted",
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+      "code" : "selected"
+    }]
+  },
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/CodeSystem/task-code",
+      "code" : "fulfill"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/7e83a049-2267-4ca0-9d35-07216dfec2b6"
+  },
+  "for" : {
+    "reference" : "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"
+  },
+  "authoredOn" : "2026-11-02T11:00:00+01:00",
+  "lastModified" : "2026-11-02T14:00:00+01:00",
+  "requester" : {
+    "identifier" : {
+      "system" : "http://fhir.nl/fhir/NamingSystem/ura",
+      "value" : "12345678"
+    }
+  },
+  "owner" : {
+    "type" : "HealthcareService",
+    "identifier" : {
+      "use" : "official",
+      "system" : "https://fulfiller-a.example.org/healthcareservice",
+      "value" : "wondzorg-thuis",
+      "assigner" : {
+        "identifier" : {
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+              "code" : "custodian"
+            }]
+          },
+          "system" : "urn:oid:2.16.528.1.1007.3.3",
+          "value" : "87654321"
+        }
+      }
+    }
+  },
+  "input" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "type-of-work"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "308292007"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "available-resource"
+      }]
+    },
+    "valueReference" : {
+      "reference" : "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "available-query"
+      }]
+    },
+    "valueString" : "Observation?patient=3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90&category=vital-signs"
+  }],
+  "output" : [{
+    "type" : {
+      "text" : "Bid"
+    },
+    "valueString" : "First visit possible on 2026-11-04"
+  }]
+}

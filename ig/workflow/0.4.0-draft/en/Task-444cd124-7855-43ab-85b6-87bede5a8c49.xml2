@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="444cd124-7855-43ab-85b6-87bede5a8c49"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-cancellation-request-task"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Task 444cd124-7855-43ab-85b6-87bede5a8c49</b></p><a name="444cd124-7855-43ab-85b6-87bede5a8c49"> </a><a name="hc444cd124-7855-43ab-85b6-87bede5a8c49"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-twiin-cancellation-request-task.html">Twiin Cancellation Request Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/72c37bd8-b443-4aad-a25b-684451a5b190</p><p><b>status</b>: Accepted</p><p><b>intent</b>: order</p><p><b>code</b>: <span title="Codes:{http://hl7.org/fhir/CodeSystem/task-code abort}">Mark the focal resource as no longer active</span></p><p><b>focus</b>: <a href="Task-f3bdd83f-0914-4232-94e9-28a01b1d36af.html">Task Fulfill the focal request</a></p><p><b>authoredOn</b>: 2026-11-04 10:00:00+0100</p><p><b>lastModified</b>: 2026-11-04 10:30:00+0100</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis (use: official)</p><p><b>reasonCode</b>: <span title="Codes:">The patient has been admitted to hospital.</span></p><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}">Type of work</span></td><td><span title="Codes:{http://snomed.info/sct 308292007}">Transfer of care</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://placer.example.org/task"/>
+    <value value="72c37bd8-b443-4aad-a25b-684451a5b190"/>
+  </identifier>
+  <status value="accepted"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+      <code value="abort"/>
+    </coding>
+  </code>
+  <focus>
+    <reference value="Task/f3bdd83f-0914-4232-94e9-28a01b1d36af"/>
+  </focus>
+  <authoredOn value="2026-11-04T10:00:00+01:00"/>
+  <lastModified value="2026-11-04T10:30:00+01:00"/>
+  <requester>
+    <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
+      <value value="12345678"/>
+    </identifier>
+  </requester>
+  <owner>
+    <type value="HealthcareService"/>
+    <identifier>
+      <use value="official"/>
+      <system value="https://fulfiller-a.example.org/healthcareservice"/>
+      <value value="wondzorg-thuis"/>
+      <assigner>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+              <code value="custodian"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.528.1.1007.3.3"/>
+          <value value="87654321"/>
+        </identifier>
+      </assigner>
+    </identifier>
+  </owner>
+  <reasonCode>
+    <text value="The patient has been admitted to hospital."/>
+  </reasonCode>
+  <input>
+    <type>
+      <coding>
+        <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+        <code value="type-of-work"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="308292007"/>
+      </coding>
+    </valueCodeableConcept>
+  </input>
+</Task>

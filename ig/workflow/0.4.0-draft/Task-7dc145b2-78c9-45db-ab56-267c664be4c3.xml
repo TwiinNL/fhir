@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="7dc145b2-78c9-45db-ab56-267c664be4c3"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Task 7dc145b2-78c9-45db-ab56-267c664be4c3</b></p><a name="7dc145b2-78c9-45db-ab56-267c664be4c3"> </a><a name="hc7dc145b2-78c9-45db-ab56-267c664be4c3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-twiin-coordination-task.html">Twiin Coordination Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/853df82f-91b5-4d26-8663-c472b5899a38</p><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>code</b>: <span title="Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow request-fulfillment}">Request fulfillment</span></p><p><b>focus</b>: <a href="ServiceRequest-3e358483-ec50-469b-94d0-54b6bc5ea7d8.html">ServiceRequest Transfer of care</a></p><p><b>authoredOn</b>: 2026-10-20 09:00:00+0200</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis (use: official)</p><blockquote><p><b>input</b></p><p><b>type</b>: <span title="Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}">Type of work</span></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 308292007}">Transfer of care</span></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title="Codes:">Dressing type</span></p><p><b>value</b>: Hydrocolloid dressing; the interval of the changes is to be confirmed.</p></blockquote></div>
+  </text>
+  <identifier>
+    <system value="https://placer.example.org/task"/>
+    <value value="853df82f-91b5-4d26-8663-c472b5899a38"/>
+  </identifier>
+  <status value="requested"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+      <code value="request-fulfillment"/>
+    </coding>
+  </code>
+  <focus>
+    <reference value="ServiceRequest/3e358483-ec50-469b-94d0-54b6bc5ea7d8"/>
+  </focus>
+  <authoredOn value="2026-10-20T09:00:00+02:00"/>
+  <requester>
+    <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
+      <value value="12345678"/>
+    </identifier>
+  </requester>
+  <owner>
+    <type value="HealthcareService"/>
+    <identifier>
+      <use value="official"/>
+      <system value="https://fulfiller-a.example.org/healthcareservice"/>
+      <value value="wondzorg-thuis"/>
+      <assigner>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+              <code value="custodian"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.528.1.1007.3.3"/>
+          <value value="87654321"/>
+        </identifier>
+      </assigner>
+    </identifier>
+  </owner>
+  <input>
+    <type>
+      <coding>
+        <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+        <code value="type-of-work"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="308292007"/>
+      </coding>
+    </valueCodeableConcept>
+  </input>
+  <input>
+    <type>
+      <text value="Dressing type"/>
+    </type>
+    <valueString value="Hydrocolloid dressing; the interval of the changes is to be confirmed."/>
+  </input>
+</Task>

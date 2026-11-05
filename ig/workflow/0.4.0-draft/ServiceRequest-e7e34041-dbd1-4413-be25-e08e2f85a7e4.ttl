@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/ServiceRequest/e7e34041-dbd1-4413-be25-e08e2f85a7e4> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "e7e34041-dbd1-4413-be25-e08e2f85a7e4"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-workflow-servicerequest" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-workflow-servicerequest>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest e7e34041-dbd1-4413-be25-e08e2f85a7e4</b></p><a name=\"e7e34041-dbd1-4413-be25-e08e2f85a7e4\"> </a><a name=\"hce7e34041-dbd1-4413-be25-e08e2f85a7e4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-workflow-servicerequest.html\">Twiin Workflow ServiceRequest</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/servicerequest</code>/200a94a8-7f0d-450a-b9ad-45e5861c1c92</p><p><b>instantiatesCanonical</b>: <code>https://example.org/fhir/ActivityDefinition/transfer-of-care</code></p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></p><p><b>subject</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>authoredOn</b>: 2026-11-03 12:50:00+0100</p><p><b>performer</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis (use: official)</p></div>"
+  ] ;
+  fhir:ServiceRequest.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://placer.example.org/servicerequest" ] ;
+     fhir:Identifier.value [ fhir:value "200a94a8-7f0d-450a-b9ad-45e5861c1c92" ]
+  ] ;
+  fhir:ServiceRequest.instantiatesCanonical [
+     fhir:value "https://example.org/fhir/ActivityDefinition/transfer-of-care" ;
+     fhir:index 0 ;
+     fhir:link <https://example.org/fhir/ActivityDefinition/transfer-of-care>
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "active"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:308292007 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "308292007" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <https://fhir.twiin.nl/ig/workflow/Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90> ;
+     fhir:Reference.reference [ fhir:value "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90" ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-11-03T12:50:00+01:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.performer [
+     fhir:index 0 ;
+     fhir:Reference.type [ fhir:value "HealthcareService" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.use [ fhir:value "official" ] ;
+       fhir:Identifier.system [ fhir:value "https://fulfiller-a.example.org/healthcareservice" ] ;
+       fhir:Identifier.value [ fhir:value "wondzorg-thuis" ] ;
+       fhir:Identifier.assigner [
+         fhir:Reference.identifier [
+           fhir:Identifier.type [
+             fhir:CodeableConcept.coding [
+               fhir:index 0 ;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+               fhir:Coding.code [ fhir:value "custodian" ]
+             ]
+           ] ;
+           fhir:Identifier.system [ fhir:value "urn:oid:2.16.528.1.1007.3.3" ] ;
+           fhir:Identifier.value [ fhir:value "87654321" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/ServiceRequest/e7e34041-dbd1-4413-be25-e08e2f85a7e4.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

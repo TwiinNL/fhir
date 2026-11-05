@@ -1,0 +1,103 @@
+# nl.twiin.fhir.r4.workflow#0.4.0-draft: Twiin Workflow(en)
+
+## Pages
+
+* [Home](index.md)
+* [Artifacts overview](artifacts-overview.md)
+* [Example: reselection](example-reselection.md)
+* [Requirements not expressed in artifacts](requirements-not-in-artifacts.md)
+* [Installing dependencies](installing-dependencies.md)
+* [Example: sharing additional content](example-sharing.md)
+* [Example scenarios](example-scenarios.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### CodeSystems
+
+* [TA Workflow Codes](CodeSystem-ta-workflow.md)
+
+### ValueSets
+
+* [TA Workflow Business Status](ValueSet-ta-workflow-business-status.md)
+* [TA Workflow Status Reason](ValueSet-ta-workflow-status-reason.md)
+* [TA Workflow Task Code](ValueSet-ta-workflow-task-code.md)
+
+### Resource Profiles
+
+* [Twiin Authorization Cancellation Request Task](StructureDefinition-twiin-authorization-cancellation-request-task.md)
+* [Twiin Cancellation Request Task](StructureDefinition-twiin-cancellation-request-task.md)
+* [Twiin Coordination Task](StructureDefinition-twiin-coordination-task.md)
+* [Twiin Workflow ServiceRequest](StructureDefinition-twiin-workflow-servicerequest.md)
+* [Twiin Workflow Subscription](StructureDefinition-twiin-workflow-subscription.md)
+
+### CapabilityStatements
+
+* [Twiin Workflow Placer Server](CapabilityStatement-twiin-workflow-placer-server.md)
+
+### ImplementationGuides
+
+* [Twiin Workflow](ImplementationGuide-nl.twiin.fhir.r4.workflow.md)
+
+### SearchParameters
+
+* [OwnerAssigner](SearchParameter-owner-assigner.md)
+
+### Examples
+
+* [8d97c695-4ece-45fb-96e0-a216398978fa (Observation)](Observation-8d97c695-4ece-45fb-96e0-a216398978fa.md)
+* [d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43 (Observation)](Observation-d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43.md)
+* [3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90 (Patient)](Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.md)
+* [0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75 (ServiceRequest)](ServiceRequest-0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75.md)
+* [3e358483-ec50-469b-94d0-54b6bc5ea7d8 (ServiceRequest)](ServiceRequest-3e358483-ec50-469b-94d0-54b6bc5ea7d8.md)
+* [462d6275-922e-434a-a379-96fd4a29548b (ServiceRequest)](ServiceRequest-462d6275-922e-434a-a379-96fd4a29548b.md)
+* [57129653-f261-4841-9e42-e5b40b57f6fb (ServiceRequest)](ServiceRequest-57129653-f261-4841-9e42-e5b40b57f6fb.md)
+* [5f9a3627-3c42-4f64-9ed4-b6526ea57f65 (ServiceRequest)](ServiceRequest-5f9a3627-3c42-4f64-9ed4-b6526ea57f65.md)
+* [7e83a049-2267-4ca0-9d35-07216dfec2b6 (ServiceRequest)](ServiceRequest-7e83a049-2267-4ca0-9d35-07216dfec2b6.md)
+* [862e9389-15a3-4681-aa0c-1ebcd5bc17d0 (ServiceRequest)](ServiceRequest-862e9389-15a3-4681-aa0c-1ebcd5bc17d0.md)
+* [a529d458-5bec-4d91-8ed8-f4fd5bb93720 (ServiceRequest)](ServiceRequest-a529d458-5bec-4d91-8ed8-f4fd5bb93720.md)
+* [c682d130-33be-4bd5-a2b5-6677aead5ad9 (ServiceRequest)](ServiceRequest-c682d130-33be-4bd5-a2b5-6677aead5ad9.md)
+* [c6df56d1-5fc1-4abb-bc72-fb260f800832 (ServiceRequest)](ServiceRequest-c6df56d1-5fc1-4abb-bc72-fb260f800832.md)
+* [e7e34041-dbd1-4413-be25-e08e2f85a7e4 (ServiceRequest)](ServiceRequest-e7e34041-dbd1-4413-be25-e08e2f85a7e4.md)
+* [1e8b4c6d-3f7a-4b2e-9d5c-8a1f6e3b7c29 (Subscription)](Subscription-1e8b4c6d-3f7a-4b2e-9d5c-8a1f6e3b7c29.md)
+* [e0a7c3b9-5d14-4f82-b6e9-8a2d4c7f1b06 (Subscription)](Subscription-e0a7c3b9-5d14-4f82-b6e9-8a2d4c7f1b06.md)
+* [12e3afcc-3979-476c-bc59-8e8e4e40afb9 (Task)](Task-12e3afcc-3979-476c-bc59-8e8e4e40afb9.md)
+* [18d1bd56-33f6-43e0-a3fa-8871a100df12 (Task)](Task-18d1bd56-33f6-43e0-a3fa-8871a100df12.md)
+* [444cd124-7855-43ab-85b6-87bede5a8c49 (Task)](Task-444cd124-7855-43ab-85b6-87bede5a8c49.md)
+* [46ebdfdd-408a-4340-915d-980a14c75f36 (Task)](Task-46ebdfdd-408a-4340-915d-980a14c75f36.md)
+* [47ca5941-e107-4c70-bae9-bce09b69311d (Task)](Task-47ca5941-e107-4c70-bae9-bce09b69311d.md)
+* [4ae98e56-816c-4068-bdce-890a8a24b52f (Task)](Task-4ae98e56-816c-4068-bdce-890a8a24b52f.md)
+* [4e1168c4-0d2d-434f-a44e-bd117d0780d2 (Task)](Task-4e1168c4-0d2d-434f-a44e-bd117d0780d2.md)
+* [5932fe26-950a-481f-8fc3-fa792e1d318f (Task)](Task-5932fe26-950a-481f-8fc3-fa792e1d318f.md)
+* [5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56 (Task)](Task-5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56.md)
+* [5dede07b-28ae-4497-bd35-817f5bee9690 (Task)](Task-5dede07b-28ae-4497-bd35-817f5bee9690.md)
+* [5e2888cb-fd37-4328-bfa7-45a9e1a047ff (Task)](Task-5e2888cb-fd37-4328-bfa7-45a9e1a047ff.md)
+* [5fe23d95-5f8d-4f9d-9315-7d7979153e2a (Task)](Task-5fe23d95-5f8d-4f9d-9315-7d7979153e2a.md)
+* [66507516-150c-415f-9e88-7c1f24eef69c (Task)](Task-66507516-150c-415f-9e88-7c1f24eef69c.md)
+* [66689cbb-33d1-4159-8ce2-d5fa970577a9 (Task)](Task-66689cbb-33d1-4159-8ce2-d5fa970577a9.md)
+* [66bb48ed-2053-4fa4-ae26-4aba6ad37e5d (Task)](Task-66bb48ed-2053-4fa4-ae26-4aba6ad37e5d.md)
+* [683af045-b470-4595-b80d-cd40c92da2f7 (Task)](Task-683af045-b470-4595-b80d-cd40c92da2f7.md)
+* [6d2e9f41-8b3c-4a7d-b5e2-1c9f7a3d8e64 (Task)](Task-6d2e9f41-8b3c-4a7d-b5e2-1c9f7a3d8e64.md)
+* [71af91f0-f5ec-42cf-9b48-75b74d0036a0 (Task)](Task-71af91f0-f5ec-42cf-9b48-75b74d0036a0.md)
+* [7b4e4d93-be6d-4511-a2b0-0d141fa362e6 (Task)](Task-7b4e4d93-be6d-4511-a2b0-0d141fa362e6.md)
+* [7dc145b2-78c9-45db-ab56-267c664be4c3 (Task)](Task-7dc145b2-78c9-45db-ab56-267c664be4c3.md)
+* [948d41c4-820f-49ed-bbb7-c15e6d7fc699 (Task)](Task-948d41c4-820f-49ed-bbb7-c15e6d7fc699.md)
+* [9c4a1f8e-7d3b-4e2a-b6f9-3a8e5d2c7b14 (Task)](Task-9c4a1f8e-7d3b-4e2a-b6f9-3a8e5d2c7b14.md)
+* [a41c7e2b-5f9d-4e3a-8c6b-2d7f1e9a5b38 (Task)](Task-a41c7e2b-5f9d-4e3a-8c6b-2d7f1e9a5b38.md)
+* [a5c02498-4399-4c8d-aa17-b17023396852 (Task)](Task-a5c02498-4399-4c8d-aa17-b17023396852.md)
+* [b5e65e9b-434f-445c-924d-ff772c25ae4d (Task)](Task-b5e65e9b-434f-445c-924d-ff772c25ae4d.md)
+* [b8d24f6e-1c37-4a59-9f02-6e1a7c4b8d35 (Task)](Task-b8d24f6e-1c37-4a59-9f02-6e1a7c4b8d35.md)
+* [c2b03781-d9f7-40e2-ba3d-d68d47f055b5 (Task)](Task-c2b03781-d9f7-40e2-ba3d-d68d47f055b5.md)
+* [c8ca1ec3-dd83-4900-9bfa-a05d6e93782c (Task)](Task-c8ca1ec3-dd83-4900-9bfa-a05d6e93782c.md)
+* [c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91 (Task)](Task-c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91.md)
+* [cd47fb57-917b-4cd4-86d7-38ccb3bbeef9 (Task)](Task-cd47fb57-917b-4cd4-86d7-38ccb3bbeef9.md)
+* [d4f3456d-86b6-4429-b606-bf52a94ca749 (Task)](Task-d4f3456d-86b6-4429-b606-bf52a94ca749.md)
+* [e1e3f55f-c56e-4501-b409-ed05bb70cc87 (Task)](Task-e1e3f55f-c56e-4501-b409-ed05bb70cc87.md)
+* [e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47 (Task)](Task-e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47.md)
+* [e74fa5b7-7904-40f5-ba19-d1aed93134ba (Task)](Task-e74fa5b7-7904-40f5-ba19-d1aed93134ba.md)
+* [f0299832-a6c0-4517-a8af-0727fab92ee6 (Task)](Task-f0299832-a6c0-4517-a8af-0727fab92ee6.md)
+* [f3bdd83f-0914-4232-94e9-28a01b1d36af (Task)](Task-f3bdd83f-0914-4232-94e9-28a01b1d36af.md)
+* [f8f11d4a-2339-4ef3-9414-b2743d3a5102 (Task)](Task-f8f11d4a-2339-4ef3-9414-b2743d3a5102.md)
+* [f99620ae-3d81-4e74-915e-c9dc12771355 (Task)](Task-f99620ae-3d81-4e74-915e-c9dc12771355.md)
+* [fb3a4ac7-3f98-45cf-acd6-95b18e688d6b (Task)](Task-fb3a4ac7-3f98-45cf-acd6-95b18e688d6b.md)
+* [fcf2352b-4027-45ea-8cd3-002dbebc3d7a (Task)](Task-fcf2352b-4027-45ea-8cd3-002dbebc3d7a.md)

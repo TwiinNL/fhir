@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-workflow-servicerequest"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest 0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75</b></p><a name="0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75"> </a><a name="hc0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-twiin-workflow-servicerequest.html">Twiin Workflow ServiceRequest</a></p></div><p><b>instantiatesCanonical</b>: <code>https://example.org/fhir/ActivityDefinition/transfer-of-care</code></p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 308292007}">Transfer of care</span></p><p><b>subject</b>: <a href="Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>authoredOn</b>: 2026-10-09 08:55:00+0200</p></div>
+  </text>
+  <instantiatesCanonical value="https://example.org/fhir/ActivityDefinition/transfer-of-care"/>
+  <status value="active"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="308292007"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"/>
+  </subject>
+  <authoredOn value="2026-10-09T08:55:00+02:00"/>
+</ServiceRequest>
