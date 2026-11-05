@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "nl.twiin.fhir.r4.workflow",
   "ig-ver" : "0.4.0-draft",
-  "date" : "Thu, 05 Nov, 2026 12:00:03 +0000",
-  "dateISO8601" : "2026-11-05T12:00:03+00:00",
+  "date" : "Thu, 05 Nov, 2026 13:14:06 +0000",
+  "dateISO8601" : "2026-11-05T13:14:06+00:00",
   "errs" : 2,
   "warnings" : 83,
   "hints" : 109,
@@ -16,5 +16,5 @@
   "suppressed-warnings" : 24,
   "version" : "4.0.1",
   "tool" : "6.0.0-snapshot1 (3)",
-  "maxMemory" : 1026170832
+  "maxMemory" : 1300043520
 }

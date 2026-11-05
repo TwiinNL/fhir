@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-twiin-cancellatio
   "title" : "Twiin Cancellation Request Task",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-05T12:00:03+00:00",
+  "date" : "2026-11-05T13:14:06+00:00",
   "publisher" : "Twiin",
   "description" : "Cancellation Request Task under TA Workflow, used by the Placer to ask the Fulfiller to stop work that has started (TA sections Summary of the profiles → Cancellation Request Task; Cancellation Request Task; Type of work on the Task).",
   "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",
