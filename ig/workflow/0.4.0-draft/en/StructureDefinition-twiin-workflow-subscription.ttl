@@ -19,7 +19,7 @@
   fhir:StructureDefinition.title [ fhir:value "Twiin Workflow Subscription"] ;
   fhir:StructureDefinition.status [ fhir:value "draft"] ;
   fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-11-05T11:19:04+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-11-05T12:00:03+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "Twiin"] ;
   fhir:StructureDefinition.description [ fhir:value "Subscription under TA Workflow, on top of the Twiin Subscription of TA Notifications (TA sections Summary of the profiles → Subscription; Subscription). The payload mode is id-only, the filter is `owner:identifier=[system]|[value]` (one HealthcareService) or `owner-assigner=[system]|[value]` (all HealthcareServices of one organization, by its URA), and a heartbeat period is required."] ;
   fhir:StructureDefinition.copyright [ fhir:value "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."] ;

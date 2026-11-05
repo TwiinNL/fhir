@@ -12,7 +12,7 @@
   "title" : "TA Workflow Business Status",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-05T11:19:04+00:00",
+  "date" : "2026-11-05T12:00:03+00:00",
   "publisher" : "Twiin",
   "description" : "Codes for Task.businessStatus of the Coordination Task under TA Workflow (TA sections Business status; Codes of this TA). Extensible: a use case MAY define further codes. selected is reserved for the Placer.",
   "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",

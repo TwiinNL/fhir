@@ -12,7 +12,7 @@
   <title value="TA Workflow Business Status"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-11-05T11:19:04+00:00"/>
+  <date value="2026-11-05T12:00:03+00:00"/>
   <publisher value="Twiin"/>
   <description value="Codes for Task.businessStatus of the Coordination Task under TA Workflow (TA sections Business status; Codes of this TA). Extensible: a use case MAY define further codes. selected is reserved for the Placer."/>
   <copyright value="Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."/>

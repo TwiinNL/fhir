@@ -16,7 +16,7 @@
   <title value="Twiin Workflow ServiceRequest"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-11-05T11:19:04+00:00"/>
+  <date value="2026-11-05T12:00:03+00:00"/>
   <publisher value="Twiin"/>
   <description value="The Request under TA Workflow (TA sections Summary of the profiles → ServiceRequest; Request; Patient context and readability). subject refers to a Patient and is not masked; code states the requested service; instantiatesCanonical MAY refer to the ActivityDefinition or PlanDefinition of the requested service."/>
   <copyright value="Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."/>

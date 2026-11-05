@@ -11,7 +11,7 @@
   <title value="TA Workflow Status Reason"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-11-05T11:19:04+00:00"/>
+  <date value="2026-11-05T12:00:03+00:00"/>
   <publisher value="Twiin"/>
   <description value="Codes for Task.statusReason of the Coordination Task under TA Workflow. Extensible: a use case or a Fulfiller MAY use other reasons, for instance when it rejects a Task; not-selected is reserved for the Placer."/>
   <copyright value="Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."/>

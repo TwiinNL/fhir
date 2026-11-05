@@ -215,11 +215,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Summary of the profiles</td>
     </tr>
     <tr>
-      <td>Selection: exactly one candidate, and only one whose Coordination Task has the status accepted, atomic update, cancelling the others</td>
+      <td>Selection: exactly one candidate, and only one whose Coordination Task has the status accepted, cancelling the others; the Placer updates its own Tasks in a way it chooses, based on their current version</td>
       <td>Multiple Fulfillers Pattern</td>
     </tr>
     <tr>
-      <td>No two open Coordination Tasks for the same Request owned by HealthcareServices of the same Fulfiller while either has Task.code request-fulfillment</td>
+      <td>The Placer MAY invite several HealthcareServices of the same Fulfiller as candidates for the same Request. Two HealthcareServices belong to the same Fulfiller when the Placer records the same identification for them. When the Placer cancels the Coordination Task of one of them, the Fulfiller keeps its read access through the other; access is per organization, and access within the organization is its own responsibility</td>
       <td>Candidates of the same Fulfiller</td>
     </tr>
     <tr>
@@ -346,7 +346,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           <br/>
           Package nl.twiin.fhir.r4.workflow#0.4.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Nov 5, 2026 11:19+0000">2026-11-05</span>
+          Generated <span title="Thu, Nov 5, 2026 12:00+0000">2026-11-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
