@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "c682d130-33be-4bd5-a2b5-6677aead5ad9",
+  "meta" : {
+    "profile" : ["https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-workflow-servicerequest"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest c682d130-33be-4bd5-a2b5-6677aead5ad9</b></p><a name=\"c682d130-33be-4bd5-a2b5-6677aead5ad9\"> </a><a name=\"hcc682d130-33be-4bd5-a2b5-6677aead5ad9\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-workflow-servicerequest.html\">Twiin Workflow ServiceRequest</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/servicerequest</code>/1b9e0c5a-4f0e-4a8e-9d4c-2f7a1e6b3c58</p><p><b>instantiatesCanonical</b>: <code>https://example.org/fhir/ActivityDefinition/transfer-of-care</code></p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>priority</b>: Urgent</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></p><p><b>subject</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>authoredOn</b>: 2026-11-02 08:50:00+0100</p><p><b>performer</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis\u00a0(use:\u00a0official)</p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://placer.example.org/servicerequest",
+    "value" : "1b9e0c5a-4f0e-4a8e-9d4c-2f7a1e6b3c58"
+  }],
+  "instantiatesCanonical" : ["https://example.org/fhir/ActivityDefinition/transfer-of-care"],
+  "status" : "active",
+  "intent" : "order",
+  "priority" : "urgent",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "308292007"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"
+  },
+  "authoredOn" : "2026-11-02T08:50:00+01:00",
+  "performer" : [{
+    "type" : "HealthcareService",
+    "identifier" : {
+      "use" : "official",
+      "system" : "https://fulfiller-a.example.org/healthcareservice",
+      "value" : "wondzorg-thuis",
+      "assigner" : {
+        "identifier" : {
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+              "code" : "custodian"
+            }]
+          },
+          "system" : "urn:oid:2.16.528.1.1007.3.3",
+          "value" : "87654321"
+        }
+      }
+    }
+  }]
+}

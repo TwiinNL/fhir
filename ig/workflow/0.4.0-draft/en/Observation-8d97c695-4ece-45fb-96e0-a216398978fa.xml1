@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="8d97c695-4ece-45fb-96e0-a216398978fa"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation 8d97c695-4ece-45fb-96e0-a216398978fa</b></p><a name="8d97c695-4ece-45fb-96e0-a216398978fa"> </a><a name="hc8d97c695-4ece-45fb-96e0-a216398978fa"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:">Wound assessment</span></p><p><b>subject</b>: <a href="Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>effective</b>: 2026-10-22 10:00:00+0200</p><p><b>performer</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>value</b>: Wound on the lower leg is clean and dry; no signs of infection.</p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <text value="Wound assessment"/>
+  </code>
+  <subject>
+    <reference value="Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"/>
+  </subject>
+  <effectiveDateTime value="2026-10-22T10:00:00+02:00"/>
+  <performer>
+    <type value="Organization"/>
+    <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
+      <value value="12345678"/>
+    </identifier>
+  </performer>
+  <valueString value="Wound on the lower leg is clean and dry; no signs of infection."/>
+</Observation>

@@ -1,0 +1,1095 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - Twiin Workflow v0.4.0-draft</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <link href="assets/css/twiin.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <a id="twiin-logo" no-external="true" href="https://fhir.twiin.nl" title="Twiin"><img src="assets/images/twiin-logo.svg" alt="Twiin - Landelijk afsprakenstelsel voor gezondheidsgegevens"/></a>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Twiin Workflow</span>
+            <br/>
+            <span style="display:inline-block;">0.4.0-draft - Draft – normative only when referenced by the Twiin afsprakenstelsel
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts-overview.html">Overview</a>
+  </li>
+  <li>
+    <a href="example-scenarios.html">Examples</a>
+  </li>
+  <li>
+    <a href="requirements-not-in-artifacts.html">Not in artifacts</a>
+  </li>
+  <li>
+    <a href="installing-dependencies.html">Dependencies</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              <ul class="nav navbar-nav" id="twiin-nav-all">
+                <li><a no-external="true" href="https://fhir.twiin.nl/ig/">All Implementation Guides</a></li>
+              </ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Twiin Workflow (v0.4.0-draft: Release 1 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.twiin.nl/ig/workflow/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Capability Statements</a>
+      </li>
+      <li>
+         <a href="#2">Behavior: Search Parameters</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-twiin-workflow-placer-server.html"
+                  title="CapabilityStatement/twiin-workflow-placer-server">
+                  <span title="CapabilityStatement/twiin-workflow-placer-server">Twiin Workflow Placer Server
+</span>
+               </a>
+            </td>
+            <td>
+<p>Requirements for the FHIR server of the Placer under TA Workflow (TA section Placer server capabilities). Imports the Twiin Subscription Server of TA Notifications for Subscription.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-owner-assigner.html"
+                  title="SearchParameter/owner-assigner">
+                  <span title="SearchParameter/owner-assigner">Task owner-assigner
+</span>
+               </a>
+            </td>
+            <td>
+<p>The URA of the organization that assigned the identifier of the HealthcareService in Task.owner, which is the organization that provides that HealthcareService. Used to filter one Subscription for all HealthcareServices of an organization, and to search for the Tasks of that organization.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-twiin-authorization-cancellation-request-task.html"
+                  title="StructureDefinition/twiin-authorization-cancellation-request-task">
+                  <span title="StructureDefinition/twiin-authorization-cancellation-request-task">Twiin Authorization Cancellation Request Task
+</span>
+               </a>
+            </td>
+            <td>
+<p>Authorization Cancellation Request Task under TA Workflow, used by a Fulfiller to ask the Placer to withdraw the Request itself (TA sections Summary of the profiles → Authorization Cancellation Request Task; Cancellation by the Fulfiller). COW IG defines no profile for this Task. requester and owner identify the Fulfiller and the Placer as organizations, by their URA.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-twiin-cancellation-request-task.html"
+                  title="StructureDefinition/twiin-cancellation-request-task">
+                  <span title="StructureDefinition/twiin-cancellation-request-task">Twiin Cancellation Request Task
+</span>
+               </a>
+            </td>
+            <td>
+<p>Cancellation Request Task under TA Workflow, used by the Placer to ask the Fulfiller to stop work that has started (TA sections Summary of the profiles → Cancellation Request Task; Cancellation Request Task; Type of work on the Task).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-twiin-coordination-task.html"
+                  title="StructureDefinition/twiin-coordination-task">
+                  <span title="StructureDefinition/twiin-coordination-task">Twiin Coordination Task
+</span>
+               </a>
+            </td>
+            <td>
+<p>Coordination Task under TA Workflow (TA sections Summary of the profiles → Coordination Task; Coordination Task; Status of the Coordination Task; Patient context and readability; Type of work on the Task; Sharing additional content; Search parameters; Codes of this TA).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-twiin-workflow-servicerequest.html"
+                  title="StructureDefinition/twiin-workflow-servicerequest">
+                  <span title="StructureDefinition/twiin-workflow-servicerequest">Twiin Workflow ServiceRequest
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request under TA Workflow (TA sections Summary of the profiles → ServiceRequest; Request; Patient context and readability). subject refers to a Patient and is not masked; code states the requested service; instantiatesCanonical MAY refer to the ActivityDefinition or PlanDefinition of the requested service.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-twiin-workflow-subscription.html"
+                  title="StructureDefinition/twiin-workflow-subscription">
+                  <span title="StructureDefinition/twiin-workflow-subscription">Twiin Workflow Subscription
+</span>
+               </a>
+            </td>
+            <td>
+<p>Subscription under TA Workflow, on top of the Twiin Subscription of TA Notifications (TA sections Summary of the profiles → Subscription; Subscription). The payload mode is id-only, the filter is <code class="language-plaintext highlighter-rouge">owner:identifier=[system]|[value]</code> (one HealthcareService) or <code class="language-plaintext highlighter-rouge">owner-assigner=[system]|[value]</code> (all HealthcareServices of one organization, by its URA), and a heartbeat period is required.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ta-workflow-business-status.html"
+                  title="ValueSet/ta-workflow-business-status">
+                  <span title="ValueSet/ta-workflow-business-status">TA Workflow Business Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for Task.businessStatus of the Coordination Task under TA Workflow (TA sections Business status; Codes of this TA). Extensible: a use case MAY define further codes. selected is reserved for the Placer.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ta-workflow-status-reason.html"
+                  title="ValueSet/ta-workflow-status-reason">
+                  <span title="ValueSet/ta-workflow-status-reason">TA Workflow Status Reason
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for Task.statusReason of the Coordination Task under TA Workflow. Extensible: a use case or a Fulfiller MAY use other reasons, for instance when it rejects a Task; not-selected is reserved for the Placer.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ta-workflow-task-code.html"
+                  title="ValueSet/ta-workflow-task-code">
+                  <span title="ValueSet/ta-workflow-task-code">TA Workflow Task Code
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes for Task.code of the Coordination Task under TA Workflow.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ta-workflow.html" title="CodeSystem/ta-workflow">
+                  <span title="CodeSystem/ta-workflow">TA Workflow Codes
+</span>
+               </a>
+            </td>
+            <td>
+<p>Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-9c4a1f8e-7d3b-4e2a-b6f9-3a8e5d2c7b14.html"
+                  title="Task/9c4a1f8e-7d3b-4e2a-b6f9-3a8e5d2c7b14">
+                  <span title="Task/9c4a1f8e-7d3b-4e2a-b6f9-3a8e5d2c7b14">Authorization Cancellation Request Task
+</span>
+               </a>
+            </td>
+            <td>
+<p>A Fulfiller asks the Placer to withdraw the Request (TA section Cancellation by the Fulfiller). requester identifies the Fulfiller and owner the Placer, each by its URA. reasonCode carries the reason of the Fulfiller.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56.html"
+                  title="Task/5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56">
+                  <span title="Task/5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56">Cancellation Request Task
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Placer asks the Fulfiller to stop work that has started. focus refers to the Coordination Task, owner and the type of work are the same as on that Task (TA sections Cancellation Request Task; Cancellation Request (After in-progress)).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-6d2e9f41-8b3c-4a7d-b5e2-1c9f7a3d8e64.html"
+                  title="Task/6d2e9f41-8b3c-4a7d-b5e2-1c9f7a3d8e64">
+                  <span title="Task/6d2e9f41-8b3c-4a7d-b5e2-1c9f7a3d8e64">Coordination Task: candidate invited
+</span>
+               </a>
+            </td>
+            <td>
+<p>A bidding task in the Multiple Fulfillers Pattern before selection: code request-fulfillment, for empty (TA sections Multiple Fulfillers Pattern; Patient context and readability). Task.input also carries a non-identifying entry with its content inline, as allowed before selection (TA sections Sharing additional content; Patient context and readability).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91.html"
+                  title="Task/c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91">
+                  <span title="Task/c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91">Coordination Task: candidate not selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Coordination Task of a candidate that was not selected: status cancelled with statusReason not-selected and the text not selected (TA section Reason for cancelling a non-selected candidate).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-a41c7e2b-5f9d-4e3a-8c6b-2d7f1e9a5b38.html"
+                  title="Task/a41c7e2b-5f9d-4e3a-8c6b-2d7f1e9a5b38">
+                  <span title="Task/a41c7e2b-5f9d-4e3a-8c6b-2d7f1e9a5b38">Coordination Task: candidate selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Coordination Task of the selected candidate: businessStatus selected, code fulfill and for set in the same update (TA sections Multiple Fulfillers Pattern; Patient context and readability). The candidate had accepted and recorded a bid in output.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-f8f11d4a-2339-4ef3-9414-b2743d3a5102.html"
+                  title="Task/f8f11d4a-2339-4ef3-9414-b2743d3a5102">
+                  <span title="Task/f8f11d4a-2339-4ef3-9414-b2743d3a5102">Coordination Task: reselection step 1, A accepted
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 1. The Coordination Task of candidate A after A accepted: code request-fulfillment, for empty, only the type of work in input (TA sections Multiple Fulfillers Pattern; Patient context and readability).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-e74fa5b7-7904-40f5-ba19-d1aed93134ba.html"
+                  title="Task/e74fa5b7-7904-40f5-ba19-d1aed93134ba">
+                  <span title="Task/e74fa5b7-7904-40f5-ba19-d1aed93134ba">Coordination Task: reselection step 1, B accepted
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 1. The Coordination Task of candidate B after B accepted: code request-fulfillment, for empty, only the type of work in input (TA sections Multiple Fulfillers Pattern; Patient context and readability).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-18d1bd56-33f6-43e0-a3fa-8871a100df12.html"
+                  title="Task/18d1bd56-33f6-43e0-a3fa-8871a100df12">
+                  <span title="Task/18d1bd56-33f6-43e0-a3fa-8871a100df12">Coordination Task: reselection step 2, A selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 2. The Coordination Task of A when the Placer selects A: businessStatus selected, code fulfill and for set in the same update (TA sections Multiple Fulfillers Pattern; Patient context and readability). The Request has performer set to A.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-f0299832-a6c0-4517-a8af-0727fab92ee6.html"
+                  title="Task/f0299832-a6c0-4517-a8af-0727fab92ee6">
+                  <span title="Task/f0299832-a6c0-4517-a8af-0727fab92ee6">Coordination Task: reselection step 2, B not selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 2. The Coordination Task of B when A is selected: status cancelled with statusReason not-selected (TA section Reason for cancelling a non-selected candidate).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-4ae98e56-816c-4068-bdce-890a8a24b52f.html"
+                  title="Task/4ae98e56-816c-4068-bdce-890a8a24b52f">
+                  <span title="Task/4ae98e56-816c-4068-bdce-890a8a24b52f">Coordination Task: reselection step 3, A cancelled
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 3. The Placer cancels the Coordination Task of the selected A before in-progress, while the Request continues (TA section Cancellation (Before in-progress)). statusReason.text gives the reason; the code not-selected is not used, because no other candidate has been selected. The Request has performer unset again.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-a5c02498-4399-4c8d-aa17-b17023396852.html"
+                  title="Task/a5c02498-4399-4c8d-aa17-b17023396852">
+                  <span title="Task/a5c02498-4399-4c8d-aa17-b17023396852">Coordination Task: reselection step 4, B invited again
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 4. A new Coordination Task for B on the same Request, after the earlier Task of B ended (TA sections Multiple Fulfillers Pattern; Handling the End of a Coordination Task). code request-fulfillment, for empty.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-d4f3456d-86b6-4429-b606-bf52a94ca749.html"
+                  title="Task/d4f3456d-86b6-4429-b606-bf52a94ca749">
+                  <span title="Task/d4f3456d-86b6-4429-b606-bf52a94ca749">Coordination Task: reselection step 4, C invited
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 4. A Coordination Task for the new candidate C on the same Request (TA sections Multiple Fulfillers Pattern; Patient context and readability). code request-fulfillment, for empty.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-5dede07b-28ae-4497-bd35-817f5bee9690.html"
+                  title="Task/5dede07b-28ae-4497-bd35-817f5bee9690">
+                  <span title="Task/5dede07b-28ae-4497-bd35-817f5bee9690">Coordination Task: reselection step 5, B not selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 5. The new Coordination Task of B when C is selected: status cancelled with statusReason not-selected (TA section Reason for cancelling a non-selected candidate).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-47ca5941-e107-4c70-bae9-bce09b69311d.html"
+                  title="Task/47ca5941-e107-4c70-bae9-bce09b69311d">
+                  <span title="Task/47ca5941-e107-4c70-bae9-bce09b69311d">Coordination Task: reselection step 5, C selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 5. The Coordination Task of C when the Placer selects C, after C accepted (TA section Multiple Fulfillers Pattern: the Placer selects only a candidate whose Task has status accepted). businessStatus selected, code fulfill and for set in the same update.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-7dc145b2-78c9-45db-ab56-267c664be4c3.html"
+                  title="Task/7dc145b2-78c9-45db-ab56-267c664be4c3">
+                  <span title="Task/7dc145b2-78c9-45db-ab56-267c664be4c3">Coordination Task: sharing step 1, content shared before selection
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 1. The Placer invites the candidate and adds an entry to input with its content inline, without a reference, since before selection a candidate may read the Request but not the Patient or other resources at the Placer. The entry does not identify the patient (TA sections Sharing additional content; Patient context and readability). The type Dressing type is fictitious: the use case defines the type and states why the content is not identifying.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-c8ca1ec3-dd83-4900-9bfa-a05d6e93782c.html"
+                  title="Task/c8ca1ec3-dd83-4900-9bfa-a05d6e93782c">
+                  <span title="Task/c8ca1ec3-dd83-4900-9bfa-a05d6e93782c">Coordination Task: sharing step 2, candidate awaits information
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 2. The candidate accepted, sets businessStatus awaiting-information and states in statusReason.text what it needs (TA section Business status).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-b5e65e9b-434f-445c-924d-ff772c25ae4d.html"
+                  title="Task/b5e65e9b-434f-445c-924d-ff772c25ae4d">
+                  <span title="Task/b5e65e9b-434f-445c-924d-ff772c25ae4d">Coordination Task: sharing step 3, Placer answers in input
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 3. The Placer provides the information by adding an entry to input, again with its content inline (TA sections Business status; Sharing additional content). The Fulfiller then sets another value or removes businessStatus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-e1e3f55f-c56e-4501-b409-ed05bb70cc87.html"
+                  title="Task/e1e3f55f-c56e-4501-b409-ed05bb70cc87">
+                  <span title="Task/e1e3f55f-c56e-4501-b409-ed05bb70cc87">Coordination Task: sharing step 4, candidate has the information
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 4. The candidate removes businessStatus and statusReason (TA section Business status).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-66507516-150c-415f-9e88-7c1f24eef69c.html"
+                  title="Task/66507516-150c-415f-9e88-7c1f24eef69c">
+                  <span title="Task/66507516-150c-415f-9e88-7c1f24eef69c">Coordination Task: sharing step 5, available resource after selection
+</span>
+               </a>
+            </td>
+            <td>
+<p>Step 5. The Placer selects the candidate: businessStatus selected, code fulfill and for set in the same update, together with an entry with type available-resource that refers to a resource at the Placer (TA sections Sharing additional content; Patient context and readability).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-948d41c4-820f-49ed-bbb7-c15e6d7fc699.html"
+                  title="Task/948d41c4-820f-49ed-bbb7-c15e6d7fc699">
+                  <span title="Task/948d41c4-820f-49ed-bbb7-c15e6d7fc699">Coordination Task: single Fulfiller, awaiting information
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller awaits information from the Placer (TA section Business status).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47.html"
+                  title="Task/e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47">
+                  <span title="Task/e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47">Coordination Task: single Fulfiller, in progress
+</span>
+               </a>
+            </td>
+            <td>
+<p>Single Fulfiller Pattern: code fulfill and for set from creation; the Fulfiller has started the work. Task.input also carries an available-resource and an available-query entry (TA sections Single Fulfiller Pattern; Sharing additional content).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-8d97c695-4ece-45fb-96e0-a216398978fa.html"
+                  title="Observation/8d97c695-4ece-45fb-96e0-a216398978fa">
+                  <span title="Observation/8d97c695-4ece-45fb-96e0-a216398978fa">Observation: updated wound assessment
+</span>
+               </a>
+            </td>
+            <td>
+<p>A resource at the Placer to which the Coordination Task refers after selection, in an entry with type available-resource (TA section Sharing additional content). The content is fictitious.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html"
+                  title="Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90">
+                  <span title="Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90">Patient
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Patient to which the Request refers. Carries the BSN in Patient.identifier (TA section Patient context and readability).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-5fe23d95-5f8d-4f9d-9315-7d7979153e2a.html"
+                  title="Task/5fe23d95-5f8d-4f9d-9315-7d7979153e2a">
+                  <span title="Task/5fe23d95-5f8d-4f9d-9315-7d7979153e2a">Scenario 1, step 1: created
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Placer creates the Coordination Task with code fulfill and for set, and with the entries it makes available, since in the Single Fulfiller Pattern there is no selection.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-f99620ae-3d81-4e74-915e-c9dc12771355.html"
+                  title="Task/f99620ae-3d81-4e74-915e-c9dc12771355">
+                  <span title="Task/f99620ae-3d81-4e74-915e-c9dc12771355">Scenario 1, step 2: accepted
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller accepts the Coordination Task.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-fcf2352b-4027-45ea-8cd3-002dbebc3d7a.html"
+                  title="Task/fcf2352b-4027-45ea-8cd3-002dbebc3d7a">
+                  <span title="Task/fcf2352b-4027-45ea-8cd3-002dbebc3d7a">Scenario 1, step 3: in progress
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller starts the work: status in-progress and executionPeriod.start.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-7b4e4d93-be6d-4511-a2b0-0d141fa362e6.html"
+                  title="Task/7b4e4d93-be6d-4511-a2b0-0d141fa362e6">
+                  <span title="Task/7b4e4d93-be6d-4511-a2b0-0d141fa362e6">Scenario 1, step 4: completed
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller completes the work: status completed and executionPeriod.end set when the status moves from in-progress.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-c682d130-33be-4bd5-a2b5-6677aead5ad9.html"
+                  title="ServiceRequest/c682d130-33be-4bd5-a2b5-6677aead5ad9">
+                  <span title="ServiceRequest/c682d130-33be-4bd5-a2b5-6677aead5ad9">Scenario 1: Request, single Fulfiller
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of scenario 1. The Single Fulfiller Pattern applies: performer refers to the HealthcareService of A. priority is populated, as the Placer SHOULD do.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-12e3afcc-3979-476c-bc59-8e8e4e40afb9.html"
+                  title="Task/12e3afcc-3979-476c-bc59-8e8e4e40afb9">
+                  <span title="Task/12e3afcc-3979-476c-bc59-8e8e4e40afb9">Scenario 2, step 1: A accepted with a bid
+</span>
+               </a>
+            </td>
+            <td>
+<p>Candidate A accepts its Coordination Task (code request-fulfillment, for empty) and records a bid in output.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-66bb48ed-2053-4fa4-ae26-4aba6ad37e5d.html"
+                  title="Task/66bb48ed-2053-4fa4-ae26-4aba6ad37e5d">
+                  <span title="Task/66bb48ed-2053-4fa4-ae26-4aba6ad37e5d">Scenario 2, step 1: B accepted with a bid
+</span>
+               </a>
+            </td>
+            <td>
+<p>Candidate B accepts its Coordination Task (code request-fulfillment, for empty) and records a bid in output.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-5932fe26-950a-481f-8fc3-fa792e1d318f.html"
+                  title="Task/5932fe26-950a-481f-8fc3-fa792e1d318f">
+                  <span title="Task/5932fe26-950a-481f-8fc3-fa792e1d318f">Scenario 2, step 2: A selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Placer selects A: businessStatus selected, code fulfill and for set in one update, together with the entries with type available-resource and available-query that it makes available.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-4e1168c4-0d2d-434f-a44e-bd117d0780d2.html"
+                  title="Task/4e1168c4-0d2d-434f-a44e-bd117d0780d2">
+                  <span title="Task/4e1168c4-0d2d-434f-a44e-bd117d0780d2">Scenario 2, step 2: B not selected
+</span>
+               </a>
+            </td>
+            <td>
+<p>In the same step the Placer cancels the Coordination Task of B with statusReason not-selected.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-7e83a049-2267-4ca0-9d35-07216dfec2b6.html"
+                  title="ServiceRequest/7e83a049-2267-4ca0-9d35-07216dfec2b6">
+                  <span title="ServiceRequest/7e83a049-2267-4ca0-9d35-07216dfec2b6">Scenario 2: Request, multiple Fulfillers
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of scenario 2. performer is unset: the Multiple Fulfillers Pattern applies. Candidates may read the Request from the creation of their Coordination Task; the Request contains no data that directly identifies the patient beyond the reference in subject.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-46ebdfdd-408a-4340-915d-980a14c75f36.html"
+                  title="Task/46ebdfdd-408a-4340-915d-980a14c75f36">
+                  <span title="Task/46ebdfdd-408a-4340-915d-980a14c75f36">Scenario 4, step 1: accepted
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller has accepted; the work has not started.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-cd47fb57-917b-4cd4-86d7-38ccb3bbeef9.html"
+                  title="Task/cd47fb57-917b-4cd4-86d7-38ccb3bbeef9">
+                  <span title="Task/cd47fb57-917b-4cd4-86d7-38ccb3bbeef9">Scenario 4, step 2: cancelled by the Placer
+</span>
+               </a>
+            </td>
+            <td>
+<p>Before in-progress the Placer cancels the Coordination Task itself, with its reason in statusReason.text.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-57129653-f261-4841-9e42-e5b40b57f6fb.html"
+                  title="ServiceRequest/57129653-f261-4841-9e42-e5b40b57f6fb">
+                  <span title="ServiceRequest/57129653-f261-4841-9e42-e5b40b57f6fb">Scenario 4: Request
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of scenario 4, Single Fulfiller Pattern.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-e7e34041-dbd1-4413-be25-e08e2f85a7e4.html"
+                  title="ServiceRequest/e7e34041-dbd1-4413-be25-e08e2f85a7e4">
+                  <span title="ServiceRequest/e7e34041-dbd1-4413-be25-e08e2f85a7e4">Scenario 5, step 1: Request active
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of scenario 5 while the work is in progress.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-f3bdd83f-0914-4232-94e9-28a01b1d36af.html"
+                  title="Task/f3bdd83f-0914-4232-94e9-28a01b1d36af">
+                  <span title="Task/f3bdd83f-0914-4232-94e9-28a01b1d36af">Scenario 5, step 1: in progress
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller has started the work.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-c2b03781-d9f7-40e2-ba3d-d68d47f055b5.html"
+                  title="Task/c2b03781-d9f7-40e2-ba3d-d68d47f055b5">
+                  <span title="Task/c2b03781-d9f7-40e2-ba3d-d68d47f055b5">Scenario 5, step 2: Cancellation Request Task requested
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Placer asks the Fulfiller to stop the work, with its reason in reasonCode.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-444cd124-7855-43ab-85b6-87bede5a8c49.html"
+                  title="Task/444cd124-7855-43ab-85b6-87bede5a8c49">
+                  <span title="Task/444cd124-7855-43ab-85b6-87bede5a8c49">Scenario 5, step 3: Cancellation Request Task accepted
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller accepts the Cancellation Request Task.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-66689cbb-33d1-4159-8ce2-d5fa970577a9.html"
+                  title="Task/66689cbb-33d1-4159-8ce2-d5fa970577a9">
+                  <span title="Task/66689cbb-33d1-4159-8ce2-d5fa970577a9">Scenario 5, step 3: cancelled after the Cancellation Request
+</span>
+               </a>
+            </td>
+            <td>
+<p>After accepting the Cancellation Request Task the Fulfiller sets the Coordination Task to cancelled (not failed) and sets executionPeriod.end.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-462d6275-922e-434a-a379-96fd4a29548b.html"
+                  title="ServiceRequest/462d6275-922e-434a-a379-96fd4a29548b">
+                  <span title="ServiceRequest/462d6275-922e-434a-a379-96fd4a29548b">Scenario 5, step 4: Request revoked
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Placer revokes the Request. Same identifier as step 1: one resource in successive states.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-5e2888cb-fd37-4328-bfa7-45a9e1a047ff.html"
+                  title="Task/5e2888cb-fd37-4328-bfa7-45a9e1a047ff">
+                  <span title="Task/5e2888cb-fd37-4328-bfa7-45a9e1a047ff">Scenario 6, step 1: Authorization Cancellation Request requested
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller asks the Placer to withdraw the Request: intent proposal, code abort, focus the Request, reason in reasonCode.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-fb3a4ac7-3f98-45cf-acd6-95b18e688d6b.html"
+                  title="Task/fb3a4ac7-3f98-45cf-acd6-95b18e688d6b">
+                  <span title="Task/fb3a4ac7-3f98-45cf-acd6-95b18e688d6b">Scenario 6, step 2: Authorization Cancellation Request accepted
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Placer accepts the request to withdraw the Request.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-683af045-b470-4595-b80d-cd40c92da2f7.html"
+                  title="Task/683af045-b470-4595-b80d-cd40c92da2f7">
+                  <span title="Task/683af045-b470-4595-b80d-cd40c92da2f7">Scenario 7, step 1: Fulfiller requests information
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller sets businessStatus awaiting-information with statusReason.text, and adds an entry with type information-request to input.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-71af91f0-f5ec-42cf-9b48-75b74d0036a0.html"
+                  title="Task/71af91f0-f5ec-42cf-9b48-75b74d0036a0">
+                  <span title="Task/71af91f0-f5ec-42cf-9b48-75b74d0036a0">Scenario 7, step 2: Placer answers
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Placer answers with a further entry in input, with type available-resource, that refers to the wound assessment.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-b8d24f6e-1c37-4a59-9f02-6e1a7c4b8d35.html"
+                  title="Task/b8d24f6e-1c37-4a59-9f02-6e1a7c4b8d35">
+                  <span title="Task/b8d24f6e-1c37-4a59-9f02-6e1a7c4b8d35">Scenario 7, step 3: Fulfiller has the information
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Fulfiller removes businessStatus, statusReason and its information-request entry.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43.html"
+                  title="Observation/d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43">
+                  <span title="Observation/d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43">Scenario 7: wound assessment
+</span>
+               </a>
+            </td>
+            <td>
+<p>The resource at the Placer with which the Placer answers the information request. The content is fictitious.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-a529d458-5bec-4d91-8ed8-f4fd5bb93720.html"
+                  title="ServiceRequest/a529d458-5bec-4d91-8ed8-f4fd5bb93720">
+                  <span title="ServiceRequest/a529d458-5bec-4d91-8ed8-f4fd5bb93720">ServiceRequest: no definition
+</span>
+               </a>
+            </td>
+            <td>
+<p>A Request that follows no predefined definition and has no standard dataset; it is routed on ServiceRequest.code alone (TA sections Request; Routing by the Fulfiller).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-c6df56d1-5fc1-4abb-bc72-fb260f800832.html"
+                  title="ServiceRequest/c6df56d1-5fc1-4abb-bc72-fb260f800832">
+                  <span title="ServiceRequest/c6df56d1-5fc1-4abb-bc72-fb260f800832">ServiceRequest: reselection step 2, performer set to A
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of the reselection scenario at step 2, after A was selected: performer refers to the HealthcareService of A (TA section Multiple Fulfillers Pattern). At step 3 the Placer clears performer again; that state is the Request with performer unset. Same identifier as the other variants.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-5f9a3627-3c42-4f64-9ed4-b6526ea57f65.html"
+                  title="ServiceRequest/5f9a3627-3c42-4f64-9ed4-b6526ea57f65">
+                  <span title="ServiceRequest/5f9a3627-3c42-4f64-9ed4-b6526ea57f65">ServiceRequest: reselection step 5, performer set to C
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of the reselection scenario at step 5, after C was selected: performer refers to the HealthcareService of C (TA section Multiple Fulfillers Pattern). Same identifier as the other two variants: they are one resource in successive states.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-862e9389-15a3-4681-aa0c-1ebcd5bc17d0.html"
+                  title="ServiceRequest/862e9389-15a3-4681-aa0c-1ebcd5bc17d0">
+                  <span title="ServiceRequest/862e9389-15a3-4681-aa0c-1ebcd5bc17d0">ServiceRequest: reselection, performer unset
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of the reselection scenario while solicitation is open: performer unset (TA section Multiple Fulfillers Pattern). This is its state at steps 1, 3 and 4, and the state to which the Coordination Tasks of the scenario refer. Same identifier as the other two variants: they are one resource in successive states.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-3e358483-ec50-469b-94d0-54b6bc5ea7d8.html"
+                  title="ServiceRequest/3e358483-ec50-469b-94d0-54b6bc5ea7d8">
+                  <span title="ServiceRequest/3e358483-ec50-469b-94d0-54b6bc5ea7d8">ServiceRequest: sharing additional content
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request of the scenario sharing additional content. performer is unset: the Multiple Fulfillers Pattern applies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75.html"
+                  title="ServiceRequest/0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75">
+                  <span title="ServiceRequest/0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75">ServiceRequest: transfer of care
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Request, with subject a Patient and instantiatesCanonical referring to the definition of the requested service (TA sections Request; Patient context and readability). performer is unset: the Multiple Fulfillers Pattern applies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Subscription-1e8b4c6d-3f7a-4b2e-9d5c-8a1f6e3b7c29.html"
+                  title="Subscription/1e8b4c6d-3f7a-4b2e-9d5c-8a1f6e3b7c29">
+                  <span title="Subscription/1e8b4c6d-3f7a-4b2e-9d5c-8a1f6e3b7c29">Subscription for a HealthcareService
+</span>
+               </a>
+            </td>
+            <td>
+<p>Subscription for one HealthcareService and one topic at the base URL of the Placer: filter owner:identifier, id-only, heartbeat period (TA section Subscription). The topic URL is an example; topics are defined per use case.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Subscription-e0a7c3b9-5d14-4f82-b6e9-8a2d4c7f1b06.html"
+                  title="Subscription/e0a7c3b9-5d14-4f82-b6e9-8a2d4c7f1b06">
+                  <span title="Subscription/e0a7c3b9-5d14-4f82-b6e9-8a2d4c7f1b06">Subscription for an organization
+</span>
+               </a>
+            </td>
+            <td>
+<p>Subscription for all HealthcareServices of Fulfiller A, also those registered later: filter owner-assigner with the URA of the organization; channel.endpoint begins with the address of an Endpoint in Organization.endpoint. The topic URL is an example.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/twiin-tables.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          &#169; <a style="color:var(--footer-hyperlink-text-color)" href="https://www.twiin.nl">Twiin</a>. Content licensed under <a rel="license" style="color:var(--footer-hyperlink-text-color)" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, except the Twiin logo and the design and code of this site (all rights reserved). Third-party software keeps its own licence.
+
+
+
+
+          <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/TwiinNL/ig-workflow">Source repository</a>
+
+          <br/>
+          Package nl.twiin.fhir.r4.workflow#0.4.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Nov 5, 2026 10:55+0000">2026-11-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,81 @@
+{
+  "resourceType" : "Task",
+  "id" : "4e1168c4-0d2d-434f-a44e-bd117d0780d2",
+  "meta" : {
+    "profile" : ["https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task 4e1168c4-0d2d-434f-a44e-bd117d0780d2</b></p><a name=\"4e1168c4-0d2d-434f-a44e-bd117d0780d2\"> </a><a name=\"hc4e1168c4-0d2d-434f-a44e-bd117d0780d2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-coordination-task.html\">Twiin Coordination Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/44630c0f-e5e8-43b7-9ba3-20598cb2b36e</p><p><b>status</b>: Cancelled</p><p><b>statusReason</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow not-selected}\">not selected</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow request-fulfillment}\">Request fulfillment</span></p><p><b>focus</b>: <a href=\"ServiceRequest-7e83a049-2267-4ca0-9d35-07216dfec2b6.html\">ServiceRequest Transfer of care</a></p><p><b>authoredOn</b>: 2026-11-02 11:00:00+0100</p><p><b>lastModified</b>: 2026-11-02 14:00:00+0100</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-b.example.org/healthcareservice</code>/wijkverpleging-noord\u00a0(use:\u00a0official)</p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}\">Type of work</span></td><td><span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></td></tr></table><h3>Outputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:\">Bid</span></td><td>First visit possible on 2026-11-06</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://placer.example.org/task",
+    "value" : "44630c0f-e5e8-43b7-9ba3-20598cb2b36e"
+  }],
+  "status" : "cancelled",
+  "statusReason" : {
+    "coding" : [{
+      "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+      "code" : "not-selected"
+    }],
+    "text" : "not selected"
+  },
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+      "code" : "request-fulfillment"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/7e83a049-2267-4ca0-9d35-07216dfec2b6"
+  },
+  "authoredOn" : "2026-11-02T11:00:00+01:00",
+  "lastModified" : "2026-11-02T14:00:00+01:00",
+  "requester" : {
+    "identifier" : {
+      "system" : "http://fhir.nl/fhir/NamingSystem/ura",
+      "value" : "12345678"
+    }
+  },
+  "owner" : {
+    "type" : "HealthcareService",
+    "identifier" : {
+      "use" : "official",
+      "system" : "https://fulfiller-b.example.org/healthcareservice",
+      "value" : "wijkverpleging-noord",
+      "assigner" : {
+        "identifier" : {
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+              "code" : "custodian"
+            }]
+          },
+          "system" : "urn:oid:2.16.528.1.1007.3.3",
+          "value" : "11223344"
+        }
+      }
+    }
+  },
+  "input" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "type-of-work"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "308292007"
+      }]
+    }
+  }],
+  "output" : [{
+    "type" : {
+      "text" : "Bid"
+    },
+    "valueString" : "First visit possible on 2026-11-06"
+  }]
+}

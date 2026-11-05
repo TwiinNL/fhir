@@ -1,0 +1,75 @@
+{
+  "resourceType" : "Task",
+  "id" : "f3bdd83f-0914-4232-94e9-28a01b1d36af",
+  "meta" : {
+    "profile" : ["https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task f3bdd83f-0914-4232-94e9-28a01b1d36af</b></p><a name=\"f3bdd83f-0914-4232-94e9-28a01b1d36af\"> </a><a name=\"hcf3bdd83f-0914-4232-94e9-28a01b1d36af\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-coordination-task.html\">Twiin Coordination Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/7e85fd28-36fc-4b39-a0ca-822d7a1dea61</p><p><b>status</b>: In Progress</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/CodeSystem/task-code fulfill}\">Fulfill the focal request</span></p><p><b>focus</b>: <a href=\"ServiceRequest-e7e34041-dbd1-4413-be25-e08e2f85a7e4.html\">ServiceRequest Transfer of care</a></p><p><b>for</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>executionPeriod</b>: 2026-11-04 08:00:00+0100 --&gt; (ongoing)</p><p><b>authoredOn</b>: 2026-11-03 13:00:00+0100</p><p><b>lastModified</b>: 2026-11-04 08:00:00+0100</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis\u00a0(use:\u00a0official)</p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}\">Type of work</span></td><td><span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://placer.example.org/task",
+    "value" : "7e85fd28-36fc-4b39-a0ca-822d7a1dea61"
+  }],
+  "status" : "in-progress",
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/CodeSystem/task-code",
+      "code" : "fulfill"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/e7e34041-dbd1-4413-be25-e08e2f85a7e4"
+  },
+  "for" : {
+    "reference" : "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"
+  },
+  "executionPeriod" : {
+    "start" : "2026-11-04T08:00:00+01:00"
+  },
+  "authoredOn" : "2026-11-03T13:00:00+01:00",
+  "lastModified" : "2026-11-04T08:00:00+01:00",
+  "requester" : {
+    "identifier" : {
+      "system" : "http://fhir.nl/fhir/NamingSystem/ura",
+      "value" : "12345678"
+    }
+  },
+  "owner" : {
+    "type" : "HealthcareService",
+    "identifier" : {
+      "use" : "official",
+      "system" : "https://fulfiller-a.example.org/healthcareservice",
+      "value" : "wondzorg-thuis",
+      "assigner" : {
+        "identifier" : {
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+              "code" : "custodian"
+            }]
+          },
+          "system" : "urn:oid:2.16.528.1.1007.3.3",
+          "value" : "87654321"
+        }
+      }
+    }
+  },
+  "input" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "type-of-work"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "308292007"
+      }]
+    }
+  }]
+}

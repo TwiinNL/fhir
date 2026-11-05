@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91"/>
+  <meta>
+    <profile value="https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Task c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91</b></p><a name="c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91"> </a><a name="hcc8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-twiin-coordination-task.html">Twiin Coordination Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91</p><p><b>status</b>: Cancelled</p><p><b>statusReason</b>: <span title="Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow not-selected}">not selected</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title="Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow request-fulfillment}">Request fulfillment</span></p><p><b>focus</b>: <a href="ServiceRequest-0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75.html">ServiceRequest Transfer of care</a></p><p><b>authoredOn</b>: 2026-10-09 09:00:00+0200</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-b.example.org/healthcareservice</code>/wijkverpleging-noord (use: official)</p><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}">Type of work</span></td><td><span title="Codes:{http://snomed.info/sct 308292007}">Transfer of care</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://placer.example.org/task"/>
+    <value value="c8e3d5a7-2b4f-4d9e-a1c6-7f3b8e2d4a91"/>
+  </identifier>
+  <status value="cancelled"/>
+  <statusReason>
+    <coding>
+      <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+      <code value="not-selected"/>
+    </coding>
+    <text value="not selected"/>
+  </statusReason>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+      <code value="request-fulfillment"/>
+    </coding>
+  </code>
+  <focus>
+    <reference value="ServiceRequest/0b7c5d0e-6f3a-4c2b-9e1d-8a4f2c6b3d75"/>
+  </focus>
+  <authoredOn value="2026-10-09T09:00:00+02:00"/>
+  <requester>
+    <identifier>
+      <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
+      <value value="12345678"/>
+    </identifier>
+  </requester>
+  <owner>
+    <type value="HealthcareService"/>
+    <identifier>
+      <use value="official"/>
+      <system value="https://fulfiller-b.example.org/healthcareservice"/>
+      <value value="wijkverpleging-noord"/>
+      <assigner>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+              <code value="custodian"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.528.1.1007.3.3"/>
+          <value value="11223344"/>
+        </identifier>
+      </assigner>
+    </identifier>
+  </owner>
+  <input>
+    <type>
+      <coding>
+        <system value="https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow"/>
+        <code value="type-of-work"/>
+      </coding>
+    </type>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="308292007"/>
+      </coding>
+    </valueCodeableConcept>
+  </input>
+</Task>

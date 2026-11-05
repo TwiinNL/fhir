@@ -1,0 +1,443 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Example scenarios - Twiin Workflow v0.4.0-draft</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <link href="assets/css/twiin.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <a id="twiin-logo" no-external="true" href="https://fhir.twiin.nl" title="Twiin"><img src="assets/images/twiin-logo.svg" alt="Twiin - Landelijk afsprakenstelsel voor gezondheidsgegevens"/></a>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Twiin Workflow</span>
+            <br/>
+            <span style="display:inline-block;">0.4.0-draft - Draft – normative only when referenced by the Twiin afsprakenstelsel
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts-overview.html">Overview</a>
+  </li>
+  <li>
+    <a href="example-scenarios.html">Examples</a>
+  </li>
+  <li>
+    <a href="requirements-not-in-artifacts.html">Not in artifacts</a>
+  </li>
+  <li>
+    <a href="installing-dependencies.html">Dependencies</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              <ul class="nav navbar-nav" id="twiin-nav-all">
+                <li><a no-external="true" href="https://fhir.twiin.nl/ig/">All Implementation Guides</a></li>
+              </ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Example scenarios</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Twiin Workflow (v0.4.0-draft: Release 1 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.twiin.nl/ig/workflow/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Example scenarios</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#standard-dataset-and-available-entries" id="markdown-toc-standard-dataset-and-available-entries">Standard dataset and available entries</a></li>
+  <li><a href="#1-single-fulfiller" id="markdown-toc-1-single-fulfiller">1. Single Fulfiller</a></li>
+  <li><a href="#2-multiple-fulfillers-with-bidding-and-selection" id="markdown-toc-2-multiple-fulfillers-with-bidding-and-selection">2. Multiple Fulfillers with bidding and selection</a></li>
+  <li><a href="#3-deselection-and-renewed-solicitation" id="markdown-toc-3-deselection-and-renewed-solicitation">3. Deselection and renewed solicitation</a></li>
+  <li><a href="#4-cancellation-before-in-progress-by-the-placer" id="markdown-toc-4-cancellation-before-in-progress-by-the-placer">4. Cancellation before in-progress by the Placer</a></li>
+  <li><a href="#5-cancellation-request-after-in-progress" id="markdown-toc-5-cancellation-request-after-in-progress">5. Cancellation Request after in-progress</a></li>
+  <li><a href="#6-authorization-cancellation-request-by-the-fulfiller" id="markdown-toc-6-authorization-cancellation-request-by-the-fulfiller">6. Authorization Cancellation Request by the Fulfiller</a></li>
+  <li><a href="#7-information-request" id="markdown-toc-7-information-request">7. Information request</a></li>
+  <li><a href="#subscriptions" id="markdown-toc-subscriptions">Subscriptions</a></li>
+</ul>
+
+</div>
+<p>This page is informative. It shows the main scenarios of TA Workflow with their own instances. The requirements are in the TA. Instances with the same <code class="language-plaintext highlighter-rouge">Task.identifier</code> (or <code class="language-plaintext highlighter-rouge">ServiceRequest.identifier</code>) are one resource in successive states; the ids differ only because the IG holds one instance per id (TA section Identifiers of Tasks and Subscriptions). The type of work is SNOMED CT 308292007 (eOverdracht); hosts, identifiers and the topic URL are invented.</p>
+
+<h3 id="standard-dataset-and-available-entries">Standard dataset and available entries</h3>
+
+<p>A standard dataset, described by the Library of the ActivityDefinition or PlanDefinition in <code class="language-plaintext highlighter-rouge">ServiceRequest.instantiatesCanonical</code>, is a guideline for what a Fulfiller expects, not a requirement. The Placer states for each Request what it makes available, in <code class="language-plaintext highlighter-rouge">Task.input</code> entries with type <code class="language-plaintext highlighter-rouge">available-resource</code> (a reference in <code class="language-plaintext highlighter-rouge">valueReference</code>) or <code class="language-plaintext highlighter-rouge">available-query</code> (a search in <code class="language-plaintext highlighter-rouge">valueString</code>, relative to the Placer's FHIR base). It adds them when it selects the candidate, at creation in the Single Fulfiller Pattern, or where the use case makes the Patient readable before selection. The Fulfiller retrieves what these entries refer to, and may ask for missing information with an <code class="language-plaintext highlighter-rouge">information-request</code> entry (scenario 7). The Placer's server supports the reads and searches behind the entries it puts in <code class="language-plaintext highlighter-rouge">Task.input</code>; it is not required to support the searches of the dataset itself.</p>
+
+<h3 id="1-single-fulfiller">1. Single Fulfiller</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What happens</th>
+      <th>Instances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>The Placer creates the Coordination Task with code <code class="language-plaintext highlighter-rouge">fulfill</code>, <code class="language-plaintext highlighter-rouge">for</code> set and the available entries. <code class="language-plaintext highlighter-rouge">ServiceRequest.performer</code> refers to A; <code class="language-plaintext highlighter-rouge">priority</code> is populated.</td>
+      <td><a href="ServiceRequest-c682d130-33be-4bd5-a2b5-6677aead5ad9.html">Request</a>, <a href="Task-5fe23d95-5f8d-4f9d-9315-7d7979153e2a.html">created</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>The Fulfiller accepts.</td>
+      <td><a href="Task-f99620ae-3d81-4e74-915e-c9dc12771355.html">accepted</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>The Fulfiller starts the work: <code class="language-plaintext highlighter-rouge">in-progress</code>, <code class="language-plaintext highlighter-rouge">executionPeriod.start</code>.</td>
+      <td><a href="Task-fcf2352b-4027-45ea-8cd3-002dbebc3d7a.html">in progress</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>The Fulfiller completes the work: <code class="language-plaintext highlighter-rouge">completed</code>, <code class="language-plaintext highlighter-rouge">executionPeriod.end</code>.</td>
+      <td><a href="Task-7b4e4d93-be6d-4511-a2b0-0d141fa362e6.html">completed</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="2-multiple-fulfillers-with-bidding-and-selection">2. Multiple Fulfillers with bidding and selection</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What happens</th>
+      <th>Instances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>One Request, two candidates A and B, each with a Coordination Task with code <code class="language-plaintext highlighter-rouge">request-fulfillment</code> and <code class="language-plaintext highlighter-rouge">for</code> empty. Each candidate may read the Request from the creation of its Coordination Task; until selection the Placer keeps data that directly identifies the patient out of the Request. Both accept and record a bid in <code class="language-plaintext highlighter-rouge">output</code>.</td>
+      <td><a href="ServiceRequest-7e83a049-2267-4ca0-9d35-07216dfec2b6.html">Request</a>, <a href="Task-12e3afcc-3979-476c-bc59-8e8e4e40afb9.html">A accepted</a>, <a href="Task-66bb48ed-2053-4fa4-ae26-4aba6ad37e5d.html">B accepted</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>The Placer selects A: code <code class="language-plaintext highlighter-rouge">fulfill</code>, <code class="language-plaintext highlighter-rouge">businessStatus</code> <code class="language-plaintext highlighter-rouge">selected</code> and <code class="language-plaintext highlighter-rouge">for</code> in one update, with the available entries. From code <code class="language-plaintext highlighter-rouge">fulfill</code> on, A may read the Patient. The Task of B is cancelled with <code class="language-plaintext highlighter-rouge">statusReason</code> <code class="language-plaintext highlighter-rouge">not-selected</code>.</td>
+      <td><a href="Task-5932fe26-950a-481f-8fc3-fa792e1d318f.html">A selected</a>, <a href="Task-4e1168c4-0d2d-434f-a44e-bd117d0780d2.html">B not selected</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="3-deselection-and-renewed-solicitation">3. Deselection and renewed solicitation</h3>
+
+<p>See <a href="example-reselection.html">Example: reselection</a>: the Coordination Task of the selected Fulfiller is cancelled before <code class="language-plaintext highlighter-rouge">in-progress</code> while the Request stays active, and a new Coordination Task is created for the same Request.</p>
+
+<h3 id="4-cancellation-before-in-progress-by-the-placer">4. Cancellation before in-progress by the Placer</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What happens</th>
+      <th>Instances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>The Fulfiller has accepted; the work has not started.</td>
+      <td><a href="ServiceRequest-57129653-f261-4841-9e42-e5b40b57f6fb.html">Request</a>, <a href="Task-46ebdfdd-408a-4340-915d-980a14c75f36.html">accepted</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>The Placer sets the Coordination Task to <code class="language-plaintext highlighter-rouge">cancelled</code>, with its reason in <code class="language-plaintext highlighter-rouge">statusReason.text</code>.</td>
+      <td><a href="Task-cd47fb57-917b-4cd4-86d7-38ccb3bbeef9.html">cancelled</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="5-cancellation-request-after-in-progress">5. Cancellation Request after in-progress</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What happens</th>
+      <th>Instances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>The work is in progress.</td>
+      <td><a href="ServiceRequest-e7e34041-dbd1-4413-be25-e08e2f85a7e4.html">Request active</a>, <a href="Task-f3bdd83f-0914-4232-94e9-28a01b1d36af.html">in progress</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>The Placer creates a Cancellation Request Task: code <code class="language-plaintext highlighter-rouge">abort</code>, <code class="language-plaintext highlighter-rouge">focus</code> the Coordination Task, reason in <code class="language-plaintext highlighter-rouge">reasonCode</code>.</td>
+      <td><a href="Task-c2b03781-d9f7-40e2-ba3d-d68d47f055b5.html">requested</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>The Fulfiller accepts it and sets the Coordination Task to <code class="language-plaintext highlighter-rouge">cancelled</code> (not <code class="language-plaintext highlighter-rouge">failed</code>), with <code class="language-plaintext highlighter-rouge">executionPeriod.end</code>.</td>
+      <td><a href="Task-444cd124-7855-43ab-85b6-87bede5a8c49.html">accepted</a>, <a href="Task-66689cbb-33d1-4159-8ce2-d5fa970577a9.html">Coordination Task cancelled</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>The Placer revokes the Request.</td>
+      <td><a href="ServiceRequest-462d6275-922e-434a-a379-96fd4a29548b.html">Request revoked</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="6-authorization-cancellation-request-by-the-fulfiller">6. Authorization Cancellation Request by the Fulfiller</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What happens</th>
+      <th>Instances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>The Fulfiller of scenario 1 asks the Placer to withdraw the Request: <code class="language-plaintext highlighter-rouge">intent</code> <code class="language-plaintext highlighter-rouge">proposal</code>, code <code class="language-plaintext highlighter-rouge">abort</code>, <code class="language-plaintext highlighter-rouge">focus</code> the Request, reason in <code class="language-plaintext highlighter-rouge">reasonCode</code>.</td>
+      <td><a href="Task-5e2888cb-fd37-4328-bfa7-45a9e1a047ff.html">requested</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>The Placer accepts.</td>
+      <td><a href="Task-fb3a4ac7-3f98-45cf-acd6-95b18e688d6b.html">accepted</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="7-information-request">7. Information request</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>What happens</th>
+      <th>Instances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>The Fulfiller sets <code class="language-plaintext highlighter-rouge">businessStatus</code> <code class="language-plaintext highlighter-rouge">awaiting-information</code> with <code class="language-plaintext highlighter-rouge">statusReason.text</code>, and adds an entry with type <code class="language-plaintext highlighter-rouge">information-request</code> to <code class="language-plaintext highlighter-rouge">input</code>.</td>
+      <td><a href="Task-683af045-b470-4595-b80d-cd40c92da2f7.html">requests information</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>The Placer answers with a further entry with type <code class="language-plaintext highlighter-rouge">available-resource</code>, referring to a <a href="Observation-d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43.html">wound assessment</a>.</td>
+      <td><a href="Task-71af91f0-f5ec-42cf-9b48-75b74d0036a0.html">Placer answers</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>The Fulfiller removes <code class="language-plaintext highlighter-rouge">businessStatus</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> and its <code class="language-plaintext highlighter-rouge">information-request</code> entry.</td>
+      <td><a href="Task-b8d24f6e-1c37-4a59-9f02-6e1a7c4b8d35.html">has the information</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Fulfiller may change only <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">businessStatus</code>, <code class="language-plaintext highlighter-rouge">statusReason</code>, <code class="language-plaintext highlighter-rouge">executionPeriod</code>, <code class="language-plaintext highlighter-rouge">lastModified</code> and <code class="language-plaintext highlighter-rouge">output</code>, and may add and remove entries with type <code class="language-plaintext highlighter-rouge">information-request</code> in <code class="language-plaintext highlighter-rouge">input</code>; the type <code class="language-plaintext highlighter-rouge">information-request</code> is reserved for the Fulfiller. All other <code class="language-plaintext highlighter-rouge">input</code> entries are set by the Placer (TA section Write access).</p>
+
+<h3 id="subscriptions">Subscriptions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filter</th>
+      <th>Instance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">owner:identifier=[system]|[value]</code>, one HealthcareService</td>
+      <td><a href="Subscription-1e8b4c6d-3f7a-4b2e-9d5c-8a1f6e3b7c29.html">Subscription for a HealthcareService</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">owner-assigner=[system]|[value]</code>, all HealthcareServices of one organization, also those registered later</td>
+      <td><a href="Subscription-e0a7c3b9-5d14-4f82-b6e9-8a2d4c7f1b06.html">Subscription for an organization</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Per organization, topic and base URL, a Fulfiller has either one Subscription per HealthcareService or one Subscription for the organization, not both. For a Subscription on <code class="language-plaintext highlighter-rouge">owner-assigner</code>, <code class="language-plaintext highlighter-rouge">channel.endpoint</code> begins with the address of an Endpoint with payloadType Notification in <code class="language-plaintext highlighter-rouge">Organization.endpoint</code>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/twiin-tables.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          &#169; <a style="color:var(--footer-hyperlink-text-color)" href="https://www.twiin.nl">Twiin</a>. Content licensed under <a rel="license" style="color:var(--footer-hyperlink-text-color)" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, except the Twiin logo and the design and code of this site (all rights reserved). Third-party software keeps its own licence.
+
+
+
+
+          <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/TwiinNL/ig-workflow">Source repository</a>
+
+          <br/>
+          Package nl.twiin.fhir.r4.workflow#0.4.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Nov 5, 2026 10:55+0000">2026-11-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

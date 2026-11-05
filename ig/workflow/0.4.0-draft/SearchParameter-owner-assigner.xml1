@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="owner-assigner"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: SearchParameter owner-assigner</b></p><a name="owner-assigner"> </a><a name="hcowner-assigner"> </a><h2>OwnerAssigner</h2><p>Parameter <code>owner-assigner</code>:<code>token</code></p><div><p>The URA of the organization that assigned the identifier of the HealthcareService in Task.owner, which is the organization that provides that HealthcareService. Used to filter one Subscription for all HealthcareServices of an organization, and to search for the Tasks of that organization.</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/task.html">Task</a></td></tr><tr><td>Expression</td><td><code>Task.owner.identifier.assigner.identifier</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://fhir.twiin.nl/ig/workflow/SearchParameter/owner-assigner"/>
+  <version value="0.4.0-draft"/>
+  <name value="OwnerAssigner"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-11-05T10:55:26+00:00"/>
+  <publisher value="Twiin"/>
+  <description value="The URA of the organization that assigned the identifier of the HealthcareService in Task.owner, which is the organization that provides that HealthcareService. Used to filter one Subscription for all HealthcareServices of an organization, and to search for the Tasks of that organization."/>
+  <code value="owner-assigner"/>
+  <base value="Task"/>
+  <type value="token"/>
+  <expression value="Task.owner.identifier.assigner.identifier"/>
+</SearchParameter>

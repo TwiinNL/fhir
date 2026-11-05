@@ -1,0 +1,95 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/Task/5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-cancellation-request-task" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-cancellation-request-task>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task 5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56</b></p><a name=\"5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56\"> </a><a name=\"hc5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-cancellation-request-task.html\">Twiin Cancellation Request Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56</p><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/CodeSystem/task-code abort}\">Mark the focal resource as no longer active</span></p><p><b>focus</b>: <a href=\"Task-e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47.html\">Task Fulfill the focal request</a></p><p><b>authoredOn</b>: 2026-10-13 10:00:00+0200</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis (use: official)</p><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}\">Type of work</span></td><td><span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></td></tr></table></div>"
+  ] ;
+  fhir:Task.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://placer.example.org/task" ] ;
+     fhir:Identifier.value [ fhir:value "5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56" ]
+  ] ;
+  fhir:Task.status [ fhir:value "requested"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/CodeSystem/task-code" ] ;
+       fhir:Coding.code [ fhir:value "abort" ]
+     ]
+  ] ;
+  fhir:Task.focus [
+     fhir:link <https://fhir.twiin.nl/ig/workflow/Task/e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47> ;
+     fhir:Reference.reference [ fhir:value "Task/e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-10-13T10:00:00+02:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://fhir.nl/fhir/NamingSystem/ura" ] ;
+       fhir:Identifier.value [ fhir:value "12345678" ]
+     ]
+  ] ;
+  fhir:Task.owner [
+     fhir:Reference.type [ fhir:value "HealthcareService" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.use [ fhir:value "official" ] ;
+       fhir:Identifier.system [ fhir:value "https://fulfiller-a.example.org/healthcareservice" ] ;
+       fhir:Identifier.value [ fhir:value "wondzorg-thuis" ] ;
+       fhir:Identifier.assigner [
+         fhir:Reference.identifier [
+           fhir:Identifier.type [
+             fhir:CodeableConcept.coding [
+               fhir:index -1 ;
+               fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+               fhir:Coding.code [ fhir:value "custodian" ]
+             ]
+           ] ;
+           fhir:Identifier.system [ fhir:value "urn:oid:2.16.528.1.1007.3.3" ] ;
+           fhir:Identifier.value [ fhir:value "87654321" ]
+         ]
+       ]
+     ]
+  ] ;
+  fhir:Task.input [
+     fhir:index -1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow" ] ;
+         fhir:Coding.code [ fhir:value "type-of-work" ]
+       ]
+     ] ;
+     fhir:Task.input.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:308292007 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "308292007" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/Task/5b9d3e7f-1a2c-4f6e-8d4b-9e2a7c1f3b56.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

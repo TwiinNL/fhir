@@ -1,0 +1,111 @@
+{
+  "resourceType" : "Task",
+  "id" : "f99620ae-3d81-4e74-915e-c9dc12771355",
+  "meta" : {
+    "profile" : ["https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task f99620ae-3d81-4e74-915e-c9dc12771355</b></p><a name=\"f99620ae-3d81-4e74-915e-c9dc12771355\"> </a><a name=\"hcf99620ae-3d81-4e74-915e-c9dc12771355\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-coordination-task.html\">Twiin Coordination Task</a></p></div><p><b>identifier</b>: <code>https://placer.example.org/task</code>/12d4c5d1-e6cb-432f-b195-7a4dc2da47be</p><p><b>status</b>: Accepted</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/CodeSystem/task-code fulfill}\">Fulfill the focal request</span></p><p><b>focus</b>: <a href=\"ServiceRequest-c682d130-33be-4bd5-a2b5-6677aead5ad9.html\">ServiceRequest Transfer of care</a></p><p><b>for</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>authoredOn</b>: 2026-11-02 09:00:00+0100</p><p><b>lastModified</b>: 2026-11-02 10:15:00+0100</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>owner</b>: Identifier: <code>https://fulfiller-a.example.org/healthcareservice</code>/wondzorg-thuis\u00a0(use:\u00a0official)</p><p><b>location</b>: Identifier: <code>https://fulfiller-a.example.org/location</code>/vestiging-centrum\u00a0(use:\u00a0official)</p><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow type-of-work}\">Type of work</span></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 308292007}\">Transfer of care</span></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow available-resource}\">Available resource</span></p><p><b>value</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow available-query}\">Available query</span></p><p><b>value</b>: Observation?patient=3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90&amp;category=vital-signs</p></blockquote></div>"
+  },
+  "identifier" : [{
+    "system" : "https://placer.example.org/task",
+    "value" : "12d4c5d1-e6cb-432f-b195-7a4dc2da47be"
+  }],
+  "status" : "accepted",
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/CodeSystem/task-code",
+      "code" : "fulfill"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/c682d130-33be-4bd5-a2b5-6677aead5ad9"
+  },
+  "for" : {
+    "reference" : "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"
+  },
+  "authoredOn" : "2026-11-02T09:00:00+01:00",
+  "lastModified" : "2026-11-02T10:15:00+01:00",
+  "requester" : {
+    "identifier" : {
+      "system" : "http://fhir.nl/fhir/NamingSystem/ura",
+      "value" : "12345678"
+    }
+  },
+  "owner" : {
+    "type" : "HealthcareService",
+    "identifier" : {
+      "use" : "official",
+      "system" : "https://fulfiller-a.example.org/healthcareservice",
+      "value" : "wondzorg-thuis",
+      "assigner" : {
+        "identifier" : {
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+              "code" : "custodian"
+            }]
+          },
+          "system" : "urn:oid:2.16.528.1.1007.3.3",
+          "value" : "87654321"
+        }
+      }
+    }
+  },
+  "location" : {
+    "type" : "Location",
+    "identifier" : {
+      "use" : "official",
+      "system" : "https://fulfiller-a.example.org/location",
+      "value" : "vestiging-centrum",
+      "assigner" : {
+        "identifier" : {
+          "type" : {
+            "coding" : [{
+              "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+              "code" : "custodian"
+            }]
+          },
+          "system" : "urn:oid:2.16.528.1.1007.3.3",
+          "value" : "87654321"
+        }
+      }
+    }
+  },
+  "input" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "type-of-work"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "308292007"
+      }]
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "available-resource"
+      }]
+    },
+    "valueReference" : {
+      "reference" : "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90"
+    }
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow",
+        "code" : "available-query"
+      }]
+    },
+    "valueString" : "Observation?patient=3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90&category=vital-signs"
+  }]
+}

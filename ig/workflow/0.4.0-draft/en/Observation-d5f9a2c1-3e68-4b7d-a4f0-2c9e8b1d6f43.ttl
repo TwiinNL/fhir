@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/Observation/d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43</b></p><a name=\"d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43\"> </a><a name=\"hcd5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:\">Wound assessment</span></p><p><b>subject</b>: <a href=\"Patient-3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90.html\">Anna Jansen  (no stated gender), DoB Unknown ( http://fhir.nl/fhir/NamingSystem/bsn#999999151)</a></p><p><b>effective</b>: 2026-10-08 15:00:00+0200</p><p><b>performer</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>value</b>: Wound on the lower leg, 3 cm, clean; no signs of infection.</p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.text [ fhir:value "Wound assessment" ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://fhir.twiin.nl/ig/workflow/Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90> ;
+     fhir:Reference.reference [ fhir:value "Patient/3f6a2b8c-1d4e-4f7a-9b2c-5e8d1a7c4f90" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-10-08T15:00:00+02:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index -1 ;
+     fhir:Reference.type [ fhir:value "Organization" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://fhir.nl/fhir/NamingSystem/ura" ] ;
+       fhir:Identifier.value [ fhir:value "12345678" ]
+     ]
+  ] ;
+  fhir:Observation.valueString [ fhir:value "Wound on the lower leg, 3 cm, clean; no signs of infection."] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.twiin.nl/ig/workflow/Observation/d5f9a2c1-3e68-4b7d-a4f0-2c9e8b1d6f43.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

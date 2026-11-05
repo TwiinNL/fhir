@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Task",
+  "id" : "5e2888cb-fd37-4328-bfa7-45a9e1a047ff",
+  "meta" : {
+    "profile" : ["https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-authorization-cancellation-request-task"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task 5e2888cb-fd37-4328-bfa7-45a9e1a047ff</b></p><a name=\"5e2888cb-fd37-4328-bfa7-45a9e1a047ff\"> </a><a name=\"hc5e2888cb-fd37-4328-bfa7-45a9e1a047ff\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-twiin-authorization-cancellation-request-task.html\">Twiin Authorization Cancellation Request Task</a></p></div><p><b>status</b>: Requested</p><p><b>intent</b>: proposal</p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/CodeSystem/task-code abort}\">Mark the focal resource as no longer active</span></p><p><b>focus</b>: <a href=\"ServiceRequest-c682d130-33be-4bd5-a2b5-6677aead5ad9.html\">ServiceRequest Transfer of care</a></p><p><b>authoredOn</b>: 2026-11-03 12:00:00+0100</p><p><b>requester</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/87654321</p><p><b>owner</b>: Identifier: <code>http://fhir.nl/fhir/NamingSystem/ura</code>/12345678</p><p><b>reasonCode</b>: <span title=\"Codes:\">The wound requires specialist care that we cannot provide.</span></p></div>"
+  },
+  "status" : "requested",
+  "intent" : "proposal",
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/CodeSystem/task-code",
+      "code" : "abort"
+    }]
+  },
+  "focus" : {
+    "reference" : "ServiceRequest/c682d130-33be-4bd5-a2b5-6677aead5ad9"
+  },
+  "authoredOn" : "2026-11-03T12:00:00+01:00",
+  "requester" : {
+    "identifier" : {
+      "system" : "http://fhir.nl/fhir/NamingSystem/ura",
+      "value" : "87654321"
+    }
+  },
+  "owner" : {
+    "identifier" : {
+      "system" : "http://fhir.nl/fhir/NamingSystem/ura",
+      "value" : "12345678"
+    }
+  },
+  "reasonCode" : {
+    "text" : "The wound requires specialist care that we cannot provide."
+  }
+}
