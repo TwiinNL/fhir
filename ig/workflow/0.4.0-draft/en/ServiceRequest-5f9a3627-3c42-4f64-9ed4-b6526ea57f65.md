@@ -66,7 +66,7 @@ Profile: [Twiin Workflow ServiceRequest](StructureDefinition-twiin-workflow-serv
               "code" : "custodian"
             }]
           },
-          "system" : "urn:oid:2.16.528.1.1007.3.3",
+          "system" : "http://fhir.nl/fhir/NamingSystem/ura",
           "value" : "55667788"
         }
       }

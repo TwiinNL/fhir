@@ -12,7 +12,7 @@
   <reason value="Coordination Tasks for all HealthcareServices of the organization with URA 87654321"/>
   <criteria value="https://example.org/fhir/SubscriptionTopic/transfer-of-care">
     <extension url="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria">
-      <valueString value="owner-assigner=urn:oid:2.16.528.1.1007.3.3|87654321"/>
+      <valueString value="owner-assigner=http://fhir.nl/fhir/NamingSystem/ura|87654321"/>
     </extension>
   </criteria>
   <channel>

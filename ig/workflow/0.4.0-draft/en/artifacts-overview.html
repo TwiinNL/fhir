@@ -103,6 +103,9 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
 </ul>
               <ul class="nav navbar-nav" id="twiin-nav-all">
                 <li><a no-external="true" href="https://fhir.twiin.nl/ig/">All Implementation Guides</a></li>
@@ -209,7 +212,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Task.owner and Task.location refer to a HealthcareService and a Location, with the type and a complete identifier (system, value and the identifier of its assigner) required. That they are profiled by GF Addressing is not expressed in the artifacts of this guide (see <a href="requirements-not-in-artifacts.html">Requirements not expressed in artifacts</a>). The invariant <code class="language-plaintext highlighter-rouge">twiin-aid-1</code> excludes an assigner identified by a KvK number; the URA system of the assigner is not fixed in this guide.</p>
+<p>Task.owner and Task.location refer to a HealthcareService and a Location, with the type and a complete identifier (system, value and the identifier of its assigner) required. That they are profiled by GF Addressing is not expressed in the artifacts of this guide (see <a href="requirements-not-in-artifacts.html">Requirements not expressed in artifacts</a>). The invariant <code class="language-plaintext highlighter-rouge">twiin-aid-1</code> excludes an assigner identified by a KvK number; the profiles do not fix the system of the assigner. The URA is always identified with the system <code class="language-plaintext highlighter-rouge">http://fhir.nl/fhir/NamingSystem/ura</code>, on the assigner as on Task.requester, as in GF Addressing.</p>
 
 <p>COW IG defines no profile for the Authorization Cancellation Request Task. Its requester is the Fulfiller as an organization, identified by its URA, as its owner is the Placer: FHIR R4 does not allow Task.requester to refer to a HealthcareService (TA section Summary of the profiles → Authorization Cancellation Request Task).</p>
 
@@ -472,7 +475,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           <br/>
           Package nl.twiin.fhir.r4.workflow#0.4.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Nov 5, 2026 10:55+0000">2026-11-05</span>
+          Generated <span title="Thu, Nov 5, 2026 11:19+0000">2026-11-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

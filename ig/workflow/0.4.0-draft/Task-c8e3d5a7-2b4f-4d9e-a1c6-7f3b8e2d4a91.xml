@@ -51,7 +51,7 @@
               <code value="custodian"/>
             </coding>
           </type>
-          <system value="urn:oid:2.16.528.1.1007.3.3"/>
+          <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
           <value value="11223344"/>
         </identifier>
       </assigner>

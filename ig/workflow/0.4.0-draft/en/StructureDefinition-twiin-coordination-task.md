@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-twiin-coordinatio
   "title" : "Twiin Coordination Task",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-05T10:55:26+00:00",
+  "date" : "2026-11-05T11:19:04+00:00",
   "publisher" : "Twiin",
   "description" : "Coordination Task under TA Workflow (TA sections Summary of the profiles → Coordination Task; Coordination Task; Status of the Coordination Task; Patient context and readability; Type of work on the Task; Sharing additional content; Search parameters; Codes of this TA).",
   "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",

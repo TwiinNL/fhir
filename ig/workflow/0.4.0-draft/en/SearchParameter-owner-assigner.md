@@ -28,7 +28,7 @@ The URA of the organization that assigned the identifier of the HealthcareServic
   "name" : "OwnerAssigner",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-05T10:55:26+00:00",
+  "date" : "2026-11-05T11:19:04+00:00",
   "publisher" : "Twiin",
   "description" : "The URA of the organization that assigned the identifier of the HealthcareService in Task.owner, which is the organization that provides that HealthcareService. Used to filter one Subscription for all HealthcareServices of an organization, and to search for the Tasks of that organization.",
   "code" : "owner-assigner",

@@ -38,7 +38,7 @@ Profile: [Twiin Workflow Subscription](StructureDefinition-twiin-workflow-subscr
   "_criteria" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria",
-      "valueString" : "owner-assigner=urn:oid:2.16.528.1.1007.3.3|87654321"
+      "valueString" : "owner-assigner=http://fhir.nl/fhir/NamingSystem/ura|87654321"
     }]
   },
   "channel" : {

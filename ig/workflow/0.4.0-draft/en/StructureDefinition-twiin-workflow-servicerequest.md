@@ -45,7 +45,7 @@ Other representations of profile: [CSV](../StructureDefinition-twiin-workflow-se
   "title" : "Twiin Workflow ServiceRequest",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-05T10:55:26+00:00",
+  "date" : "2026-11-05T11:19:04+00:00",
   "publisher" : "Twiin",
   "description" : "The Request under TA Workflow (TA sections Summary of the profiles → ServiceRequest; Request; Patient context and readability). subject refers to a Patient and is not masked; code states the requested service; instantiatesCanonical MAY refer to the ActivityDefinition or PlanDefinition of the requested service.",
   "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",
