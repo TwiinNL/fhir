@@ -20,8 +20,8 @@
     "description" : "Codes defined by TA Workflow for Task.code, Task.businessStatus, Task.statusReason and Task.input.type.",
     "uses" : {
     },
+    "ValueSet-ta-workflow-status-reason.html" : "TA Workflow Status Reason",
     "ValueSet-ta-workflow-task-code.html" : "TA Workflow Task Code",
-    "ValueSet-ta-workflow-business-status.html" : "TA Workflow Business Status",
-    "ValueSet-ta-workflow-status-reason.html" : "TA Workflow Status Reason"
+    "ValueSet-ta-workflow-business-status.html" : "TA Workflow Business Status"
   }]
 }

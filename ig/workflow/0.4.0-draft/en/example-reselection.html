@@ -185,12 +185,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td>1</td>
-      <td>The Placer invites A and B: one Coordination Task each, code <code class="language-plaintext highlighter-rouge">request-fulfillment</code>, <code class="language-plaintext highlighter-rouge">for</code> empty, only the type of work in <code class="language-plaintext highlighter-rouge">input</code>. Both accept.</td>
+      <td>The Placer invites A and B: one Coordination Task each, code <code class="language-plaintext highlighter-rouge">request-fulfillment</code>, <code class="language-plaintext highlighter-rouge">for</code> set at creation, only the type of work in <code class="language-plaintext highlighter-rouge">input</code>. Both accept.</td>
       <td><a href="Task-f8f11d4a-2339-4ef3-9414-b2743d3a5102.html">A accepted</a>, <a href="Task-e74fa5b7-7904-40f5-ba19-d1aed93134ba.html">B accepted</a>, <a href="ServiceRequest-862e9389-15a3-4681-aa0c-1ebcd5bc17d0.html">Request</a></td>
     </tr>
     <tr>
       <td>2</td>
-      <td>The Placer selects A: <code class="language-plaintext highlighter-rouge">businessStatus</code> <code class="language-plaintext highlighter-rouge">selected</code>, code <code class="language-plaintext highlighter-rouge">fulfill</code> and <code class="language-plaintext highlighter-rouge">for</code> set in one update. The Task of B is cancelled with <code class="language-plaintext highlighter-rouge">statusReason</code> <code class="language-plaintext highlighter-rouge">not-selected</code>. <code class="language-plaintext highlighter-rouge">ServiceRequest.performer</code> is set to A.</td>
+      <td>The Placer selects A: <code class="language-plaintext highlighter-rouge">businessStatus</code> <code class="language-plaintext highlighter-rouge">selected</code> and code <code class="language-plaintext highlighter-rouge">fulfill</code> set in one update. The Task of B is cancelled with <code class="language-plaintext highlighter-rouge">statusReason</code> <code class="language-plaintext highlighter-rouge">not-selected</code>. <code class="language-plaintext highlighter-rouge">ServiceRequest.performer</code> is set to A.</td>
       <td><a href="Task-18d1bd56-33f6-43e0-a3fa-8871a100df12.html">A selected</a>, <a href="Task-f0299832-a6c0-4517-a8af-0727fab92ee6.html">B not selected</a>, <a href="ServiceRequest-c6df56d1-5fc1-4abb-bc72-fb260f800832.html">Request with performer</a></td>
     </tr>
     <tr>
@@ -200,7 +200,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>4</td>
-      <td>The Placer solicits again on the same Request: a new Coordination Task for B, whose earlier Task has ended, and one for C. Both have code <code class="language-plaintext highlighter-rouge">request-fulfillment</code> and <code class="language-plaintext highlighter-rouge">for</code> empty.</td>
+      <td>The Placer solicits again on the same Request: a new Coordination Task for B, whose earlier Task has ended, and one for C. Both have code <code class="language-plaintext highlighter-rouge">request-fulfillment</code> and <code class="language-plaintext highlighter-rouge">for</code> set at creation.</td>
       <td><a href="Task-a5c02498-4399-4c8d-aa17-b17023396852.html">B invited again</a>, <a href="Task-d4f3456d-86b6-4429-b606-bf52a94ca749.html">C invited</a></td>
     </tr>
     <tr>
@@ -216,7 +216,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Successive states of one resource.</strong> Instances with the same <code class="language-plaintext highlighter-rouge">Task.identifier</code> are the same Coordination Task in successive states; the three ServiceRequests with the same <code class="language-plaintext highlighter-rouge">ServiceRequest.identifier</code> are the same Request in successive states. The TA requires ids to be stable (TA section Identifiers of Tasks and Subscriptions): in reality the id of a Task or a Request does not change, only its content and version. The ids differ here only because the IG holds one instance per id.</li>
   <li>The Request is shown with <code class="language-plaintext highlighter-rouge">performer</code> unset (steps 1, 3 and 4), set to A (step 2) and set to C (step 5). The Tasks refer to the first variant.</li>
-  <li>B has two Coordination Tasks for the same Request, one per solicitation: the first ended at step 2, the second is created at step 4. A new Coordination Task for a Fulfiller whose earlier Task for the same Request has ended is allowed.</li>
+  <li>B has two Coordination Tasks for the same Request, one per solicitation: the first ended at step 2, the second is created at step 4. The Placer may then create new Coordination Tasks for the same Request, also for a Fulfiller whose earlier Coordination Task for that Request has ended (TA section Cancellation (Before in-progress)).</li>
   <li>Between steps 3 and 4 no open Coordination Task refers to the active Request, because the Placer is about to create new ones (TA section Handling the End of a Coordination Task).</li>
   <li>In step 3 the Task of A keeps code <code class="language-plaintext highlighter-rouge">fulfill</code> and <code class="language-plaintext highlighter-rouge">for</code>, and <code class="language-plaintext highlighter-rouge">businessStatus</code> is no longer set: <code class="language-plaintext highlighter-rouge">selected</code> belongs to status <code class="language-plaintext highlighter-rouge">accepted</code> (TA section Business status), and the Placer removes it when it cancels the Task of the selected Fulfiller.</li>
   <li>The Task of C in step 5 follows the requirement that the Placer selects only a candidate whose Task has status <code class="language-plaintext highlighter-rouge">accepted</code>; the instance shows the state after selection.</li>
@@ -259,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           <br/>
           Package nl.twiin.fhir.r4.workflow#0.4.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Nov 5, 2026 12:00+0000">2026-11-05</span>
+          Generated <span title="Thu, Nov 5, 2026 13:14+0000">2026-11-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

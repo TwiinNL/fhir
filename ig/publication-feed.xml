@@ -4,8 +4,8 @@
     <description>FHIR specifications published by Twiin</description>
     <link>https://fhir.twiin.nl/ig/publication-feed.xml</link>
     <generator>Twiin</generator>
-    <lastBuildDate>Thu, 05 Nov 2026 12:00:03 +0000</lastBuildDate>
-    <pubDate>Thu, 05 Nov 2026 12:00:03 +0000</pubDate>
+    <lastBuildDate>Thu, 05 Nov 2026 01:14:06 +0000</lastBuildDate>
+    <pubDate>Thu, 05 Nov 2026 01:14:06 +0000</pubDate>
   
     <item>
       <title>Twiin Workflow version 0.4.0-draft</title>
@@ -15,8 +15,8 @@
       <dc:creator>Twiin</dc:creator>
       <fhir:version>4.0.1</fhir:version>
       <fhir:kind>IG</fhir:kind>
-      <pubDate>Thu, 05 Nov 2026 12:00:03 +0000</pubDate>
-      <fhir:details>Publication run at 05/11/2026 by ffcf6c627a5e using Version 3.0.0 (Git# 7d1c5ae624df). Built 2026-10-08T04:07:06.228Z (28 days old) source id Unknown (todo)</fhir:details>
+      <pubDate>Thu, 05 Nov 2026 01:14:06 +0000</pubDate>
+      <fhir:details>Publication run at 05/11/2026 by ae8d2a60b6a3 using Version 3.0.0 (Git# 7d1c5ae624df). Built 2026-10-08T04:07:06.228Z (28 days old) source id Unknown (todo)</fhir:details>
     </item>
     <item>
       <title>Twiin Workflow version 0.3.0-draft</title>

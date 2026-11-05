@@ -11,7 +11,7 @@
   "name" : "TwiinWorkflow",
   "title" : "Twiin Workflow",
   "status" : "draft",
-  "date" : "2026-11-05T12:00:03+00:00",
+  "date" : "2026-11-05T13:14:06+00:00",
   "publisher" : "Twiin",
   "description" : "Technical specification of TA Workflow, part of the technical core of the Twiin Afsprakenstelsel.",
   "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",
@@ -387,7 +387,7 @@
         "reference" : "Task/6d2e9f41-8b3c-4a7d-b5e2-1c9f7a3d8e64"
       },
       "name" : "Coordination Task: candidate invited",
-      "description" : "A bidding task in the Multiple Fulfillers Pattern before selection: code request-fulfillment, for empty (TA sections Multiple Fulfillers Pattern; Patient context and readability). Task.input also carries a non-identifying entry with its content inline, as allowed before selection (TA sections Sharing additional content; Patient context and readability).",
+      "description" : "A bidding task in the Multiple Fulfillers Pattern before selection: code request-fulfillment (TA sections Multiple Fulfillers Pattern; Patient context and readability). Task.input also carries a non-identifying entry with its content inline, as allowed before selection (TA sections Sharing additional content; Patient context and readability).",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -411,7 +411,7 @@
         "reference" : "Task/a41c7e2b-5f9d-4e3a-8c6b-2d7f1e9a5b38"
       },
       "name" : "Coordination Task: candidate selected",
-      "description" : "The Coordination Task of the selected candidate: businessStatus selected, code fulfill and for set in the same update (TA sections Multiple Fulfillers Pattern; Patient context and readability). The candidate had accepted and recorded a bid in output.",
+      "description" : "The Coordination Task of the selected candidate: businessStatus selected, code fulfill set in the same update (TA sections Multiple Fulfillers Pattern; Patient context and readability). The candidate had accepted and recorded a bid in output.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -423,7 +423,7 @@
         "reference" : "Task/f8f11d4a-2339-4ef3-9414-b2743d3a5102"
       },
       "name" : "Coordination Task: reselection step 1, A accepted",
-      "description" : "Step 1. The Coordination Task of candidate A after A accepted: code request-fulfillment, for empty, only the type of work in input (TA sections Multiple Fulfillers Pattern; Patient context and readability).",
+      "description" : "Step 1. The Coordination Task of candidate A after A accepted: code request-fulfillment, only the type of work in input (TA sections Multiple Fulfillers Pattern; Patient context and readability).",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -435,7 +435,7 @@
         "reference" : "Task/e74fa5b7-7904-40f5-ba19-d1aed93134ba"
       },
       "name" : "Coordination Task: reselection step 1, B accepted",
-      "description" : "Step 1. The Coordination Task of candidate B after B accepted: code request-fulfillment, for empty, only the type of work in input (TA sections Multiple Fulfillers Pattern; Patient context and readability).",
+      "description" : "Step 1. The Coordination Task of candidate B after B accepted: code request-fulfillment, only the type of work in input (TA sections Multiple Fulfillers Pattern; Patient context and readability).",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -447,7 +447,7 @@
         "reference" : "Task/18d1bd56-33f6-43e0-a3fa-8871a100df12"
       },
       "name" : "Coordination Task: reselection step 2, A selected",
-      "description" : "Step 2. The Coordination Task of A when the Placer selects A: businessStatus selected, code fulfill and for set in the same update (TA sections Multiple Fulfillers Pattern; Patient context and readability). The Request has performer set to A.",
+      "description" : "Step 2. The Coordination Task of A when the Placer selects A: businessStatus selected, code fulfill set in the same update (TA sections Multiple Fulfillers Pattern; Patient context and readability). The Request has performer set to A.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -483,7 +483,7 @@
         "reference" : "Task/a5c02498-4399-4c8d-aa17-b17023396852"
       },
       "name" : "Coordination Task: reselection step 4, B invited again",
-      "description" : "Step 4. A new Coordination Task for B on the same Request, after the earlier Task of B ended (TA sections Multiple Fulfillers Pattern; Handling the End of a Coordination Task). code request-fulfillment, for empty.",
+      "description" : "Step 4. A new Coordination Task for B on the same Request, after the earlier Task of B ended (TA sections Multiple Fulfillers Pattern; Handling the End of a Coordination Task). code request-fulfillment.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -495,7 +495,7 @@
         "reference" : "Task/d4f3456d-86b6-4429-b606-bf52a94ca749"
       },
       "name" : "Coordination Task: reselection step 4, C invited",
-      "description" : "Step 4. A Coordination Task for the new candidate C on the same Request (TA sections Multiple Fulfillers Pattern; Patient context and readability). code request-fulfillment, for empty.",
+      "description" : "Step 4. A Coordination Task for the new candidate C on the same Request (TA sections Multiple Fulfillers Pattern; Patient context and readability). code request-fulfillment.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -519,7 +519,7 @@
         "reference" : "Task/47ca5941-e107-4c70-bae9-bce09b69311d"
       },
       "name" : "Coordination Task: reselection step 5, C selected",
-      "description" : "Step 5. The Coordination Task of C when the Placer selects C, after C accepted (TA section Multiple Fulfillers Pattern: the Placer selects only a candidate whose Task has status accepted). businessStatus selected, code fulfill and for set in the same update.",
+      "description" : "Step 5. The Coordination Task of C when the Placer selects C, after C accepted (TA section Multiple Fulfillers Pattern: the Placer selects only a candidate whose Task has status accepted). businessStatus selected, code fulfill set in the same update.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -579,7 +579,7 @@
         "reference" : "Task/66507516-150c-415f-9e88-7c1f24eef69c"
       },
       "name" : "Coordination Task: sharing step 5, available resource after selection",
-      "description" : "Step 5. The Placer selects the candidate: businessStatus selected, code fulfill and for set in the same update, together with an entry with type available-resource that refers to a resource at the Placer (TA sections Sharing additional content; Patient context and readability).",
+      "description" : "Step 5. The Placer selects the candidate: businessStatus selected, code fulfill set in the same update, together with an entry with type available-resource that refers to a resource at the Placer (TA sections Sharing additional content; Patient context and readability).",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -603,7 +603,7 @@
         "reference" : "Task/e2f7a9c1-4d6b-4b8e-9a3f-6c1d5e8b2a47"
       },
       "name" : "Coordination Task: single Fulfiller, in progress",
-      "description" : "Single Fulfiller Pattern: code fulfill and for set from creation; the Fulfiller has started the work. Task.input also carries an available-resource and an available-query entry (TA sections Single Fulfiller Pattern; Sharing additional content).",
+      "description" : "Single Fulfiller Pattern: code fulfill from creation; the Fulfiller has started the work. Task.input also carries an available-resource and an available-query entry (TA sections Single Fulfiller Pattern; Sharing additional content).",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -639,7 +639,7 @@
         "reference" : "Task/5fe23d95-5f8d-4f9d-9315-7d7979153e2a"
       },
       "name" : "Scenario 1, step 1: created",
-      "description" : "The Placer creates the Coordination Task with code fulfill and for set, and with the entries it makes available, since in the Single Fulfiller Pattern there is no selection.",
+      "description" : "The Placer creates the Coordination Task with code fulfill, and with the entries it makes available, since in the Single Fulfiller Pattern there is no selection.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -699,7 +699,7 @@
         "reference" : "Task/12e3afcc-3979-476c-bc59-8e8e4e40afb9"
       },
       "name" : "Scenario 2, step 1: A accepted with a bid",
-      "description" : "Candidate A accepts its Coordination Task (code request-fulfillment, for empty) and records a bid in output.",
+      "description" : "Candidate A accepts its Coordination Task (code request-fulfillment) and records a bid in output.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -711,7 +711,7 @@
         "reference" : "Task/66bb48ed-2053-4fa4-ae26-4aba6ad37e5d"
       },
       "name" : "Scenario 2, step 1: B accepted with a bid",
-      "description" : "Candidate B accepts its Coordination Task (code request-fulfillment, for empty) and records a bid in output.",
+      "description" : "Candidate B accepts its Coordination Task (code request-fulfillment) and records a bid in output.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {
@@ -723,7 +723,7 @@
         "reference" : "Task/5932fe26-950a-481f-8fc3-fa792e1d318f"
       },
       "name" : "Scenario 2, step 2: A selected",
-      "description" : "The Placer selects A: businessStatus selected, code fulfill and for set in one update, together with the entries with type available-resource and available-query that it makes available.",
+      "description" : "The Placer selects A: businessStatus selected, code fulfill set in one update, together with the entries with type available-resource and available-query that it makes available.",
       "exampleCanonical" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
     },
     {

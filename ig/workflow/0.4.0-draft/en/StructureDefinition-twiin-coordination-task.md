@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-twiin-coordinatio
   "title" : "Twiin Coordination Task",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-05T12:00:03+00:00",
+  "date" : "2026-11-05T13:14:06+00:00",
   "publisher" : "Twiin",
   "description" : "Coordination Task under TA Workflow (TA sections Summary of the profiles → Coordination Task; Coordination Task; Status of the Coordination Task; Patient context and readability; Type of work on the Task; Sharing additional content; Search parameters; Codes of this TA).",
   "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",
@@ -100,8 +100,8 @@ Other representations of profile: [CSV](../StructureDefinition-twiin-coordinatio
       {
         "key" : "twiin-ct-3",
         "severity" : "error",
-        "human" : "When businessStatus is selected, code is fulfill and for is populated (TA sections Multiple Fulfillers Pattern; Patient context and readability).",
-        "expression" : "businessStatus.coding.where(system = 'https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow' and code = 'selected').exists() implies (code.coding.where(system = 'http://hl7.org/fhir/CodeSystem/task-code' and code = 'fulfill').exists() and for.exists())",
+        "human" : "When businessStatus is selected, code is fulfill (TA section Multiple Fulfillers Pattern).",
+        "expression" : "businessStatus.coding.where(system = 'https://fhir.twiin.nl/ig/workflow/CodeSystem/ta-workflow' and code = 'selected').exists() implies (code.coding.where(system = 'http://hl7.org/fhir/CodeSystem/task-code' and code = 'fulfill').exists())",
         "source" : "https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-coordination-task"
       },
       {
@@ -193,6 +193,18 @@ Other representations of profile: [CSV](../StructureDefinition-twiin-coordinatio
         "code" : "Reference",
         "targetProfile" : ["https://fhir.twiin.nl/ig/workflow/StructureDefinition/twiin-workflow-servicerequest"]
       }]
+    },
+    {
+      "id" : "Task.for",
+      "path" : "Task.for",
+      "short" : "The Patient of the Request, set at creation",
+      "comment" : "Set at creation, in every pattern, and refers by Reference.reference to the Patient that ServiceRequest.subject refers to. The selection does not set it. Read access to the Patient follows Task.code fulfill (TA section Patient context and readability).",
+      "min" : 1
+    },
+    {
+      "id" : "Task.for.reference",
+      "path" : "Task.for.reference",
+      "min" : 1
     },
     {
       "id" : "Task.executionPeriod",
