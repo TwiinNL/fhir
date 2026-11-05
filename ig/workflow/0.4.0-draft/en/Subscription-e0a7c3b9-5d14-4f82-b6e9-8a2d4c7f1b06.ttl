@@ -27,7 +27,7 @@
      fhir:Element.extension [
        fhir:index -1 ;
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria" ] ;
-       fhir:Extension.valueString [ fhir:value "owner-assigner=urn:oid:2.16.528.1.1007.3.3|87654321" ]
+       fhir:Extension.valueString [ fhir:value "owner-assigner=http://fhir.nl/fhir/NamingSystem/ura|87654321" ]
      ]
   ] ;
   fhir:Subscription.channel [

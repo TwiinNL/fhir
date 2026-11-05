@@ -11,7 +11,7 @@
   "name" : "TwiinWorkflow",
   "title" : "Twiin Workflow",
   "status" : "draft",
-  "date" : "2026-11-05T10:55:26+00:00",
+  "date" : "2026-11-05T11:19:04+00:00",
   "publisher" : "Twiin",
   "description" : "Technical specification of TA Workflow, part of the technical core of the Twiin Afsprakenstelsel.",
   "copyright" : "Copyright 2026 Twiin. Licensed under CC BY-SA 4.0.",
@@ -1218,6 +1218,15 @@
         }],
         "nameUrl" : "requirements-not-in-artifacts.html",
         "title" : "Requirements not expressed in artifacts",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "changes.html"
+        }],
+        "nameUrl" : "changes.html",
+        "title" : "Changes",
         "generation" : "markdown"
       },
       {

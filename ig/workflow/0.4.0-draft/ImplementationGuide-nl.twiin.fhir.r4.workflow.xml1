@@ -12,7 +12,7 @@
   <name value="TwiinWorkflow"/>
   <title value="Twiin Workflow"/>
   <status value="draft"/>
-  <date value="2026-11-05T10:55:26+00:00"/>
+  <date value="2026-11-05T11:19:04+00:00"/>
   <publisher value="Twiin"/>
   <description value="Technical specification of TA Workflow, part of the technical core of the Twiin Afsprakenstelsel."/>
   <copyright value="Copyright 2026 Twiin. Licensed under CC BY-SA 4.0."/>
@@ -1057,6 +1057,14 @@
         </extension>
         <nameUrl value="requirements-not-in-artifacts.html"/>
         <title value="Requirements not expressed in artifacts"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="changes.html"/>
+        </extension>
+        <nameUrl value="changes.html"/>
+        <title value="Changes"/>
         <generation value="markdown"/>
       </page>
       <page>

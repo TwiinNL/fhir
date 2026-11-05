@@ -6,6 +6,7 @@
 * [Artifacts overview](en/artifacts-overview.md)
 * [Example: reselection](en/example-reselection.md)
 * [Requirements not expressed in artifacts](en/requirements-not-in-artifacts.md)
+* [Changes](en/changes.md)
 * [Installing dependencies](en/installing-dependencies.md)
 * [Example: sharing additional content](en/example-sharing.md)
 * [Example scenarios](en/example-scenarios.md)

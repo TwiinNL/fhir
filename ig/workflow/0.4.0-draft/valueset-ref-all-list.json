@@ -58,8 +58,8 @@
     "uses" : {
     },
     "StructureDefinition-twiin-workflow-subscription.html" : "Twiin Workflow Subscription",
-    "StructureDefinition-twiin-workflow-servicerequest.html" : "Twiin Workflow ServiceRequest",
     "StructureDefinition-twiin-cancellation-request-task.html" : "Twiin Cancellation Request Task",
+    "StructureDefinition-twiin-workflow-servicerequest.html" : "Twiin Workflow ServiceRequest",
     "StructureDefinition-twiin-coordination-task.html" : "Twiin Coordination Task",
     "StructureDefinition-twiin-authorization-cancellation-request-task.html" : "Twiin Authorization Cancellation Request Task"
   },
@@ -161,8 +161,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.115"],
     "uses" : {
     },
-    "StructureDefinition-twiin-workflow-servicerequest.html" : "Twiin Workflow ServiceRequest",
     "StructureDefinition-twiin-cancellation-request-task.html" : "Twiin Cancellation Request Task",
+    "StructureDefinition-twiin-workflow-servicerequest.html" : "Twiin Workflow ServiceRequest",
     "StructureDefinition-twiin-coordination-task.html" : "Twiin Coordination Task",
     "StructureDefinition-twiin-authorization-cancellation-request-task.html" : "Twiin Authorization Cancellation Request Task"
   },

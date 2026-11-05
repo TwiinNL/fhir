@@ -1,0 +1,289 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Changes - Twiin Workflow v0.4.0-draft</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <link href="assets/css/twiin.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <a id="twiin-logo" no-external="true" href="https://fhir.twiin.nl" title="Twiin"><img src="assets/images/twiin-logo.svg" alt="Twiin - Landelijk afsprakenstelsel voor gezondheidsgegevens"/></a>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Twiin Workflow</span>
+            <br/>
+            <span style="display:inline-block;">0.4.0-draft - Draft – normative only when referenced by the Twiin afsprakenstelsel
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts-overview.html">Overview</a>
+  </li>
+  <li>
+    <a href="example-scenarios.html">Examples</a>
+  </li>
+  <li>
+    <a href="requirements-not-in-artifacts.html">Not in artifacts</a>
+  </li>
+  <li>
+    <a href="installing-dependencies.html">Dependencies</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+</ul>
+              <ul class="nav navbar-nav" id="twiin-nav-all">
+                <li><a no-external="true" href="https://fhir.twiin.nl/ig/">All Implementation Guides</a></li>
+              </ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Changes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Twiin Workflow (v0.4.0-draft: Release 1 Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.twiin.nl/ig/workflow/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Changes</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#040-draft" id="markdown-toc-040-draft">0.4.0-draft</a></li>
+  <li><a href="#030-draft-2026-10-16" id="markdown-toc-030-draft-2026-10-16">0.3.0-draft (2026-10-16)</a></li>
+  <li><a href="#020-draft-2026-10-16" id="markdown-toc-020-draft-2026-10-16">0.2.0-draft (2026-10-16)</a></li>
+  <li><a href="#011-draft-2026-10-12" id="markdown-toc-011-draft-2026-10-12">0.1.1-draft (2026-10-12)</a></li>
+  <li><a href="#010-draft-2026-10-12" id="markdown-toc-010-draft-2026-10-12">0.1.0-draft (2026-10-12)</a></li>
+</ul>
+
+</div>
+<p>This page lists the changes per published version, newest first. The requirements are in TA Workflow; where this guide and the TA differ, the TA applies.</p>
+
+<h3 id="040-draft">0.4.0-draft</h3>
+
+<p>Technical specification of TA Workflow 0.4. Changes since 0.3.0-draft:</p>
+
+<ul>
+  <li>Task.input types <code class="language-plaintext highlighter-rouge">supplemental-resource</code> and <code class="language-plaintext highlighter-rouge">supplemental-query</code> renamed to <code class="language-plaintext highlighter-rouge">available-resource</code> and <code class="language-plaintext highlighter-rouge">available-query</code> (slices <code class="language-plaintext highlighter-rouge">availableResource</code>, <code class="language-plaintext highlighter-rouge">availableQuery</code>). A standard dataset (the Library of the ActivityDefinition or PlanDefinition in <code class="language-plaintext highlighter-rouge">ServiceRequest.instantiatesCanonical</code>) is a guideline, not a requirement: the Placer states per Request what it makes available in these entries, and its server supports the reads and searches behind them, not the searches of the dataset itself.</li>
+  <li>New code <code class="language-plaintext highlighter-rouge">information-request</code> (nine codes in <code class="language-plaintext highlighter-rouge">ta-workflow</code>) and slice <code class="language-plaintext highlighter-rouge">informationRequest</code> (0..*) on the Coordination Task. The Fulfiller may add and remove such entries; the type is reserved for the Fulfiller.</li>
+  <li>New search parameter <code class="language-plaintext highlighter-rouge">owner-assigner</code> (Task.owner.identifier.assigner.identifier), in the CapabilityStatement of the Placer's server. Subscriptions per organization: filter <code class="language-plaintext highlighter-rouge">owner-assigner=[system]|[value]</code> next to <code class="language-plaintext highlighter-rouge">owner:identifier</code>, <code class="language-plaintext highlighter-rouge">channel.endpoint</code> 1..1 and from <code class="language-plaintext highlighter-rouge">Organization.endpoint</code> for such a Subscription; <code class="language-plaintext highlighter-rouge">twiin-wsub-1</code> accepts both forms.</li>
+  <li>After an accepted Cancellation Request the Coordination Task ends as <code class="language-plaintext highlighter-rouge">cancelled</code> instead of <code class="language-plaintext highlighter-rouge">failed</code>; the Fulfiller sets it. The Placer sets <code class="language-plaintext highlighter-rouge">cancelled</code> only before <code class="language-plaintext highlighter-rouge">in-progress</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">statusReason</code>: new invariant <code class="language-plaintext highlighter-rouge">twiin-ct-9</code> (<code class="language-plaintext highlighter-rouge">statusReason.text</code> when <code class="language-plaintext highlighter-rouge">businessStatus</code> is <code class="language-plaintext highlighter-rouge">awaiting-information</code>), next to <code class="language-plaintext highlighter-rouge">twiin-ct-8</code> (rejected, failed) and <code class="language-plaintext highlighter-rouge">twiin-ct-5</code> (SHOULD on cancelled). <code class="language-plaintext highlighter-rouge">executionPeriod.end</code> is set when the status leaves <code class="language-plaintext highlighter-rouge">in-progress</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">ServiceRequest.priority</code> mustSupport with guidance; Task.priority is not used.</li>
+  <li>A candidate may read the Request from the creation of its Coordination Task; read access to the Patient follows Task.code <code class="language-plaintext highlighter-rouge">fulfill</code>, not <code class="language-plaintext highlighter-rouge">businessStatus</code> <code class="language-plaintext highlighter-rouge">selected</code>.</li>
+  <li>New page <a href="example-scenarios.html">Example scenarios</a> with seven scenarios and a Subscription example per filter form.</li>
+  <li>New examples: deselecting a selected Fulfiller before in-progress and soliciting again on the same Request (<a href="example-reselection.html">Example: reselection</a>); sharing additional content before and after selection (<a href="example-sharing.html">Example: sharing additional content</a>).</li>
+  <li>Cancellation Request Task and Authorization Cancellation Request Task: <code class="language-plaintext highlighter-rouge">reasonCode</code> for the requesting party's reason (1..1 on the latter); <code class="language-plaintext highlighter-rouge">statusReason</code> carries only the answering party's reason. The existing Authorization Cancellation Request Task example moves the Fulfiller's reason to <code class="language-plaintext highlighter-rouge">reasonCode.text</code>.</li>
+  <li>Coordination Task: invariant <code class="language-plaintext highlighter-rouge">twiin-ct-8</code> (<code class="language-plaintext highlighter-rouge">statusReason</code> required when the status is rejected or failed); <code class="language-plaintext highlighter-rouge">twiin-ct-5</code> now covers the status cancelled only.</li>
+  <li>Template <code class="language-plaintext highlighter-rouge">twiin.base.template</code> 0.1.7 (was 0.1.6). <code class="language-plaintext highlighter-rouge">0.3.0-draft</code> is published unchanged and keeps its template.</li>
+  <li>Package lock: <code class="language-plaintext highlighter-rouge">hl7.terminology</code> 7.5.0; <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code> pinned to 5.3.0, as TA Workflow names it as a base specification (see known-issues.md in the source repository).</li>
+  <li>Correction: the URA is identified with the system <code class="language-plaintext highlighter-rouge">http://fhir.nl/fhir/NamingSystem/ura</code> everywhere, also on the assigner of the identifiers of HealthcareService and Location (as GF Addressing does) and in the <code class="language-plaintext highlighter-rouge">owner-assigner</code> Subscription example. The examples and test fixtures used the OID <code class="language-plaintext highlighter-rouge">urn:oid:2.16.528.1.1007.3.3</code> for the assigner. Republished as 0.4.0-draft.</li>
+</ul>
+
+<h3 id="030-draft-2026-10-16">0.3.0-draft (2026-10-16)</h3>
+
+<p>Fourth draft publication, technical specification of TA Workflow 0.3.</p>
+
+<ul>
+  <li>Business status: codes <code class="language-plaintext highlighter-rouge">awaiting-information</code> and <code class="language-plaintext highlighter-rouge">visit-scheduled</code> in the code system and the businessStatus value set; the Coordination Task and the page <a href="requirements-not-in-artifacts.html">Requirements not expressed in artifacts</a> aligned with the TA sections Business status and Write access; an example added.</li>
+</ul>
+
+<h3 id="020-draft-2026-10-16">0.2.0-draft (2026-10-16)</h3>
+
+<p>Third draft publication, technical specification of TA Workflow 0.3.</p>
+
+<ul>
+  <li>Aligned with TA Workflow 0.3. Twiin Notifications pinned to 0.2.0-draft; the dependency on GF Addressing removed. Invariant <code class="language-plaintext highlighter-rouge">twiin-ct-4</code> removed.</li>
+</ul>
+
+<h3 id="011-draft-2026-10-12">0.1.1-draft (2026-10-12)</h3>
+
+<p>Second draft publication, technical specification of TA Workflow 0.3, in the Twiin house style.</p>
+
+<ul>
+  <li>Depends on Twiin Notifications 0.1.1-draft. The page <a href="installing-dependencies.html">Installing dependencies</a> includes the dependency table.</li>
+</ul>
+
+<h3 id="010-draft-2026-10-12">0.1.0-draft (2026-10-12)</h3>
+
+<p>First draft publication, technical specification of TA Workflow 0.3. Removed from the site after 0.1.1-draft was published.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/twiin-tables.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          &#169; <a style="color:var(--footer-hyperlink-text-color)" href="https://www.twiin.nl">Twiin</a>. Content licensed under <a rel="license" style="color:var(--footer-hyperlink-text-color)" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, except the Twiin logo and the design and code of this site (all rights reserved). Third-party software keeps its own licence.
+
+
+
+
+          <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/TwiinNL/ig-workflow">Source repository</a>
+
+          <br/>
+          Package nl.twiin.fhir.r4.workflow#0.4.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Nov 5, 2026 11:19+0000">2026-11-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
