@@ -190,6 +190,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Coordination Task: invariant <code class="language-plaintext highlighter-rouge">twiin-ct-8</code> (<code class="language-plaintext highlighter-rouge">statusReason</code> required when the status is rejected or failed); <code class="language-plaintext highlighter-rouge">twiin-ct-5</code> now covers the status cancelled only.</li>
   <li>Template <code class="language-plaintext highlighter-rouge">twiin.base.template</code> 0.1.7 (was 0.1.6). <code class="language-plaintext highlighter-rouge">0.3.0-draft</code> is published unchanged and keeps its template.</li>
   <li>Package lock: <code class="language-plaintext highlighter-rouge">hl7.terminology</code> 7.5.0; <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code> pinned to 5.3.0, as TA Workflow names it as a base specification (see known-issues.md in the source repository).</li>
+  <li>Several HealthcareServices of the same Fulfiller may be candidates for the same Request; the rule of 0.3 (no two open Coordination Tasks of the same Fulfiller for the same Request while either has code <code class="language-plaintext highlighter-rouge">request-fulfillment</code>) is removed from <a href="requirements-not-in-artifacts.html">Requirements not expressed in artifacts</a>. The page no longer mentions an atomic update at selection: the Placer updates its own Tasks in a way it chooses, based on their current version.</li>
   <li>Correction: the URA is identified with the system <code class="language-plaintext highlighter-rouge">http://fhir.nl/fhir/NamingSystem/ura</code> everywhere, also on the assigner of the identifiers of HealthcareService and Location (as GF Addressing does) and in the <code class="language-plaintext highlighter-rouge">owner-assigner</code> Subscription example. The examples and test fixtures used the OID <code class="language-plaintext highlighter-rouge">urn:oid:2.16.528.1.1007.3.3</code> for the assigner. Republished as 0.4.0-draft.</li>
 </ul>
 
@@ -254,7 +255,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           <br/>
           Package nl.twiin.fhir.r4.workflow#0.4.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Nov 5, 2026 11:19+0000">2026-11-05</span>
+          Generated <span title="Thu, Nov 5, 2026 12:00+0000">2026-11-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
